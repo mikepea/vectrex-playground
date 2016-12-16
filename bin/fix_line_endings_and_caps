@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -x
+
+dos2unix $1
+sed -i'' 's/^\([ 	][ 	]*\)\([A-Z][A-Z]*\) /\1\L\2 /' $1
+sed -i'' 's/ EQU / equ /' $1
