@@ -1,0 +1,15 @@
+#!/bin/sh
+
+ME=$(realpath $0)
+BASE=$( dirname $ME )/..
+ROM=$(realpath $1)
+
+export VECTREX_ROM="fastrom.dat"
+
+if [ ! -d ${BASE}/build/vecx ]; then
+  echo "No vecx cli build found: run bin/install_nanoflite_vecx"
+  exit 1
+fi
+
+cd ${BASE}/build/vecx/
+./vecx $ROM

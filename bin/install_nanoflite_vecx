@@ -1,0 +1,13 @@
+#!/bin/sh
+
+[ ! -d build ] && mkdir build
+cd build || exit 1
+brew install sdl
+brew install sdl_gfx
+brew install sdl_image
+brew install sdl_mixer
+brew install sdl_ttf
+git clone https://github.com/nanoflite/vecx.git
+cd vecx || exit 2
+make || exit 3
+cd ../../ && ln -s build/vecx/vecx bin/vecx
