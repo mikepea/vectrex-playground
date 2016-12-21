@@ -107,6 +107,39 @@ Carry (C).
 There are a whole bunch of 'B' instructions (and also 'Long Branch' 'LB'
 equivalents) that handle the CC bits (and some combos)
 
+### Branch Instructions
+
+(NB: All Branch instructions have (eg) BCC and LBCC form, for short and long
+branching)
+
+    C = Carry
+    V = oVerflow
+    Z = Zero
+    N = Negative
+    H = Half Carry
+
+    Instruction      Description               H N Z V C
+    ----------------------------------------------------
+    BCC              Branch on Carry Clear     C=O
+    BCS              Branch on Carry Set       C=1
+    BEQ              Branch on Equal           Z=O
+    BGE              Branch on >=Zero
+    BGT              Branch on > Zero
+    BHI              Branch if Higher
+    BHS              Branch if Higher or Same
+    BLE              Branch on <=Zero
+    BLO              Branch on Lower
+    BLS              Branch on Lower or Same
+    BLT              Branch on < Zero
+    BNE              Branch Not Equal
+    BPL              Branch on Plus            N=0
+    BMI              Branch if Minus           N=1
+    BRA              Branch Alwavs
+    BRN              Branch Never
+    BSR              Branch to Subroutine
+    BVC              Branch V=0
+    BVS              Branch V=1
+
 ### Handy code snippets:
 
    kill_ship:
