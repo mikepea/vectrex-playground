@@ -59,7 +59,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       if [ -f /vagrant/vagrant/VIM_EDITING ]; then
         echo 'set editing-mode vi' > ~/.inputrc
       fi
-      ln -s /vagrant ~/vagrant
     SHELL
 
   end
