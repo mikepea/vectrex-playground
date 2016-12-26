@@ -1,0 +1,2674 @@
+<html>
+<head>
+<TITLE>6809 Instruction Set</TITLE>
+</head>
+<body>
+<table border=1 cellspacing=0 width=100%>
+<td colspan=23 align=center>6809 Instruction Set</td>
+<tr>
+
+<td rowspan=3 valign=bottom>Instruction</td>
+<td rowspan=3 valign=bottom>Mnemonic</td>
+<td colspan=15 Align=center>Addressing Mode</td>
+<td rowspan=3 valign=bottom align=center>Description</td>
+<td colspan=5 align=center>CC bit</td>
+<tr>
+
+
+<td colspan=3 Align=center>Immediate</td>
+<td colspan=3 Align=center>Direct</td>
+<td colspan=3 Align=center>Indexed</td>
+<td colspan=3 Align=center>Extended</td>
+<td colspan=3 Align=center>Inherent</td>
+<td >5</td>
+<td>3</td>
+<td >2</td>
+<td>1</td>
+<td >0</td>
+
+<tr>
+<!&nbsp; immediate>
+<td align=center>Op</td>
+<td align=center>~</td>
+<td align=center>#</td>
+
+<!&nbsp; direct>
+<td align=center>Op</td>
+<td align=center>~</td>
+<td align=center>#</td>
+
+<!&nbsp; Indexed>
+<td align=center>Op</td>
+<td align=center>~</td>
+<td align=center>#</td>
+
+<!&nbsp; Extended>
+<td align=center>Op</td>
+<td align=center>~</td>
+<td align=center>#</td>
+
+<!&nbsp; inherent>
+<td align=center>Op</td>
+<td align=center>~</td>
+<td align=center>#</td>
+
+<td align=center>H</td>
+<td align=center>N</td>
+<td align=center>Z</td>
+<td align=center>V</td>
+<td align=center>C</td>
+
+<tr>
+<td>ABX</td>
+<td align=center>&nbsp; </td>
+<td colspan=3 align=center> &nbsp;</td>
+<td colspan=3 align=center> &nbsp;</td>
+<td colspan=3 align=center>&nbsp; </td>
+<td colspan=3 align=center>&nbsp;</td>
+<td>3A</td><td>3</td><td>1</td>
+<td>X = B+X (Unsigned)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+
+<tr>
+
+<td rowspan=2>ADC</td>
+<td align=center>ADCA</td>
+<td >89</td> <td>2</td> <td>2</td>
+<td >99</td> <td>4</td> <td>2</td>
+<td >A9</td> <td>4+</td> <td>2+</td>
+<td >B9</td> <td>5</td> <td>3</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td>A = A+M+C</td>
+<td>+<br>+</td>
+<td>+<br>+</td>
+<td>+<br>+</td>
+<td>+<br>+</td>
+<td>+<br>+</td>
+<tr>
+
+<td align=center>ADCB</td>
+<td >C9</td> <td>2</td> <td>2</td>
+<td >D9</td> <td>4</td> <td>2</td>
+<td >E9</td> <td>4+</td> <td>2+</td>
+<td >F9</td> <td>5</td> <td>3</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td>B = B+M+C</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<tr>
+
+
+<td rowspan=3>ADD</td>
+
+<td align=center>ADDA</td>
+<td >8B</td> <td>2</td> <td>2</td>
+<td >9B</td> <td>4</td> <td>2</td>
+<td >AB</td> <td>4+</td> <td>2+</td>
+<td >BB</td> <td>5</td> <td>3</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td>A = A+M</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<tr>
+
+<td align=center>ADDB</td>
+<td >CB</td> <td>2 </td> <td>2 </td>
+<td >DB</td> <td>4 </td> <td>2 </td>
+<td >EB</td> <td>4+</td> <td>2+</td>
+<td >FB</td> <td>5 </td> <td>3 </td>
+<td colspan=3 align=center>&nbsp;</td>
+<td>B = B+M</td>
+
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<tr>
+
+<td align=center>ADDD</td>
+<td >C3</td> <td>4</td> <td>3</td>
+<td >D3</td> <td>6</td> <td>2</td>
+<td >E3</td> <td>6+</td> <td>2+</td>
+<td >F3</td> <td>7</td> <td>3</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td>D = D+M:M+1</td>
+<td>&nbsp;</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+<tr>
+
+<td rowspan=3>AND</td>
+<td align=center>ANDA</td>
+
+<td valign=top>84</td>
+<td valign=top>2 </td>
+<td valign=top>2 </td>
+
+<td valign=top>94 </td>
+<td valign=top>4 </td>
+<td valign=top>2 </td>
+
+<td valign=top>A4 </td>
+<td valign=top>4+ </td>
+<td valign=top>2+ </td>
+
+<td valign=top>B4 </td>
+<td valign=top>5 </td>
+<td valign=top>3 </td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>A = A && M</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<td valign=top>0</td>
+<td valign=top>&nbsp;</td>
+<tr>
+<td align=center>ANDB</td>
+
+<td valign=top>C4</td>
+<td valign=top>2</td>
+<td valign=top>2</td>
+
+<td valign=top>D4</td>
+<td valign=top>4</td>
+<td valign=top>2</td>
+
+<td valign=top>E4</td>
+<td valign=top>4+</td>
+<td valign=top>2+</td>
+
+<td valign=top>F4</td>
+<td valign=top>5</td>
+<td valign=top>3</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>B = B && M</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<td valign=top>0</td>
+<td valign=top>&nbsp;</td>
+<tr>
+
+<td align=center>ANDCC</td>
+
+<td valign=top>1C</td>
+<td valign=top>3</td>
+<td valign=top>2</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td>C = CC && IMM</td>
+<td align=center>?</td>
+<td align=center>?</td>
+<td align=center>?</td>
+<td align=center>?</td>
+<td align=center>?</td>
+<tr>
+
+
+
+<td rowspan=3>ASL</td>
+<td align=center>ASLA</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td align=center>48</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+<td rowspan=3 align=center>Arithmetic<br>shift<br>left</td>
+<td align=center>8</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>ASLB</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td align=center>58</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+
+<td align=center>8</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>ASL</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>08</td>
+<td align=center>6</td>
+<td align=center>2</td>
+
+<td align=center>68</td>
+<td align=center>6+</td>
+<td align=center>2+</td>
+
+<td align=center>78</td>
+<td align=center>7</td>
+<td align=center>3</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td align=center>8</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+
+
+<td rowspan=3>ASR</td>
+<td align=center>ASRA</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td align=center>47</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+<td rowspan=3 align=center>Arithmetic<br>shift<br>right</td>
+<td align=center>8</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>ASRB</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td align=center>57</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+
+<td align=center>8</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>ASR</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>07</td>
+<td align=center>6</td>
+<td align=center>2</td>
+
+<td align=center>67</td>
+<td align=center>6+</td>
+<td align=center>2+</td>
+
+<td align=center>77</td>
+<td align=center>7</td>
+<td align=center>3</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+
+<td align=center>8</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<tr>
+
+
+
+
+<td rowspan=2>BIT</td>
+<td align=center>BITA</td>
+
+<td >85</td>
+<td>2</td>
+<td>2</td>
+
+<td>95</td>
+<td>4 </td>
+<td>2 </td>
+
+<td >A5</td>
+<td>4+</td>
+<td>2+</td>
+
+<td >B5</td>
+<td>5 </td>
+<td>3 </td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td>Bit Test A (M&&A)</td>
+<td>&nbsp;</td>
+<td>+</td>
+<td>+</td>
+<td>0</td>
+<td>&nbsp;</td>
+<tr>
+
+<td align=center>BITB</td>
+
+<td >C5</td>
+<td>2</td>
+<td>2</td>
+
+<td>D5</td>
+<td>4 </td>
+<td>2</td>
+
+<td >E5</td>
+<td>4+</td>
+<td>2+</td>
+
+<td>F5</td>
+<td>5</td>
+<td>3</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td>Bit Test B (M&&B)</td>
+<td>&nbsp;</td>
+<td>+</td>
+<td>+</td>
+<td>0</td>
+<td>&nbsp;</td>
+<tr>
+
+
+<td rowspan=3>CLR</td>
+<td align=center>CLRA</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td valign=top>4F</td>
+<td valign=top>2</td>
+<td valign=top>1</td>
+
+<td valign=top>A = 0</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>0</td>
+<td valign=top>1</td>
+<td valign=top>0</td>
+<td valign=top>0</td>
+<tr>
+
+<td align=center>CLRB</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+
+<td valign=top>5F</td>
+<td valign=top>2</td>
+<td valign=top>1</td>
+
+<td valign=top>B = 0</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>0</td>
+<td valign=top>1</td>
+<td valign=top>0</td>
+<td valign=top>0</td>
+<tr>
+
+<td align=center>CLR</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td valign=top>0F</td>
+<td valign=top>6</td>
+<td valign=top>2</td>
+
+<td valign=top>6F</td>
+<td valign=top>6+</td>
+<td valign=top>2+</td>
+
+<td valign=top>7F</td>
+<td valign=top>7</td>
+<td valign=top>3</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td valign=top>M = 0</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>0</td>
+<td valign=top>1</td>
+<td valign=top>0</td>
+<td valign=top>0</td>
+<tr>
+
+
+<td rowspan=7>CMP</td>
+
+<td align=center valign = top>CMPA</td>
+
+<td valign=top>81</td>
+<td valign=top>2</td>
+<td valign=top>2</td>
+
+<td valign=top>91</td>
+<td valign=top>4 </td>
+<td valign=top>2 </td>
+
+
+<td valign=top>A1  </td>
+<td valign=top>4+  </td>
+<td valign=top>2+  </td>
+
+<td valign=top>B1  </td>
+<td valign=top>5   </td>
+<td valign=top>3   </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>Compare M from A</td>
+<td valign=top>8</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<tr>
+
+<td align=center valign = top>CMPB</td>
+
+<td valign=top>C1 </td>
+<td valign=top>2  </td>
+<td valign=top>2  </td>
+
+<td valign=top>D1 </td>
+<td valign=top>4  </td>
+<td valign=top>2  </td>
+
+
+<td valign=top>E1 </td>
+<td valign=top>4+ </td>
+<td valign=top>2+ </td>
+
+<td valign=top>F1 </td>
+<td valign=top>5  </td>
+<td valign=top>3  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>Compare M from B</td>
+<td valign=top>8</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<tr>
+
+
+<td align=center>CMPD</td>
+
+<td align=center>10 <br>83</td>
+<td valign=top>5  </td>
+<td valign=top>4  </td>
+
+<td valign=top>10 <br>93 </td>
+<td valign=top>7  </td>
+<td valign=top>3  </td>
+
+
+<td valign=top>10 <br>A3 </td>
+<td valign=top>7+ </td>
+<td valign=top>3+ </td>
+
+<td valign=top>10 <br>B3 </td>
+<td valign=top>8  </td>
+<td valign=top>4  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>Compare M:M+1 from D</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>CMPS</td>
+
+<td align=center>11 <br>8C</td>
+<td valign=top>5  </td>
+<td valign=top>4  </td>
+
+<td valign=top>11 <br>9C </td>
+<td valign=top>7  </td>
+<td valign=top>3  </td>
+
+
+<td valign=top>11 <br>AC </td>
+<td valign=top>7+ </td>
+<td valign=top>3+ </td>
+
+<td valign=top>11 <br>BC </td>
+<td valign=top>8  </td>
+<td valign=top>4  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>Compare M:M+1 from S</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>CMPU</td>
+
+<td align=center>11 <br>83</td>
+<td valign=top>5  </td>
+<td valign=top>4  </td>
+
+<td valign=top>11 <br>93 </td>
+<td valign=top>7  </td>
+<td valign=top>3  </td>
+
+
+<td valign=top>11 <br>A3 </td>
+<td valign=top>7+ </td>
+<td valign=top>3+ </td>
+
+<td valign=top>11 <br>B3 </td>
+<td valign=top>8  </td>
+<td valign=top>4  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>Compare M:M+1 from U</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>CMPX</td>
+
+<td align=center>8C</td>
+<td valign=top>4  </td>
+<td valign=top>3  </td>
+
+<td valign=top>9C </td>
+<td valign=top>6  </td>
+<td valign=top>2  </td>
+
+
+<td valign=top>AC </td>
+<td valign=top>6+ </td>
+<td valign=top>2+ </td>
+
+<td valign=top>BC </td>
+<td valign=top>7  </td>
+<td valign=top>3  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>Compare M:M+1 from X</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>CMPY</td>
+
+<td align=center>10 <br>8C</td>
+<td valign=top>5  </td>
+<td valign=top>4  </td>
+
+<td valign=top>10 <br>9C </td>
+<td valign=top>7  </td>
+<td valign=top>3  </td>
+
+
+<td valign=top>10 <br>AC </td>
+<td valign=top>7+ </td>
+<td valign=top>3+ </td>
+
+<td valign=top>10 <br>BC </td>
+<td valign=top>8  </td>
+<td valign=top>4  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>Compare M:M+1 from Y</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td rowspan=3>COM</td>
+<td>COMA</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td align=center colspan=3>&nbsp;</td>
+<td align=center colspan=3>&nbsp;</td>
+<td align=center colspan=3>&nbsp;</td>
+
+<td align=center>43</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+<td>A = complement(A)</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<tr>
+
+<td>COMB</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td align=center colspan=3>&nbsp;</td>
+<td align=center colspan=3>&nbsp;</td>
+<td align=center colspan=3>&nbsp;</td>
+
+<td align=center>53</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+<td>B = complement(B)</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<tr>
+
+<td>COM</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>03</td>
+<td align=center>6</td>
+<td align=center>2</td>
+
+<td align=center>63</td>
+<td align=center>6+</td>
+<td align=center>2+</td>
+
+<td align=center>73</td>
+<td align=center>7</td>
+<td align=center>3</td>
+
+<td align=center colspan=3>&nbsp;</td>
+
+<td>M = complement(M)</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<tr>
+
+
+
+<td>CWAI</td>
+<td>&nbsp;</td>
+<td>3C </td>
+<td> =&gt;<br>20</td>
+<td>2 </td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+               
+<td>CC = CC ^ IMM;<br>Wait for Interrupt</td>
+<td colspan=5 align=right>7</td>
+<tr>
+
+<td>DAA</td>
+<td>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td>19 </td>
+<td> 2</td>
+<td> 1</td>
+               
+<td>Decimal Adjust A</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>+</td>
+<tr>
+
+<td rowspan=3>DEC</td>
+<td>DECA</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td align=center colspan=3>&nbsp;</td>
+<td align=center colspan=3>&nbsp;</td>
+<td align=center colspan=3>&nbsp;</td>
+
+<td align=center>4A</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+<td>A = A &nbsp; 1</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td>DECB</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td align=center colspan=3>&nbsp;</td>
+<td align=center colspan=3>&nbsp;</td>
+<td align=center colspan=3>&nbsp;</td>
+
+<td align=center>5A</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+<td>B = B &nbsp;1</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td>DEC</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>0A</td>
+<td align=center>6</td>
+<td align=center>2</td>
+
+<td align=center>6A</td>
+<td align=center>6+</td>
+<td align=center>2+</td>
+
+<td align=center>7A</td>
+<td align=center>7</td>
+<td align=center>3</td>
+
+<td align=center colspan=3>&nbsp;</td>
+
+<td>M = M &nbsp; 1</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td rowspan=2>EOR</td>
+<td align=center>EORA</td>
+
+<td >88</td>
+<td>2</td>
+<td>2</td>
+
+<td>98</td>
+<td>4 </td>
+<td>2 </td>
+
+<td >A8</td>
+<td>4+</td>
+<td>2+</td>
+
+<td >B8</td>
+<td>5 </td>
+<td>3 </td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td>A = A XOR M</td>
+<td>&nbsp;</td>
+<td>+</td>
+<td>+</td>
+<td>0</td>
+<td>&nbsp;</td>
+<tr>
+
+<td align=center>EORB</td>
+
+<td >C8</td>
+<td>2</td>
+<td>2</td>
+
+<td>D8</td>
+<td>4 </td>
+<td>2</td>
+
+<td >E8</td>
+<td>4+</td>
+<td>2+</td>
+
+<td>F8</td>
+<td>5</td>
+<td>3</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td>B = M XOR B</td>
+<td>&nbsp;</td>
+<td>+</td>
+<td>+</td>
+<td>0</td>
+<td>&nbsp;</td>
+<tr>
+
+<td>EXG</td>
+<td>R1,R2</td>
+<td>1E </td>
+<td>8</td>
+<td>2</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+               
+<td>exchange R1,R2</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td rowspan=3>INC</td>
+<td>INCA</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>4C</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+<td>A = A + 1</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td>INCB</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>5C</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+<td>B = B + 1</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td>INC</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>0C</td>
+<td align=center>6</td>
+<td align=center>2</td>
+
+<td align=center>6C</td>
+<td align=center>6+</td>
+<td align=center>2+</td>
+
+<td align=center>7C</td>
+<td align=center>7</td>
+<td align=center>3</td>
+
+<td align=center colspan=3>&nbsp;</td>
+
+<td>M = M + 1</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td>JMP</td>
+<td>&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>0E</td>
+<td align=center>3</td>
+<td align=center>2</td>
+
+<td align=center>6E</td>
+<td align=center>3+</td>
+<td align=center>2+</td>
+
+<td align=center>7E</td>
+<td align=center>4</td>
+<td align=center>3</td>
+
+<td align=center colspan=3>&nbsp;</td>
+
+<td>pc = EA</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td>JSR</td>
+<td>&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>9D</td>
+<td align=center>7</td>
+<td align=center>2</td>
+
+<td align=center>AD</td>
+<td align=center>7+</td>
+<td align=center>2+</td>
+
+<td align=center>BD</td>
+<td align=center>8</td>
+<td align=center>3</td>
+
+<td align=center colspan=3>&nbsp;</td>
+
+<td>jump to subroutine</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+</table>
+<!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; part 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>
+<hr>
+<p>
+<table border=1 cellspacing=0 width=100%>
+<td colspan=23 align=center>6809 Instruction Set</td>
+<tr>
+
+<td rowspan=3 valign=bottom>Instruction</td>
+<td rowspan=3 valign=bottom>Mnemonic</td>
+<td colspan=15 Align=center>Addressing Mode</td>
+<td rowspan=3 valign=bottom align=center>Description</td>
+<td colspan=5 align=center>CC bit</td>
+<tr>
+
+
+<td colspan=3 Align=center>Immediate</td>
+<td colspan=3 Align=center>Direct</td>
+<td colspan=3 Align=center>Indexed</td>
+<td colspan=3 Align=center>Extended</td>
+<td colspan=3 Align=center>Inherent</td>
+<td >5</td>
+<td>3</td>
+<td >2</td>
+<td>1</td>
+<td >0</td>
+
+<tr>
+<!&nbsp; immediate>
+<td align=center>Op</td>
+<td align=center>~</td>
+<td align=center>#</td>
+
+<!&nbsp; direct>
+<td align=center>Op</td>
+<td align=center>~</td>
+<td align=center>#</td>
+
+<!&nbsp; Indexed>
+<td align=center>Op</td>
+<td align=center>~</td>
+<td align=center>#</td>
+
+<!&nbsp; Extended>
+<td align=center>Op</td>
+<td align=center>~</td>
+<td align=center>#</td>
+
+<!&nbsp; inherent>
+<td align=center>Op</td>
+<td align=center>~</td>
+<td align=center>#</td>
+
+<td align=center>H</td>
+<td align=center>N</td>
+<td align=center>Z</td>
+<td align=center>V</td>
+<td align=center>C</td>
+
+
+<tr>
+<td rowspan=7>LD</td>
+
+<td align=center valign = top>LDA</td>
+
+<td valign=top>86</td>
+<td valign=top>2</td>
+<td valign=top>2</td>
+
+<td valign=top>96</td>
+<td valign=top>4 </td>
+<td valign=top>2 </td>
+
+
+<td valign=top>A6  </td>
+<td valign=top>4+  </td>
+<td valign=top>2+  </td>
+
+<td valign=top>B6  </td>
+<td valign=top>5   </td>
+<td valign=top>3   </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>A = M</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<td valign=top>0</td>
+<td valign=top>&nbsp;</td>
+<tr>
+
+<td align=center valign = top>LDB</td>
+
+<td valign=top>C6 </td>
+<td valign=top>2  </td>
+<td valign=top>2  </td>
+
+<td valign=top>D6 </td>
+<td valign=top>4  </td>
+<td valign=top>2  </td>
+
+
+<td valign=top>E6 </td>
+<td valign=top>4+ </td>
+<td valign=top>2+ </td>
+
+<td valign=top>F6 </td>
+<td valign=top>5  </td>
+<td valign=top>3  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>B = M</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<td valign=top>0</td>
+<td valign=top>&nbsp;</td>
+<tr>
+
+
+<td align=center>LDD</td>
+
+<td align=center>CC</td>
+<td valign=top>3  </td>
+<td valign=top>3  </td>
+
+<td valign=top>DC </td>
+<td valign=top>5 </td>
+<td valign=top>2 </td>
+
+
+<td valign=top>EC</td>
+<td valign=top>5+ </td>
+<td valign=top>2+ </td>
+
+<td valign=top>FC</td>
+<td valign=top>6  </td>
+<td valign=top>3  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>D = M:M+1</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td align=center>LDS</td>
+
+<td align=center>10<br>CE</td>
+<td valign=top>4 </td>
+<td valign=top>4 </td>
+
+<td valign=top>10<br>DE</td>
+<td valign=top>6 </td>
+<td valign=top>3 </td>
+
+
+<td valign=top>10<br>EE </td>
+<td valign=top>6+ </td>
+<td valign=top>3+ </td>
+
+<td valign=top>10 <br>FE </td>
+<td valign=top>7  </td>
+<td valign=top>4  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>S = M:M+1</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td align=center>LDU</td>
+
+<td align=center>CE</td>
+<td valign=top>3  </td>
+<td valign=top>3  </td>
+
+<td valign=top>DE</td>
+<td valign=top>5  </td>
+<td valign=top>2  </td>
+
+
+<td valign=top>EE </td>
+<td valign=top>5+ </td>
+<td valign=top>2+ </td>
+
+<td valign=top>FE </td>
+<td valign=top>6  </td>
+<td valign=top>3  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>U = M:M+1</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td align=center>LDX</td>
+
+<td align=center>8E</td>
+<td valign=top>3  </td>
+<td valign=top>3  </td>
+
+<td valign=top>9E </td>
+<td valign=top>5  </td>
+<td valign=top>2  </td>
+
+
+<td valign=top>AE </td>
+<td valign=top>5+ </td>
+<td valign=top>2+ </td>
+
+<td valign=top>BE </td>
+<td valign=top>6  </td>
+<td valign=top>3  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>X = M:M+1</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td align=center>LDY</td>
+
+<td align=center>10 <br>8E</td>
+<td valign=top>4  </td>
+<td valign=top>4  </td>
+
+<td valign=top>10 <br>9E </td>
+<td valign=top>6  </td>
+<td valign=top>3  </td>
+
+
+<td valign=top>10 <br>AE </td>
+<td valign=top>6+ </td>
+<td valign=top>3+ </td>
+
+<td valign=top>10 <br>BE </td>
+<td valign=top>7  </td>
+<td valign=top>4  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>Y = M:M+1</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+
+<td rowspan=4>LEA</td>
+
+<td align=center valign = top>LEAS</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>32</td>
+<td valign=top>4+</td>
+<td valign=top>2+</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>S = EA</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>&nbsp;</td>
+<tr>
+
+<td align=center valign = top>LEAU</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>33</td>
+<td valign=top>4+</td>
+<td valign=top>2+</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>U = EA</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>&nbsp;</td>
+<tr>
+
+<td align=center valign = top>LEAX</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>30</td>
+<td valign=top>4+</td>
+<td valign=top>2+</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>X = EA</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>+</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>&nbsp;</td>
+<tr>
+
+<td align=center valign = top>LEAY</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>31</td>
+<td valign=top>4+</td>
+<td valign=top>2+</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>Y = EA</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>+</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>&nbsp;</td>
+<tr>
+
+
+<td rowspan=3>LSL</td>
+<td align=center>LSLA</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>48</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+<td rowspan=3 align=center>Logical<br>shift<br>left</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>LSLB</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>58</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>LSL</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>08</td>
+<td align=center>6</td>
+<td align=center>2</td>
+
+<td align=center>68</td>
+<td align=center>6+</td>
+<td align=center>2+</td>
+
+<td align=center>78</td>
+<td align=center>7</td>
+<td align=center>3</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td rowspan=3>LSR</td>
+<td align=center>LSRA</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>44</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+<td rowspan=3 align=center>Logical<br>shift<br>right</td>
+<td align=center>&nbsp;</td>
+<td align=center>0</td>
+<td align=center>+</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>LSRB</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>54</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+
+<td align=center>&nbsp;</td>
+<td align=center>0</td>
+<td align=center>+</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>LSR</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>04</td>
+<td align=center>6</td>
+<td align=center>2</td>
+
+<td align=center>64</td>
+<td align=center>6+</td>
+<td align=center>2+</td>
+
+<td align=center>74</td>
+<td align=center>7</td>
+<td align=center>3</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>0</td>
+<td align=center>+</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<tr>
+
+<td>MUL</td>
+<td>&nbsp;</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td align=center>3D</td>
+<td align=center>11</td>
+<td align=center>1</td>
+<td align=center>D = A*B (Unsigned)
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>&nbsp;</td>
+<td align=center>9</td>
+<tr>
+
+<td rowspan=3>NEG</td>
+<td align=center>NEGA</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>40</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+<td align=center>A = !A + 1</td>
+<td align=center>8</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>NEGB</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>50</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+<td align=center>B = !B + 1</td>
+<td align=center>8</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>NEG</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>00</td>
+<td align=center>6</td>
+<td align=center>2</td>
+
+<td align=center>60</td>
+<td align=center>6+</td>
+<td align=center>2+</td>
+
+<td align=center>70</td>
+<td align=center>7</td>
+<td align=center>3</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>M = !M + 1</td>
+<td align=center>8</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td>NOP</td>
+<td>&nbsp;</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td align=center>12</td>
+<td align=center>2</td>
+<td align=center>1</td>
+<td align=center>No Operation</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td rowspan=3>OR</td>
+<td align=center>ORA</td>
+
+<td valign=top>8A</td>
+<td valign=top>2 </td>
+<td valign=top>2 </td>
+
+<td valign=top>9A </td>
+<td valign=top>4 </td>
+<td valign=top>2 </td>
+
+<td valign=top>AA </td>
+<td valign=top>4+ </td>
+<td valign=top>2+ </td>
+
+<td valign=top>BA </td>
+<td valign=top>5 </td>
+<td valign=top>3 </td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top align=center>A = A || M</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<td valign=top>0</td>
+<td valign=top>&nbsp;</td>
+<tr>
+<td align=center>ORB</td>
+
+<td valign=top>CA</td>
+<td valign=top>2</td>
+<td valign=top>2</td>
+
+<td valign=top>DA</td>
+<td valign=top>4</td>
+<td valign=top>2</td>
+
+<td valign=top>EA</td>
+<td valign=top>4+</td>
+<td valign=top>2+</td>
+
+<td valign=top>FA</td>
+<td valign=top>5</td>
+<td valign=top>3</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top align=center>B = B || M</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<td valign=top>0</td>
+<td valign=top>&nbsp;</td>
+<tr>
+
+<td align=center>ORCC</td>
+
+<td valign=top>1A</td>
+<td valign=top>3</td>
+<td valign=top>2</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>C = CC || IMM</td>
+<td align=center>?</td>
+<td align=center>?</td>
+<td align=center>?</td>
+<td align=center>?</td>
+<td align=center>?</td>
+<tr>
+
+<td rowspan=2>PSH</td>
+<td align=center>PSHS</td>
+<td valign=top>34 </td>
+<td valign=top>5+</td>
+<td valign=top>2</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td align=center>Push Registers on S Stack</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td align=center>PSHU</td>
+<td valign=top>36</td>
+<td valign=top>5+</td>
+<td valign=top>2</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td align=center>Push Registers on U Stack</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td rowspan=2>PUL</td>
+<td align=center>PULS</td>
+<td valign=top>35 </td>
+<td valign=top>5+</td>
+<td valign=top>2</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td align=center>Pull Registers from S Stack</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td align=center>PULU</td>
+<td valign=top>37</td>
+<td valign=top>5+</td>
+<td valign=top>2</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td align=center>Pull Registers from U Stack</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td rowspan=3>ROL</td>
+<td align=center>ROLA</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>49</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+<td rowspan=3 align=center>Rotate left thru carry</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>ROLB</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>59</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>ROL</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>09</td>
+<td align=center>6</td>
+<td align=center>2</td>
+
+<td align=center>69</td>
+<td align=center>6+</td>
+<td align=center>2+</td>
+
+<td align=center>79</td>
+<td align=center>7</td>
+<td align=center>3</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td rowspan=3>ROR</td>
+<td align=center>RORA</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>46</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+<td rowspan=3 align=center>Rotate Right thru carry</td>
+<td align=center>&nbsp;</td>
+<td align=center>0</td>
+<td align=center>+</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>RORB</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>56</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+
+<td align=center>&nbsp;</td>
+<td align=center>0</td>
+<td align=center>+</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>ROR</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>06</td>
+<td align=center>6</td>
+<td align=center>2</td>
+
+<td align=center>66</td>
+<td align=center>6+</td>
+<td align=center>2+</td>
+
+<td align=center>76</td>
+<td align=center>7</td>
+<td align=center>3</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>&nbsp;</td>
+<td align=center>0</td>
+<td align=center>+</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<tr>
+
+<td>RTI</td>
+<td>&nbsp;</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td align=center>3B</td>
+<td align=center>6/15</td>
+<td align=center>1</td>
+<td align=center>Return from Interrupt</td>
+<td align=center>?</td>
+<td align=center>?</td>
+<td align=center>?</td>
+<td align=center>?</td>
+<td align=center>?</td>
+<tr>
+
+<td>RTS</td>
+<td>&nbsp;</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td align=center>39</td>
+<td align=center>5</td>
+<td align=center>1</td>
+<td align=center>Return from subroutine</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td rowspan=2>SBC</td>
+<td align=center>SBCA</td>
+
+<td valign=top>82</td>
+<td valign=top>2 </td>
+<td valign=top>2 </td>
+
+<td valign=top>92 </td>
+<td valign=top>4 </td>
+<td valign=top>2 </td>
+
+<td valign=top>A2 </td>
+<td valign=top>4+ </td>
+<td valign=top>2+ </td>
+
+<td valign=top>B2 </td>
+<td valign=top>5 </td>
+<td valign=top>3 </td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top align=center>A = A - M - C</td>
+<td valign=top>8</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<tr>
+<td align=center>SBCB</td>
+
+<td valign=top>C2</td>
+<td valign=top>2</td>
+<td valign=top>2</td>
+
+<td valign=top>D2</td>
+<td valign=top>4</td>
+<td valign=top>2</td>
+
+<td valign=top>E2</td>
+<td valign=top>4+</td>
+<td valign=top>2+</td>
+
+<td valign=top>F2</td>
+<td valign=top>5</td>
+<td valign=top>3</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top align=center>B = B - M - C</td>
+<td valign=top>8</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<tr>
+
+
+<td>SEX</td>
+<td>&nbsp;</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td align=center>1D</td>
+<td align=center>2</td>
+<td align=center>1</td>
+<td align=center>Sign extend B into A</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td rowspan=7>ST</td>
+
+<td align=center valign = top>STA</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>97</td>
+<td valign=top>4 </td>
+<td valign=top>2 </td>
+
+
+<td valign=top>A7  </td>
+<td valign=top>4+  </td>
+<td valign=top>2+  </td>
+
+<td valign=top>B7  </td>
+<td valign=top>5   </td>
+<td valign=top>3   </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>M = A</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<td valign=top>0</td>
+<td valign=top>&nbsp;</td>
+<tr>
+
+<td align=center valign = top>STB</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>D7 </td>
+<td valign=top>4  </td>
+<td valign=top>2  </td>
+
+
+<td valign=top>E7 </td>
+<td valign=top>4+ </td>
+<td valign=top>2+ </td>
+
+<td valign=top>F7 </td>
+<td valign=top>5  </td>
+<td valign=top>3  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>M = B</td>
+<td valign=top>&nbsp;</td>
+<td valign=top>+</td>
+<td valign=top>+</td>
+<td valign=top>0</td>
+<td valign=top>&nbsp;</td>
+<tr>
+
+
+<td align=center>STD</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>DD </td>
+<td valign=top>5 </td>
+<td valign=top>2 </td>
+
+
+<td valign=top>ED</td>
+<td valign=top>5+ </td>
+<td valign=top>2+ </td>
+
+<td valign=top>FD</td>
+<td valign=top>6  </td>
+<td valign=top>3  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>M:M+1 = D</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td align=center>STS</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>10<br>DF</td>
+<td valign=top>6 </td>
+<td valign=top>3 </td>
+
+
+<td valign=top>10<br>EF </td>
+<td valign=top>6+ </td>
+<td valign=top>3+ </td>
+
+<td valign=top>10 <br>FF </td>
+<td valign=top>7  </td>
+<td valign=top>4  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>M:M+1 = S</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td align=center>STU</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>DF</td>
+<td valign=top>5  </td>
+<td valign=top>2  </td>
+
+
+<td valign=top>EF </td>
+<td valign=top>5+ </td>
+<td valign=top>2+ </td>
+
+<td valign=top>FF </td>
+<td valign=top>6  </td>
+<td valign=top>3  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>M:M+1 = U</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td align=center>STX</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>9F </td>
+<td valign=top>5  </td>
+<td valign=top>2  </td>
+
+
+<td valign=top>AF </td>
+<td valign=top>5+ </td>
+<td valign=top>2+ </td>
+
+<td valign=top>BF </td>
+<td valign=top>6  </td>
+<td valign=top>3  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>M:M+1 = X</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td align=center>STY</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>10 <br>9F </td>
+<td valign=top>6  </td>
+<td valign=top>3  </td>
+
+
+<td valign=top>10 <br>AF </td>
+<td valign=top>6+ </td>
+<td valign=top>3+ </td>
+
+<td valign=top>10 <br>BF </td>
+<td valign=top>7  </td>
+<td valign=top>4  </td>
+
+
+<td colspan=3 align=center>&nbsp;</td>
+
+<td align=center>M:M+1 = Y</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td rowspan=3>SUB</td>
+
+<td align=center>SUBA</td>
+<td valign=top>80</td>
+<td valign=top>2</td>
+<td valign=top>2</td>
+
+<td valign=top>90</td>
+<td valign=top>4</td>
+<td valign=top>2</td>
+
+<td valign=top>A0</td>
+<td valign=top>4+</td>
+<td valign=top>2+</td>
+
+<td valign=top>B0</td>
+<td valign=top>5</td>
+<td valign=top>3</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td align=center>A = A - M</td>
+<td align=center>8</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>SUBB</td>
+<td valign=top>C0</td>
+<td valign=top>2</td>
+<td valign=top>2</td>
+
+<td valign=top>D0</td>
+<td valign=top>4</td>
+<td valign=top>2</td>
+
+<td valign=top>E0</td>
+<td valign=top>4+</td>
+<td valign=top>2+</td>
+
+<td valign=top>F0</td>
+<td valign=top>5</td>
+<td valign=top>3</td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td align=center>B = B - M</td>
+<td align=center>8</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td align=center>SUBD</td>
+<td valign=top>83</td>
+<td valign=top>4 </td>
+<td valign=top>3 </td>
+
+<td valign=top>93</td>
+<td valign=top>6 </td>
+<td valign=top>2 </td>
+
+<td valign=top>A3</td>
+<td valign=top>6+</td>
+<td valign=top>2+</td>
+
+<td valign=top>B3</td>
+<td valign=top>7 </td>
+<td valign=top>3 </td>
+
+<td colspan=3 align=center>&nbsp;</td>
+<td align=center>D = D - M:M+1</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<tr>
+
+<td rowspan=3>SWI</td>
+
+<td align=center>SWI</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>3F</td>
+<td valign=top>19</td>
+<td valign=top>1 </td>
+
+<td align=center>Software interrupt 1</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td align=center>SWI2</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>10 <br>3F</td>
+<td valign=top>20</td>
+<td valign=top>2 </td>
+
+<td align=center>Software interrupt 2</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td align=center>SWI3</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+
+<td valign=top>11 <br>3F</td>
+<td valign=top>20</td>
+<td valign=top>2 </td>
+
+<td align=center>Software interrupt 3</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td>SYNC</td>
+<td>&nbsp;</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td align=center>13</td>
+<td align=center>&gt;=<br>4 </td>
+<td align=center>1 </td>
+<td align=center>Synchronize to Interrupt</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td>TFR</td>
+<td>R1,R2</td>
+<td>1F </td>
+<td>6</td>
+<td>2</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+<td colspan=3 align=center>&nbsp;</td>
+               
+<td>R2 = R1</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td rowspan=3>TST</td>
+<td align=center>TSTA</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>4D</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+<td align=center>Test A</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td align=center>TSTB</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>5D</td>
+<td align=center>2</td>
+<td align=center>1</td>
+
+<td align=center>Test B</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+<td align=center>TST</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>0D</td>
+<td align=center>6</td>
+<td align=center>2</td>
+
+<td align=center>6D</td>
+<td align=center>6+</td>
+<td align=center>2+</td>
+
+<td align=center>7D</td>
+<td align=center>7</td>
+<td align=center>3</td>
+
+<td colspan=3 align=center >&nbsp;</td>
+
+<td align=center>Test M</td>
+<td align=center>&nbsp;</td>
+<td align=center>+</td>
+<td align=center>+</td>
+<td align=center>0</td>
+<td align=center>&nbsp;</td>
+<tr>
+
+
+</table>
+<p>
+<hr>
+<table border=1 cellspacing=0>
+<td colspan=3>Legend:</td>
+<tr>
+<td> ! Complement of M</td>
+<td> + Test and set if true,<br> cleared otherwise</td>
+<td> OP Operation Code(Hexadecimal)</td>
+<tr>
+<td> = Transfer from</td>
+<td> - Not Affected </td>
+<td> ~ Number of MPU Cycles</td>
+<tr>
+<td> H Half&nbsp;carry (from bit 3)</td>
+<td> CC Condition Code Register</td>
+<td> # Number of Program Bytes</td>
+<tr>
+<td> N Negative (sign bit)</td>           :  
+<td> : Concatenation</td>
+<td> + Arithmetic Plus</td>
+<tr>
+<td> Z Zero (Reset)</td>
+<td> || Logical or</td>
+<td> &nbsp; Arithmetic Minus</td>
+<tr>
+<td> V Overflow, 2's complement</td>
+<td> && Logical and</td>
+<td> * Multiply</td>
+<tr>
+<td> C Carry from ALU</td>
+<td>EOR Logical Exclusive or</td>
+<td>EA Effective Address:w
+</td>
+</table>
+<p>
+
+
+<hr>
+<p>
+<B>Notes:</B>
+<blockquote> 
+1. This column gives a base cycle and byte count. To obtain total count,
+add the values obtained from the INDEXED ADDRESSING MODE table,
+in Appendix F.<p>
+
+2. Rl and R2 may be any pair of 8 bit or any pair of 16 bit registers.<br>
+The 8 bit registers are: A, B, CC, DP<br>
+The 16 bit registers are: X, Y, U, S, D, PC<p>
+
+3. EA is the effective address.<p>
+
+4. The PSH and PUL instructions require 5 cycles plus 1 cycle for each byte
+pushed or pulled.<p>
+
+5. 5(6) means: 5 cycles if branch not taken, 6 cycles if taken (Branch
+instructions.<p>
+
+6. SWI sets I and F bits. SW12 and SW13 do not affect I and F.<p>
+
+7. Conditions Codes set as a direct result of the instruction.<p>
+
+8. Value of half&nbsp;carry flag is undefined.<p>
+
+9. Special Case &nbsp; Carry set if b7 is SET.<p>
+
+</blockquote>
+<hr>
+<pre>
+                       Mode
+                      Relstive                        5 3 2 1 O
+Instruction   Forms  OP          Decription         H N Z V C
+
+BCC          BCC     24 3 /     2 Branch C=O
+             LBCC    10 5l6)    4 Long Branch
+                     24            C=O
+
+BCS          BCS     25 3       2 Branch C= 1
+             LBCS    10 56)    4 Long Branch
+                     25            C=l
+
+BEQ          BEQ     27 3       2 Branch Z=O
+             LBEQ    10 5(6)    4 Long Branch
+                     27            Z=O
+
+BGE          BGE     2C 3       2 Branch2Zero
+             LBGE    10 5(6)    4 Long Branch2Zero
+                     2C
+
+BGT          BGT     2E 3       2 Branch > Zero
+             LBGT    10 5(6)    4 Long Branch>Zero
+                     2E
+
+BHI          BHI     22 3       2 Branch rligher
+             LBHI    10 5(6)    4 Long Branch Higher
+                     22
+
+BHS          BHS     24 3       2 Branch Higher
+                                   or Same
+             LBHS    10 516)    4 Long Branch Higher
+                     24            or Same
+
+BLE          BLE     2F 3       2 BranchsZero
+             LBLE    10 5(6)    4 Long BranchsZero
+                     2F
+
+BLO          BLO     25 3       2 Branch lower
+             LBLO    10 56)    4 Long Branch Lower
+                     25
+
+
+
+    Addressin        T
+       Mode
+      Rela         5 3 2 1 ,0
+Instruction Forms OP &nbsp; #    Description H N Z V C
+
+BLS     BLS   23 3     2 Branch Lower
+                          or Same
+        LBLS  10 5(6)  4 Long Branch Lower
+              23          or Same
+
+BLT     BLT   2D 3     2 Branch<Zero
+        LBLT  10 5i6)  4 Long Branch<Zero
+              2D
+
+BMI     BMI   2B 3     2 Branch Minus
+        LBMI  10 5(6)  4 Long Branch Minus
+              2B
+
+BNE     BNE   26 3     2 Branch ZtO
+        LBNE  10 5(6)  4 Long Branch
+              26          Z0
+
+BPL     BPL   2A "      Branch Plus
+        LBPL  10 5i6)  4 Long Branch Plus
+              2A
+
+BRA     BRA   20  3    2 Branch Alwavs
+        LBRA  16  5    3 Long Branch Always
+
+BRN     BRN   21  3    2 Branch Never
+        LBRN  10  5    4 Long Branch Never
+              21
+
+BSR     BSR   8D  7    2 Branch to Subroutine
+        LBSR  17  9    3 Long Branch to
+                          Subroutine
+
+BVC     BVC   28  3    2 Banch V=0
+        LBVC 10 5(61 4 Long Branch
+              28          V=0
+
+BVS     BVS   29 3     2 Branch V= 1
+        LBVS  10 5(6)  4 Long Branch
+              29          V=l
+
+</pre>
+</body>
+</html>
+
+
+
