@@ -159,8 +159,6 @@ branching)
 
 ### MAME Debugger
 
-    ./mame64 vectrex yelp_logo_bounce -debug
-    wpset c880,1,rw
-    wplist
+    See mame/README.md
 
 // vim: number! list!
