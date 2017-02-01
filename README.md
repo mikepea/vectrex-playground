@@ -30,6 +30,16 @@ Handy Links
 ### Chris Salomon Tutorial
 
 * http://www.playvectrex.com/designit/chrissalo/toc.htm
+* http://malban.de/oldies/vectrex
+
+### Frank Buss
+
+* Bloxorz and how to isometric view: http://www.frank-buss.de/vectrex/
+* https://github.com/frankbuss
+
+### GCC on 6809
+
+* https://github.com/bcd/gcc
 
 6809 Assembly Quick Notes
 -------------------------
@@ -142,6 +152,15 @@ branching)
 
 ### Handy code snippets:
 
+   ships_left EQU $C880
    kill_ship:
      DEC ships_left    ;Decrement the number of ships left by 1
      BEQ game_over     ;Check if that was the last ship, and branch if it was
+
+### MAME Debugger
+
+    ./mame64 vectrex yelp_logo_bounce -debug
+    wpset c880,1,rw
+    wplist
+
+// vim: number! list!

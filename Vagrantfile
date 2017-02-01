@@ -47,7 +47,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       apt-get update
       apt-get install -yq \
           --no-install-recommends \
-          gcc-multilib lib32stdc++6 dos2unix git
+          gcc-multilib lib32stdc++6 dos2unix git inotify-tools \
+          libgmp-dev libmpfr-dev
       install -m 0755 /vagrant/as09_142/as09 /usr/local/bin/as09
       install -m 0755 /vagrant/bin/myasm /usr/local/bin/myasm
     SHELL
