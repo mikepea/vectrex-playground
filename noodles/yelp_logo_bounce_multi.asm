@@ -26,8 +26,8 @@ MIN_X           equ     -100
 
 INITIAL_X       equ     24
 INITIAL_Y       equ     -2
-INITIAL_X_DIR       equ     +5
-INITIAL_Y_DIR       equ     +7
+INITIAL_X_DIR       equ     +4
+INITIAL_Y_DIR       equ     +4
 
 watch1          equ     $C880
 watch2          equ     $C881
@@ -54,18 +54,29 @@ init:
                 sta     burst_y_dir_offset,x
                 lda     #INITIAL_X_DIR ; initial X dir
                 sta     burst_x_dir_offset,x
-                lda     #$7f
+                lda     #$af
                 sta     burst_scaling_offset,x
 
                 ldx     #burst2_addr
-                lda     #INITIAL_Y + 5
-                ldb     #INITIAL_X - 5
+                lda     #INITIAL_Y - 15
+                ldb     #INITIAL_X - 15
                 std     burst_position_offset,x
-                lda     #INITIAL_Y_DIR + 1
+                lda     #INITIAL_Y_DIR
                 sta     burst_y_dir_offset,x
-                lda     #INITIAL_X_DIR - 1
+                lda     #INITIAL_X_DIR
                 sta     burst_x_dir_offset,x
-                lda     #$af
+                lda     #$7f
+                sta     burst_scaling_offset,x
+
+                ldx     #burst3_addr
+                lda     #INITIAL_Y - 30
+                ldb     #INITIAL_X - 30
+                std     burst_position_offset,x
+                lda     #INITIAL_Y_DIR
+                sta     burst_y_dir_offset,x
+                lda     #INITIAL_X_DIR
+                sta     burst_x_dir_offset,x
+                lda     #$50
                 sta     burst_scaling_offset,x
 
 main:
@@ -79,6 +90,13 @@ main:
                 jsr     recalibrate
 
                 ldx     #burst2_addr
+                jsr     move_burst_position
+                jsr     set_intensity_scaling_x
+                jsr     draw_yelp_burst
+
+                jsr     recalibrate
+
+                ldx     #burst3_addr
                 jsr     move_burst_position
                 jsr     set_intensity_scaling_x
                 jsr     draw_yelp_burst
