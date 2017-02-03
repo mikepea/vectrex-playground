@@ -42,90 +42,90 @@
 ;  ===================
 ;
 ;
-REG0     EQU     $C800            ;  SOUND GENERATOR (PSG) MIRROR IMAGE
-REG2     EQU     $C802            ;  .
+REG0     equ     $C800            ;  SOUND GENERATOR (PSG) MIRROR IMAGE
+REG2     equ     $C802            ;  .
 ;
-TRIGGR   EQU     $C80F            ;  COLLECTIVE SWITCH SETTINGS
-KEY0     EQU     $C812            ;  CONTROLLER #1 - SWITCH #0 (LEFT)
-KEY1     EQU     $C813            ;  .
-KEY2     EQU     $C814            ;  .
-KEY3     EQU     $C815            ;  .             - SWITCH #3 (RIGHT)
+TRIGGR   equ     $C80F            ;  COLLECTIVE SWITCH SETTINGS
+KEY0     equ     $C812            ;  CONTROLLER #1 - SWITCH #0 (LEFT)
+KEY1     equ     $C813            ;  .
+KEY2     equ     $C814            ;  .
+KEY3     equ     $C815            ;  .             - SWITCH #3 (RIGHT)
 ;
-POT0     EQU     $C81B            ;  JOYSTICK #1 - 'X' AXIS
-POT1     EQU     $C81C            ;  .           - 'Y' AXIS
+POT0     equ     $C81B            ;  JOYSTICK #1 - 'X' AXIS
+POT1     equ     $C81C            ;  .           - 'Y' AXIS
 ;
-EPOT0    EQU     $C81F            ;  ENABLE POT READ
-EPOT2    EQU     $C821            ;  .
+EPOT0    equ     $C81F            ;  ENABLE POT READ
+EPOT2    equ     $C821            ;  .
 ;
-LIST     EQU     $C823            ;  NUMBER OF VECTORS - 1
-ZSKIP    EQU     $C824            ;  SKIP INTEGRATOR ZEROING AND ACTIVE GROUND
-FRAME    EQU     $C826            ;  FRAME COUNTER
+LIST     equ     $C823            ;  NUMBER OF VECTORS - 1
+ZSKIP    equ     $C824            ;  SKIP INTEGRATOR ZEROING AND ACTIVE GROUND
+FRAME    equ     $C826            ;  FRAME COUNTER
 ;
-SIZRAS   EQU     $C82A            ;  RASTER MESSAGE SIZE
-LEG      EQU     $C83B            ;  EXECUTIVE WORKING STORAGE
-TSTAT    EQU     $C856            ;  TUNE STATUS
+SIZRAS   equ     $C82A            ;  RASTER MESSAGE SIZE
+LEG      equ     $C83B            ;  EXECUTIVE WORKING STORAGE
+TSTAT    equ     $C856            ;  TUNE STATUS
 ;
-PLAYRS   EQU     $C879            ;  NUMBER OF PLAYERS IN GAME
-OPTION   EQU     $C87A            ;  GAME OPTION NUMBER
+PLAYRS   equ     $C879            ;  NUMBER OF PLAYERS IN GAME
+OPTION   equ     $C87A            ;  GAME OPTION NUMBER
 ;
-HISCOR   EQU     $CBEB            ;  HIGH-SCORE
-;
-;
-T1LOLC   EQU     $D004            ;  TIMER #1 (LSB)
+HISCOR   equ     $CBEB            ;  HIGH-SCORE
 ;
 ;
-PWRUP    EQU     $F000            ;  POWER-UP HANDLER
-COLD0    EQU     $F01C            ;  VECTREX RESTART ENTRY FOR MINE-STORM
-INTALL   EQU     $F18B            ;  COMPLETE INTIALIZATION
-FRWAIT   EQU     $F192            ;  WAIT FOR FRAME BOUNDARY
+T1LOLC   equ     $D004            ;  TIMER #1 (LSB)
 ;
-DPIO     EQU     $F1AA            ;  SET DIRECT REGISTER
-DPRAM    EQU     $F1AF            ;  .
 ;
-DBNCE    EQU     $F1B4            ;  READ CONTROLLER BUTTONS
-INPUT    EQU     $F1BA            ;  .
-JOYBIT   EQU     $F1F8            ;  READ JOYSTICKS
+PWRUP    equ     $F000            ;  POWER-UP HANDLER
+COLD0    equ     $F01C            ;  VECTREX RESTART ENTRY FOR MINE-STORM
+INTALL   equ     $F18B            ;  COMPLETE INTIALIZATION
+FRWAIT   equ     $F192            ;  WAIT FOR FRAME BOUNDARY
 ;
-WRREG    EQU     $F256            ;  WRITE TO PSG
-INTPSG   EQU     $F272            ;  INITIALIZE SOUND GENERATOR
-PSGLST   EQU     $F27D            ;  SEND SOUND STRING TO PSG
-REQOUT   EQU     $F289            ;  SEND 'REQX' TO PSG AND MIRROR
+DPIO     equ     $F1AA            ;  SET DIRECT REGISTER
+DPRAM    equ     $F1AF            ;  .
 ;
-INT3Q    EQU     $F2A5            ;  SET INTENSITY
-INTMAX   EQU     $F2A9            ;  .
-INTENS   EQU     $F2AB            ;  .
+DBNCE    equ     $F1B4            ;  READ CONTROLLER BUTTONS
+INPUT    equ     $F1BA            ;  .
+JOYBIT   equ     $F1F8            ;  READ JOYSTICKS
 ;
-DOTAB    EQU     $F2C3            ;  DRAW ONE DOT FROM THE CONTENTS OF 'A' & 'B'
-DIFDOT   EQU     $F2D5            ;  DRAW DOTS ACCORDING TO 'DIFFY' FORMAT
+WRREG    equ     $F256            ;  WRITE TO PSG
+INTPSG   equ     $F272            ;  INITIALIZE SOUND GENERATOR
+PSGLST   equ     $F27D            ;  SEND SOUND STRING TO PSG
+REQOUT   equ     $F289            ;  SEND 'REQX' TO PSG AND MIRROR
 ;
-DEFLOK   EQU     $F2E6            ;  OVER-COME SCAN COLLAPSE CIRCUITRY
-POSWID   EQU     $F2F2            ;  POSITION RELATIVE VECTOR
-POSITD   EQU     $F2FC            ;  .
-POSITN   EQU     $F312            ;  .
-ZERGND   EQU     $F354            ;  ZERO INTEGRATORS AND SET ACTIVE GROUND
-RSTSIZ   EQU     $F373            ;  DISPLAY RASTER MESSAGE
+INT3Q    equ     $F2A5            ;  SET INTENSITY
+INTMAX   equ     $F2A9            ;  .
+INTENS   equ     $F2AB            ;  .
 ;
-TPACK    EQU     $F40E            ;  DRAW FROM 'PACKET' STYLE LIST
-PACKET   EQU     $F410            ;  .
-RASTER   EQU     $F495            ;  DISPLAY RASTER STRING
+DOTAB    equ     $F2C3            ;  DRAW ONE DOT FROM THE CONTENTS OF 'A' & 'B'
+DIFDOT   equ     $F2D5            ;  DRAW DOTS ACCORDING TO 'DIFFY' FORMAT
 ;
-RANDOM   EQU     $F517            ;  CALCULATE RANDOM NUMBER
-BCLR     EQU     $F53F            ;  CLEAR MEMORY BLOCK
-CMPASS   EQU     $F593            ;  DETERMINE ANGLE FROM DELTA 'Y:X'
-LNROT    EQU     $F601            ;  SINGLE LINE ROTATE
-PROT     EQU     $F61F            ;  'PACKET' STYLE ROTATE
+DEFLOK   equ     $F2E6            ;  OVER-COME SCAN COLLAPSE CIRCUITRY
+POSWID   equ     $F2F2            ;  POSITION RELATIVE VECTOR
+POSITD   equ     $F2FC            ;  .
+POSITN   equ     $F312            ;  .
+ZERGND   equ     $F354            ;  ZERO INTEGRATORS AND SET ACTIVE GROUND
+RSTSIZ   equ     $F373            ;  DISPLAY RASTER MESSAGE
 ;
-REPLAY   EQU     $F687            ;  SET 'REQX' FOR GIVEN TUNE
-SPLAY    EQU     $F68D            ;  .
+TPACK    equ     $F40E            ;  DRAW FROM 'PACKET' STYLE LIST
+PACKET   equ     $F410            ;  .
+RASTER   equ     $F495            ;  DISPLAY RASTER STRING
 ;
-SELOPT   EQU     $F7A9            ;  FETCH GAME OPTIONS
+RANDOM   equ     $F517            ;  CALCULATE RANDOM NUMBER
+BCLR     equ     $F53F            ;  CLEAR MEMORY BLOCK
+CMPASS   equ     $F593            ;  DETERMINE ANGLE FROM DELTA 'Y:X'
+LNROT    equ     $F601            ;  SINGLE LINE ROTATE
+PROT     equ     $F61F            ;  'PACKET' STYLE ROTATE
 ;
-SCLR     EQU     $F84F            ;  CLEAR INDICATED SCORE
-SCRADD   EQU     $F87C            ;  ADD CONTENTS OF 'D' TO INDICATED SCORE
-HISCR    EQU     $F8D8            ;  CALCULATE HIGH SCORE AND SAVE FOR LOGO
-BXTEST   EQU     $F8FF            ;  SYMMETRIC COLLISION TEST
+REPLAY   equ     $F687            ;  SET 'REQX' FOR GIVEN TUNE
+SPLAY    equ     $F68D            ;  .
 ;
-VIBENL   EQU     $FEB6
+SELOPT   equ     $F7A9            ;  FETCH GAME OPTIONS
+;
+SCLR     equ     $F84F            ;  CLEAR INDICATED SCORE
+SCRADD   equ     $F87C            ;  ADD CONTENTS OF 'D' TO INDICATED SCORE
+HISCR    equ     $F8D8            ;  CALCULATE HIGH SCORE AND SAVE FOR LOGO
+BXTEST   equ     $F8FF            ;  SYMMETRIC COLLISION TEST
+;
+VIBENL   equ     $FEB6
 ;
 ;
 ;
@@ -139,49 +139,49 @@ VIBENL   EQU     $FEB6
 ;  ***************************************
 ;
 ;
-RATE     EQU     50               ;  FRAME RATE (HERTZ)
+RATE     equ     50               ;  FRAME RATE (HERTZ)
 ;
 ;
-THYPER   EQU     $20              ;  HYPER-SPACE TIME
+THYPER   equ     $20              ;  HYPER-SPACE TIME
 ;
-BULLETS  EQU     4                ;  NUMBER OF BULLETS
-MINES    EQU     28               ;  NUMBER OF MINES
-;
-;
-PSCOR1   EQU     $7FA0            ;  POSITION OF PLAYER #1 SCORE
-PSCOR2   EQU     $7F10            ;  POSITION OF PLAYER #2 SCORE
+BULLETS  equ     4                ;  NUMBER OF BULLETS
+MINES    equ     28               ;  NUMBER OF MINES
 ;
 ;
-P.SHPSZ  EQU     $0C              ;  INITIAL STAR-SWEEPER SIZE
-;
-P.LYRSZ  EQU     $08              ;  INITIAL MINE-LAYER SIZE
-P.LYRSP  EQU     $10              ;  MINE-LAYER SPEED OFFSET
-P.LYRBX  EQU     $0616            ;  MINE-LAYER COLLISION BOX
+PSCOR1   equ     $7FA0            ;  POSITION OF PLAYER #1 SCORE
+PSCOR2   equ     $7F10            ;  POSITION OF PLAYER #2 SCORE
 ;
 ;
-MIN.SIZ1 EQU     $10              ;  MINE #1 (LARGE) SIZE
-MIN.SIZ2 EQU     $07              ;  MINE #2
-MIN.SIZ3 EQU     $02              ;  MINE #3 (SMALLEST)
+P_SHPSZ  equ     $0C              ;  INITIAL STAR-SWEEPER SIZE
 ;
-MIN.SPD1 EQU     $10              ;  MINE #1 (LARGE) SPEED
-MIN.SPD2 EQU     $18              ;  MINE #2
-MIN.SPD3 EQU     $20              ;  MINE #3 (SMALLEST)
-;
-MIN.BOX1 EQU     $0D0D            ;  MINE #1 (LARGE) COLLISION BOX
-MIN.BOX2 EQU     $0808            ;  MINE #2
-MIN.BOX3 EQU     $0404            ;  MINE #3 (SMALLEST)
-;
-M.DUMB   EQU     $00              ;  'DUMB' MINE FLAG
-M.MAG    EQU     $01              ;  'MAGNETIC' MINE FLAG
-M.FIRE   EQU     $02              ;  'FIREBALL' MINE FLAG
-M.MFIRE  EQU     $03              ;  'MAGNETIC FIREBALL' MINE FLAG
-FIRBALL  EQU     $04              ;  'RELEASED' FIREBALL
+P_LYRSZ  equ     $08              ;  INITIAL MINE-LAYER SIZE
+P_LYRSP  equ     $10              ;  MINE-LAYER SPEED OFFSET
+P_LYRBX  equ     $0616            ;  MINE-LAYER COLLISION BOX
 ;
 ;
-S.ABRT   EQU     KEY3             ;  TITLE PAGE ABORT
-S.THRST  EQU     KEY2             ;  THRUST SWITCH
-S.FIRE   EQU     KEY3             ;  FIRE SWITCH
-S.HYPER  EQU     KEY1             ;  HYPERSPACE SWITCH
+MIN_SIZ1 equ     $10              ;  MINE #1 (LARGE) SIZE
+MIN_SIZ2 equ     $07              ;  MINE #2
+MIN_SIZ3 equ     $02              ;  MINE #3 (SMALLEST)
+;
+MIN_SPD1 equ     $10              ;  MINE #1 (LARGE) SPEED
+MIN_SPD2 equ     $18              ;  MINE #2
+MIN_SPD3 equ     $20              ;  MINE #3 (SMALLEST)
+;
+MIN_BOX1 equ     $0D0D            ;  MINE #1 (LARGE) COLLISION BOX
+MIN_BOX2 equ     $0808            ;  MINE #2
+MIN_BOX3 equ     $0404            ;  MINE #3 (SMALLEST)
+;
+M_DUMB   equ     $00              ;  'DUMB' MINE FLAG
+M_MAG    equ     $01              ;  'MAGNETIC' MINE FLAG
+M_FIRE   equ     $02              ;  'FIREBALL' MINE FLAG
+M_MFIRE  equ     $03              ;  'MAGNETIC FIREBALL' MINE FLAG
+FIRBALL  equ     $04              ;  'RELEASED' FIREBALL
+;
+;
+S_ABRT   equ     KEY3             ;  TITLE PAGE ABORT
+S_THRST  equ     KEY2             ;  THRUST SWITCH
+S_FIRE   equ     KEY3             ;  FIRE SWITCH
+S_HYPER  equ     KEY1             ;  HYPERSPACE SWITCH
 ;
 ;
 ;
@@ -194,214 +194,214 @@ S.HYPER  EQU     KEY1             ;  HYPERSPACE SWITCH
 ;  *******************************************************
 ;
 ;
-         ORG     $C880
+         org     $C880
 ;        ===     =====
 ;
-SBTN     DB      0                ;  CONTROLLER DEBOUNCE FLAGS
-SJOY     DW      0                ;  JOYSTICK 'BANG' FLAGS
+SBTN     db      0                ;  CONTROLLER DEBOUNCE FLAGS
+SJOY     dw      0                ;  JOYSTICK 'BANG' FLAGS
 ;
 ;
-ETMP1    DB      0                ;  TEMPORARY WORKING STORAGE (FIRST LEVEL)
-ETMP2    DB      0                ;  .
-ETMP3    DB      0                ;  .
-ETMP4    DB      0                ;  .
-ETMP5    DB      0                ;  .
-ETMP6    DB      0                ;  .
-ETMP7    DB      0                ;  .
-ETMP8    DB      0                ;  .
-ETMP9    DB      0                ;  .
-ETMP10   DB      0                ;  .
+ETMP1    db      0                ;  TEMPORARY WORKING STORAGE (FIRST LEVEL)
+ETMP2    db      0                ;  .
+ETMP3    db      0                ;  .
+ETMP4    db      0                ;  .
+ETMP5    db      0                ;  .
+ETMP6    db      0                ;  .
+ETMP7    db      0                ;  .
+ETMP8    db      0                ;  .
+ETMP9    db      0                ;  .
+ETMP10   db      0                ;  .
 ;
-         DW      0                ;  .    WORKING STORAGE SLOP
+         dw      0                ;  .    WORKING STORAGE SLOP
 ;
-TEMP1    DB      0                ;  TEMPORARY WORKING STORAGE (SECOND LEVEL)
-TEMP2    DB      0                ;  .
-TEMP3    DB      0                ;  .
-TEMP4    DB      0                ;  .
-TEMP5    DB      0                ;  .
-TEMP6    DB      0                ;  .
-TEMP7    DB      0                ;  .
-TEMP8    DB      0                ;  .
-TEMP9    DB      0                ;  .
-TEMP10   DB      0                ;  .
+TEMP1    db      0                ;  TEMPORARY WORKING STORAGE (SECOND LEVEL)
+TEMP2    db      0                ;  .
+TEMP3    db      0                ;  .
+TEMP4    db      0                ;  .
+TEMP5    db      0                ;  .
+TEMP6    db      0                ;  .
+TEMP7    db      0                ;  .
+TEMP8    db      0                ;  .
+TEMP9    db      0                ;  .
+TEMP10   db      0                ;  .
 ;
-         DW      0                ;  .    WORKING STORAGE SLOP
-;
-;
-ACTPLY   DB      0                ;  ACTIVE PLAYER FLAG ($00 / $02)
+         dw      0                ;  .    WORKING STORAGE SLOP
 ;
 ;
-TMR1     DB      0                ;  TIMER #1 - DOWN COUNTER
-         DW      0                ;  .        - TIME-OUT ROUTINE POINTER
-;
-TMR2     DB      0                ;  TIMER #2 - DOWN COUNTER
-         DW      0                ;  .        - TIME-OUT ROUTINE POINTER
-;
-TMR3     DB      0                ;  TIMER #3 - DOWN COUNTER
-         DW      0                ;  .        - TIME-OUT ROUTINE POINTER
-;
-TMR4     DB      0                ;  TIMER #4 - DOWN COUNTER
-         DW      0                ;  .        - TIME-OUT ROUTINE POINTER
+ACTPLY   db      0                ;  ACTIVE PLAYER FLAG ($00 / $02)
 ;
 ;
-SCOR1    DS      7                ;  PLAYER #1 SCORE
-SCOR2    DS      7                ;  PLAYER #2 SCORE
+TMR1     db      0                ;  TIMER #1 - DOWN COUNTER
+         dw      0                ;  .        - TIME-OUT ROUTINE POINTER
+;
+TMR2     db      0                ;  TIMER #2 - DOWN COUNTER
+         dw      0                ;  .        - TIME-OUT ROUTINE POINTER
+;
+TMR3     db      0                ;  TIMER #3 - DOWN COUNTER
+         dw      0                ;  .        - TIME-OUT ROUTINE POINTER
+;
+TMR4     db      0                ;  TIMER #4 - DOWN COUNTER
+         dw      0                ;  .        - TIME-OUT ROUTINE POINTER
 ;
 ;
-BLTSND   DB      0                ;  BULLET SOUND FLAG
+SCOR1    ds      7                ;  PLAYER #1 SCORE
+SCOR2    ds      7                ;  PLAYER #2 SCORE
 ;
 ;
-STAR1    DB      0                ;  TEMPORARY WORKING STORAGE (THIRD LEVEL)
-STAR2    DB      0                ;  .
-STAR3    DB      0                ;  .
-STAR4    DB      0                ;  .
-STAR5    DB      0                ;  .
-STAR6    DB      0                ;  .
+BLTSND   db      0                ;  BULLET SOUND FLAG
 ;
-ABORT    DB      0                ;  GAME ABORT FLAG
-LOCK     DB      0                ;  LOCK-UP ON GAME SEQUENCE
 ;
-RSMINES  DB      0                ;  MINE-LAYER RE-SEED MINE COUNT
-RESEED   DB      0                ;  MINE-LAYER RESEED FLAG
-FRCTIME  DB      0                ;  FORCED GROWTH COUNTER
+STAR1    db      0                ;  TEMPORARY WORKING STORAGE (THIRD LEVEL)
+STAR2    db      0                ;  .
+STAR3    db      0                ;  .
+STAR4    db      0                ;  .
+STAR5    db      0                ;  .
+STAR6    db      0                ;  .
 ;
-MINTABLE DW      0                ;  MINE FIELD POINTER FOR LAYER SEQUENCE
-TBLPTR1  DW      0                ;  MINE FIELD POINTER FOR PLAYER #1
-TBLPTR2  DW      0                ;  MINE FIELD POINTER FOR PLAYER #2
+ABORT    db      0                ;  GAME ABORT FLAG
+LOCK     db      0                ;  LOCK-UP ON GAME SEQUENCE
 ;
-WSHIPY   DW      0                ;  WORKING 'Y' POSITION
-WSHIPX   DW      0                ;  WORKING 'X' POSITION
-DSHIPY1  DW      0                ;  'Y' DISPLACEMENT FOR MOMENTUM AXIS #1
-DSHIPX1  DW      0                ;  'X' DISPLACEMENT FOR MOMENTUM AXIS #1
-DSHIPY2  DW      0                ;  'Y' DISPLACEMENT FOR MOMENTUM AXIS #2
-DSHIPX2  DW      0                ;  'X' DISPLACEMENT FOR MOMENTUM AXIS #2
-SHIPROT  DB      0                ;  CURRENT SHIP ROTATION
-SHIPSPD1 DB      0                ;  SPEED ALONG MOMENTUM AXIS #1
-SHIPDIR1 DB      0                ;  DIRECTION OF MOMENTUM AXIS #1
-SHIPSPD2 DB      0                ;  SPEED ALONG MOMENTUM AXIS #2
-SHIPDIR2 DB      0                ;  DIRECTION OF MOMENTUM AXIS #2
-SHIPCNT  DB      0                ;  CURRENT SHIP COUNT FOR ACTIVE PLAYER
-SHIPCNT0 DB      0                ;  CURRENT SHIP COUNT FOR PLAYER #1
-SHIPCNT1 DB      0                ;  CURRENT SHIP COUNT FOR PLAYER #2
+RSMINES  db      0                ;  MINE-LAYER RE-SEED MINE COUNT
+RESEED   db      0                ;  MINE-LAYER RESEED FLAG
+FRCTIME  db      0                ;  FORCED GROWTH COUNTER
 ;
-LAYRYX   DW      0                ;  CURRENT MINE-LAYER POSITION (Y:X)
-WLAYRY   DW      0                ;  .    WORKING 'Y' POSITION
-WLAYRX   DW      0                ;  .    WORKING 'X' POSITION
-DLAYRY   DW      0                ;  .    'Y' DISPLACEMENT
-DLAYRX   DW      0                ;  .    'X' DISPLACEMENT
-LAYRDIR  DB      0                ;  CURRENT MINE-LAYER DIRECTION
-LAYRSPD  DB      0                ;  CURRENT MINE-LAYER SPEED
-LAYRPTR  DW      0                ;  MINE-LAYER RE-SEEDING SEQUENCE POINTER
+MINTABLE dw      0                ;  MINE FIELD POINTER FOR LAYER SEQUENCE
+TBLPTR1  dw      0                ;  MINE FIELD POINTER FOR PLAYER #1
+TBLPTR2  dw      0                ;  MINE FIELD POINTER FOR PLAYER #2
 ;
-CBULLET  DB      0                ;  ACTIVE BULLET COUNTER
-CMINES   DB      0                ;  ACTIVE MINE COUNTER
-CEXPLS   DB      0                ;  ACTIVE EXPLOSION COUNTER
+WSHIPY   dw      0                ;  WORKING 'Y' POSITION
+WSHIPX   dw      0                ;  WORKING 'X' POSITION
+DSHIPY1  dw      0                ;  'Y' DISPLACEMENT FOR MOMENTUM AXIS #1
+DSHIPX1  dw      0                ;  'X' DISPLACEMENT FOR MOMENTUM AXIS #1
+DSHIPY2  dw      0                ;  'Y' DISPLACEMENT FOR MOMENTUM AXIS #2
+DSHIPX2  dw      0                ;  'X' DISPLACEMENT FOR MOMENTUM AXIS #2
+SHIPROT  db      0                ;  CURRENT SHIP ROTATION
+SHIPSPD1 db      0                ;  SPEED ALONG MOMENTUM AXIS #1
+SHIPDIR1 db      0                ;  DIRECTION OF MOMENTUM AXIS #1
+SHIPSPD2 db      0                ;  SPEED ALONG MOMENTUM AXIS #2
+SHIPDIR2 db      0                ;  DIRECTION OF MOMENTUM AXIS #2
+SHIPCNT  db      0                ;  CURRENT SHIP COUNT FOR ACTIVE PLAYER
+SHIPCNT0 db      0                ;  CURRENT SHIP COUNT FOR PLAYER #1
+SHIPCNT1 db      0                ;  CURRENT SHIP COUNT FOR PLAYER #2
 ;
-MINMAX   DB      0                ;  MAXIMUM MINES COUNT
+LAYRYX   dw      0                ;  CURRENT MINE-LAYER POSITION (Y:X)
+WLAYRY   dw      0                ;  .    WORKING 'Y' POSITION
+WLAYRX   dw      0                ;  .    WORKING 'X' POSITION
+DLAYRY   dw      0                ;  .    'Y' DISPLACEMENT
+DLAYRX   dw      0                ;  .    'X' DISPLACEMENT
+LAYRDIR  db      0                ;  CURRENT MINE-LAYER DIRECTION
+LAYRSPD  db      0                ;  CURRENT MINE-LAYER SPEED
+LAYRPTR  dw      0                ;  MINE-LAYER RE-SEEDING SEQUENCE POINTER
 ;
-HYPFLAG  DB      0                ;  HYPER-SPACE FLAG
-HYPCNT   DB      0                ;  HYPER-SPACE SEQUENCE COUNTER
+CBULLET  db      0                ;  ACTIVE BULLET COUNTER
+CMINES   db      0                ;  ACTIVE MINE COUNTER
+CEXPLS   db      0                ;  ACTIVE EXPLOSION COUNTER
 ;
-TIMEOUT  DW      0                ;  LONG TIME-OUT DELAY
+MINMAX   db      0                ;  MAXIMUM MINES COUNT
 ;
-THRSND   DB      0                ;  THRUSTER SOUND FLAG
-EXPLSND  DB      0                ;  OBJECT EXPLOSION SOUND FLAG
-POPSND   DB      0                ;  MINE 'POP' SOUND FLAG
-FIRSND   DB      0                ;  'RELEASED' FIRE-BALL SOUND FLAG
-HYPSND   DB      0                ;  HYPER-SPACE SOUND FLAG
+HYPFLAG  db      0                ;  HYPER-SPACE FLAG
+HYPCNT   db      0                ;  HYPER-SPACE SEQUENCE COUNTER
 ;
-SEXPCNT  DB      0                ;  SHIP EXPLOSION COUNTERS
-SEXP1    DB      0                ;  .
+TIMEOUT  dw      0                ;  LONG TIME-OUT DELAY
 ;
-MNLVL1   DS      7                ;  ACTIVE MINE-FIELD LEVEL FOR PLAYER #1
-MNLVL2   DS      7                ;  ACTIVE MINE-FIELD LEVEL FOR PLAYER #2;
+THRSND   db      0                ;  THRUSTER SOUND FLAG
+EXPLSND  db      0                ;  OBJECT EXPLOSION SOUND FLAG
+POPSND   db      0                ;  MINE 'POP' SOUND FLAG
+FIRSND   db      0                ;  'RELEASED' FIRE-BALL SOUND FLAG
+HYPSND   db      0                ;  HYPER-SPACE SOUND FLAG
+;
+SEXPCNT  db      0                ;  SHIP EXPLOSION COUNTERS
+SEXP1    db      0                ;  .
+;
+MNLVL1   ds      7                ;  ACTIVE MINE-FIELD LEVEL FOR PLAYER #1
+MNLVL2   ds      7                ;  ACTIVE MINE-FIELD LEVEL FOR PLAYER #2;
 ;
 ;        BULLET TABLE
 ;        ------------
 ;
-DBLTY    DW      0                ;  'Y' DISPLACEMENT FOR ALL NEW BULLETS
-DBLTX    DW      0                ;  'X' DISPLACMENET FOR ALL NEW BULLETS
+DBLTY    dw      0                ;  'Y' DISPLACEMENT FOR ALL NEW BULLETS
+DBLTX    dw      0                ;  'X' DISPLACMENET FOR ALL NEW BULLETS
 ;
 ;
-BLT.FLG  EQU     0                ;  BULLET FLAG
-BLT.YD   EQU     BLT.FLG + 1      ;  WORKING 'Y' DISPLACEMENT
-BLT.XD   EQU     BLT.YD + 2       ;  WORKING 'X' DISPLACEMENT
-BLT.WY   EQU     BLT.XD + 2       ;  WORKING 'Y' POSITION
-BLT.WX   EQU     BLT.WY + 2       ;  WORKING 'X' POSITION
-BLT.DC   EQU     BLT.WX + 2       ;  BULLET DOWN-COUNTER
+BLT_FLG  equ     0                ;  BULLET FLAG
+BLT_YD   equ     BLT_FLG + 1      ;  WORKING 'Y' DISPLACEMENT
+BLT_XD   equ     BLT_YD + 2       ;  WORKING 'X' DISPLACEMENT
+BLT_WY   equ     BLT_XD + 2       ;  WORKING 'Y' POSITION
+BLT_WX   equ     BLT_WY + 2       ;  WORKING 'X' POSITION
+BLT_DC   equ     BLT_WX + 2       ;  BULLET DOWN-COUNTER
 ;
-BLT.LEN  EQU     BLT.DC + 1       ;  BULLET TABLE LENGTH
+BLT_LEN  equ     BLT_DC + 1       ;  BULLET TABLE LENGTH
 ;
-BLT.TBL  DS      BLT.LEN * BULLETS
+BLT_TBL  ds      BLT_LEN * BULLETS
 ;
 ;      
 ;        MINE TABLE
 ;        ----------
 ;
-MIN.FLG  EQU     0                ;  MINE FLAG
-MIN.PAK  EQU     MIN.FLG + 1      ;  PACKET TYPE (NUMBER)
-MIN.SIZ  EQU     MIN.PAK + 1      ;  SIZE (ZOOM VALUE)
-MIN.BSZ  EQU     MIN.SIZ + 1      ;  BASE MINE SIZE (0 - 3)
-MIN.YW   EQU     MIN.BSZ + 1      ;  WORKING 'Y' POSITION
-MIN.XW   EQU     MIN.YW + 2       ;  WORKING 'X' POSITION
-MIN.YD   EQU     MIN.XW + 2       ;  WORKING 'Y' DISPLACEMENT
-MIN.XD   EQU     MIN.YD + 2       ;  WORKING 'X' DISPLACEMENT
-MIN.BOX  EQU     MIN.XD + 2       ;  COLLISION BOX PARAMETERS
-MIN.SCR  EQU     MIN.BOX + 2      ;  SCORE VALUE
-MIN.T1   EQU     MIN.SCR + 2      ;  MINE TEMPORARY WORKING STORAGE
-MIN.T2   EQU     MIN.T1 + 1       ;  .
+MIN_FLG  equ     0                ;  MINE FLAG
+MIN_PAK  equ     MIN_FLG + 1      ;  PACKET TYPE (NUMBER)
+MIN_SIZ  equ     MIN_PAK + 1      ;  SIZE (ZOOM VALUE)
+MIN_BSZ  equ     MIN_SIZ + 1      ;  BASE MINE SIZE (0 - 3)
+MIN_YW   equ     MIN_BSZ + 1      ;  WORKING 'Y' POSITION
+MIN_XW   equ     MIN_YW + 2       ;  WORKING 'X' POSITION
+MIN_YD   equ     MIN_XW + 2       ;  WORKING 'Y' DISPLACEMENT
+MIN_XD   equ     MIN_YD + 2       ;  WORKING 'X' DISPLACEMENT
+MIN_BOX  equ     MIN_XD + 2       ;  COLLISION BOX PARAMETERS
+MIN_SCR  equ     MIN_BOX + 2      ;  SCORE VALUE
+MIN_T1   equ     MIN_SCR + 2      ;  MINE TEMPORARY WORKING STORAGE
+MIN_T2   equ     MIN_T1 + 1       ;  .
 ;
-MIN.LEN  EQU     MIN.T2 + 1       ;  MINE TABLE LENGTH
+MIN_LEN  equ     MIN_T2 + 1       ;  MINE TABLE LENGTH
 ;
-MIN.TBL  DS      MIN.LEN * MINES  
+MIN_TBL  ds      MIN_LEN * MINES  
 ;
 ;
 ;        EXPLOSION TABLE
 ;        ---------------
 ;
-EXP.FLG  EQU     0                ;  EXPLOSION FLAG
-EXP.SIZ  EQU     EXP.FLG + 1      ;  SIZE (ZOOM VALUE)
-EXP.YX   EQU     EXP.SIZ + 1      ;  ABSOLUTE Y:X POSITIONS
-EXP.CNT  EQU     EXP.YX + 2       ;  FRAME COUNTER
+EXP_FLG  equ     0                ;  EXPLOSION FLAG
+EXP_SIZ  equ     EXP_FLG + 1      ;  SIZE (ZOOM VALUE)
+EXP_YX   equ     EXP_SIZ + 1      ;  ABSOLUTE Y:X POSITIONS
+EXP_CNT  equ     EXP_YX + 2       ;  FRAME COUNTER
 ;
-EXP.LEN  EQU     EXP.CNT + 1      ;  EXPLOSION TABLE LENGTH
-EXPLSN   EQU     14               ;  NUMBER OF EXPLOSION ENTRIES
+EXP_LEN  equ     EXP_CNT + 1      ;  EXPLOSION TABLE LENGTH
+EXPLSN   equ     14               ;  NUMBER OF EXPLOSION ENTRIES
 ;
-EXP.TBL  DS      EXP.LEN * EXPLSN
+EXP_TBL  ds      EXP_LEN * EXPLSN
 ;
 ;
 ;        STAR FIELD TABLES
 ;        -----------------
 ;
-FSTAR    DS      16
-ZSTAR    DS      8
+FSTAR    ds      16
+ZSTAR    ds      8
 ;
 ;
 ;
 ;==========================================================================JJH
-;PACKET1 DS      30               ;  CODE DELETED - REV. C CHANGES   ======JJH
-;PACKET2 DS      30               ;  .                               ======JJH
+;PACKET1 ds      30               ;  CODE DELETED - REV. C CHANGES   ======JJH
+;PACKET2 ds      30               ;  .                               ======JJH
 ;==========================================================================JJH
 ;
 ;==========================================================================JJH
-PACKET1  DS      27               ;  CODE ADDED - REV. C CHANGES     ======JJH
-PACKET2  DS      15               ;  .    PACKET WORKING AREA        ======JJH
+PACKET1  ds      27               ;  CODE ADDED - REV. C CHANGES     ======JJH
+PACKET2  ds      15               ;  .    PACKET WORKING AREA        ======JJH
 ;==========================================================================JJH
 ;
 ;==========================================================================JJH
-MINTBL1  DB      0                ;  MINE TABLE FOR PLAYER #1        ======JJH
-         DB      0                ;  .    CODE ADDED -               ======JJH
-         DB      0                ;  .        REV. C CHANGES         ======JJH
-         DB      0                ;  .                               ======JJH
+MINTBL1  db      0                ;  MINE TABLE FOR PLAYER #1        ======JJH
+         db      0                ;  .    CODE ADDED -               ======JJH
+         db      0                ;  .        REV. C CHANGES         ======JJH
+         db      0                ;  .                               ======JJH
 ;                                                                    ======JJH
 ;                                                                    ======JJH
-MINTBL2  DB      0                ;  MINE TABLE FOR PLAYER #2        ======JJH
-         DB      0                ;  .                               ======JJH
-         DB      0                ;  .                               ======JJH
-         DB      0                ;  .                               ======JJH
+MINTBL2  db      0                ;  MINE TABLE FOR PLAYER #2        ======JJH
+         db      0                ;  .                               ======JJH
+         db      0                ;  .                               ======JJH
+         db      0                ;  .                               ======JJH
 ;==========================================================================JJH
 ;
-ENDRAM   DB      0                ;  END-OF-RAM FLAG
+ENDRAM   db      0                ;  END-OF-RAM FLAG
 ;
 ;
 ;
@@ -414,19 +414,19 @@ ENDRAM   DB      0                ;  END-OF-RAM FLAG
 ;  ***************************************************
 ;
 ;
-         ORG     $E000
+         org     $E000
 ;        ===     =====
 ;
-         DW      LAYTUNE
+         dw      LAYTUNE
 ;
-         DW      $F850
-         DW      $30E8
-         DB      'MINE',$80
+         dw      $F850
+         dw      $30E8
+         db      'MINE',$80
 ;
-         DW      $F850
-         DW      $00DE
-         DB      'STORM',$80
-         DB      0
+         dw      $F850
+         dw      $00DE
+         db      'STORM',$80
+         db      0
 ;
 ;
 ;
@@ -434,19 +434,19 @@ ENDRAM   DB      0                ;  END-OF-RAM FLAG
 ;  POWER-UP INITIALIZATION
 ;  =======================
 ;
-         SETDP   $D0
+         setdp   $D0
 ;        =====   ===
 ;
-ENTRY    LDX     #ETMP1           ;  CLEAR MEMORY
-CLRALL   CLR     X+               ;  .
-         CMPX    #ENDRAM          ;  .
-         BNE     CLRALL           ;  .
+ENTRY    ldx     #ETMP1           ;  CLEAR MEMORY
+CLRALL   clr     x+               ;  .
+         cmpx    #ENDRAM          ;  .
+         bne     CLRALL           ;  .
 ;
-         JSR     I.STARS          ;  INITIALIZE STAR FIELDS
+         jsr     I_STARS          ;  INITIALIZE STAR FIELDS
 ;
 ;==========================================================================JJH
-;        LDX     #HISCOR          ;  CODE DELETED - REV. B CHANGES   ======JJH
-;        JSR     SCLR             ;  .                               ======JJH
+;        ldx     #HISCOR          ;  CODE DELETED - REV. B CHANGES   ======JJH
+;        jsr     SCLR             ;  .                               ======JJH
 ;==========================================================================JJH
 ;
 ;==========================================================================JJH
@@ -458,185 +458,185 @@ CLRALL   CLR     X+               ;  .
 ;        NOP                      ;  .                               ======JJH
 ;==========================================================================JJH
 ;
-         INC     ZSKIP            ;  SET POST-PACKET ZEROING FLAG
+         inc     ZSKIP            ;  SET POST-PACKET ZEROING FLAG
 ;
-         LDA     #$BB             ;  SET-UP CONTROLLER FLAGS
-         STA     SBTN             ;  .
-         LDX     #$0101           ;  .
-         STX     SJOY             ;  .
+         lda     #$BB             ;  SET-UP CONTROLLER FLAGS
+         sta     SBTN             ;  .
+         ldx     #$0101           ;  .
+         stx     SJOY             ;  .
 ;
 ;
 ;  INITIALIZE MINE-SWEEPER
 ;  =======================
 ;
 ;
-NEWGAME  LDX     #ETMP1           ;  CLEAR MEMORY
-CLRMEM   CLR     X+               ;  .
-         CMPX    #FSTAR - 1       ;  .
-         BNE     CLRMEM           ;  .
-         BRA     GAME1            ;  .
+NEWGAME  ldx     #ETMP1           ;  CLEAR MEMORY
+CLRMEM   clr     x+               ;  .
+         cmpx    #FSTAR - 1       ;  .
+         bne     CLRMEM           ;  .
+         bra     GAME1            ;  .
 ;
-GAME1    JSR     DPRAM            ;  SET "DP" REGISTER FOR RAM
-         SETDP   $C8              ;  .
+GAME1    jsr     DPRAM            ;  SET "DP" REGISTER FOR RAM
+         setdp   $C8              ;  .
 ;
-         LDD     #$0200           ;  SELECT OPTIONS
-         JSR     SELOPT           ;  .
-         DEC     &lt;PLAYRS          ;  .
+         ldd     #$0200           ;  SELECT OPTIONS
+         jsr     SELOPT           ;  .
+         dec     <PLAYRS          ;  .
 ;
-         CLR     &lt;TSTAT           ;  CLEAR TUNE FLAG
-         CLR     &lt;ACTPLY          ;  CLEAR ACTIVE PLAYER FLAG
+         clr     <TSTAT           ;  CLEAR TUNE FLAG
+         clr     <ACTPLY          ;  CLEAR ACTIVE PLAYER FLAG
 ;
-         LDX     #SCOR1           ;  CLEAR PLAYERS SCORE
-         JSR     SCLR             ;  .
-         LDX     #SCOR2           ;  .
-         JSR     SCLR             ;  .
+         ldx     #SCOR1           ;  CLEAR PLAYERS SCORE
+         jsr     SCLR             ;  .
+         ldx     #SCOR2           ;  .
+         jsr     SCLR             ;  .
 ;
-         LDX     #MNLVL1          ;  CLEAR ACTIVE MINE-FIELD COUNTER
-         JSR     SCLR             ;  .    FOR PLAYER #1
-         LDD     #$0001           ;  .    .
-         JSR     SCRADD           ;  .    .
+         ldx     #MNLVL1          ;  CLEAR ACTIVE MINE-FIELD COUNTER
+         jsr     SCLR             ;  .    FOR PLAYER #1
+         ldd     #$0001           ;  .    .
+         jsr     SCRADD           ;  .    .
 ;
-         LDX     #MNLVL2          ;  .    FOR PLAYER #2
-         JSR     SCLR             ;  .    .
-         LDD     #$0001           ;  .    .
-         JSR     SCRADD           ;  .    .
-;
-;==========================================================================JJH
-;        LDX     #MINTBL1         ;  CODE DELETED - REV. C CHANGES   ======JJH
-;        STX     &lt;TBLPTR1         ;  .                               ======JJH
-;        STX     &lt;TBLPTR2         ;  .                               ======JJH
-;==========================================================================JJH
+         ldx     #MNLVL2          ;  .    FOR PLAYER #2
+         jsr     SCLR             ;  .    .
+         ldd     #$0001           ;  .    .
+         jsr     SCRADD           ;  .    .
 ;
 ;==========================================================================JJH
-         LDX     #MINTBL1         ;  CODE ADDED - REV. C CHANGES     ======JJH
-         STX     &lt;TBLPTR1         ;  .    SET-UP NEW MINE TABLES     ======JJH
-         LDX     #MINTBL2         ;  .    .                          ======JJH
-         STX     &lt;TBLPTR2         ;  .    .                          ======JJH
-         LDB     #$08             ;  .    CLEAR NEW MINE TABLES      ======JJH
-         LDX     #MINTBL1         ;  .    .                          ======JJH
-         JSR     BCLR             ;  .    .                          ======JJH
+;        ldx     #MINTBL1         ;  CODE DELETED - REV. C CHANGES   ======JJH
+;        stx     <TBLPTR1         ;  .                               ======JJH
+;        stx     <TBLPTR2         ;  .                               ======JJH
 ;==========================================================================JJH
 ;
-         LDA     #5               ;  SET SHIP COUNT
-         STA     &lt;SHIPCNT         ;  .
-         STA     &lt;SHIPCNT0        ;  .
-         STA     &lt;SHIPCNT1        ;  .
+;==========================================================================JJH
+         ldx     #MINTBL1         ;  CODE ADDED - REV. C CHANGES     ======JJH
+         stx     <TBLPTR1         ;  .    SET-UP NEW MINE TABLES     ======JJH
+         ldx     #MINTBL2         ;  .    .                          ======JJH
+         stx     <TBLPTR2         ;  .    .                          ======JJH
+         ldb     #$08             ;  .    CLEAR NEW MINE TABLES      ======JJH
+         ldx     #MINTBL1         ;  .    .                          ======JJH
+         jsr     BCLR             ;  .    .                          ======JJH
+;==========================================================================JJH
 ;
-         BRA     LVLN1            ;  LEVEL #1 ENTRY POINT IS DIFFERENT
+         lda     #5               ;  SET SHIP COUNT
+         sta     <SHIPCNT         ;  .
+         sta     <SHIPCNT0        ;  .
+         sta     <SHIPCNT1        ;  .
+;
+         bra     LVLN1            ;  LEVEL #1 ENTRY POINT IS DIFFERENT
 ;   
 ;
 ;  GAME LEVEL SEQUENCER
 ;  ====================
 ;
 ;
-LEVELN   JSR     FALL             ;  FALL-THRU TO NEXT GAME LEVEL
+LEVELN   jsr     FALL             ;  FALL-THRU TO NEXT GAME LEVEL
 ;
-         LDY     #TBLPTR1         ;  BUMP GAME DATA POINTER FOR ACTIVE PLAYER
-         LDA     &lt;ACTPLY          ;  .
-         LDX     A,Y              ;  .
-;
-;==========================================================================JJH
-;        LEAX    4,X              ;  CODE DELETED - REV. C CHANGES   ======JJH
-;        STX     A,Y              ;  .                               ======JJH
-;==========================================================================JJH
+         ldy     #TBLPTR1         ;  BUMP GAME DATA POINTER FOR ACTIVE PLAYER
+         lda     <ACTPLY          ;  .
+         ldx     a,y              ;  .
 ;
 ;==========================================================================JJH
-         JSR     REVC.0           ;  CODE ADDED - REV. C CHANGES     ======JJH
+;        LEAX    4,x              ;  CODE DELETED - REV. C CHANGES   ======JJH
+;        stx     a,y              ;  .                               ======JJH
 ;==========================================================================JJH
 ;
-         LDX     #PMNLVL          ;  BUMP ACTIVE MINE-FIELD COUNTER
-         LDA     &lt;ACTPLY          ;  .    WHICH PLAYER IS ACTIVE ?
-         LDX     A,X              ;  .    .
+;==========================================================================JJH
+         jsr     REVC_0           ;  CODE ADDED - REV. C CHANGES     ======JJH
+;==========================================================================JJH
 ;
-         LDA     5,X              ;  .    BONUS SHIP ?
-         ANDA    #$03             ;  .    .
-         BNE     LVLN01           ;  .    .
-         INC     SHIPCNT          ;  .    .    BUMP SHIP COUNT FOR ACTIVE PLAYER
+         ldx     #PMNLVL          ;  BUMP ACTIVE MINE-FIELD COUNTER
+         lda     <ACTPLY          ;  .    WHICH PLAYER IS ACTIVE ?
+         ldx     a,x              ;  .    .
 ;
-LVLN01   LDD     #$0001           ;  .    BUMP GAME LEVEL
-         JSR     SCRADD           ;  .    .
+         lda     5,x              ;  .    BONUS SHIP ?
+         anda    #$03             ;  .    .
+         bne     LVLN01           ;  .    .
+         inc     SHIPCNT          ;  .    .    BUMP SHIP COUNT FOR ACTIVE PLAYER
 ;
-LVLN1    JSR     SWPINT           ;  ENTRY FOR LEVEL RE-START
+LVLN01   ldd     #$0001           ;  .    BUMP GAME LEVEL
+         jsr     SCRADD           ;  .    .
 ;
-         LDX     #TBLPTR1         ;  .    SET-UP FOR NEXT GAME LEVEL
-         LDA     &lt;ACTPLY          ;  .    .    WHICH PLAYER IS ACTIVE
-         LDX     A,X              ;  .    .    .
+LVLN1    jsr     SWPINT           ;  ENTRY FOR LEVEL RE-START
+;
+         ldx     #TBLPTR1         ;  .    SET-UP FOR NEXT GAME LEVEL
+         lda     <ACTPLY          ;  .    .    WHICH PLAYER IS ACTIVE
+         ldx     a,x              ;  .    .    .
 ;
 ;==========================================================================JJH
-;        LDA     0,X              ;  CODE DELETED - REV. C CHANGES   ======JJH
+;        lda     0,x              ;  CODE DELETED - REV. C CHANGES   ======JJH
 ;        BMI     LVLN2            ;  .                               ======JJH
 ;==========================================================================JJH
 ;
-         JSR     MINLAY           ;  INITIALIZE FOR GAME LEVEL
-         BRA     LVLN3            ;  .
+         jsr     MINLAY           ;  INITIALIZE FOR GAME LEVEL
+         bra     LVLN3            ;  .
 ;
-LVLN2    LDD     &lt;TIMEOUT         ;  LOCK-UP ON GAME SEQUENCE
-         SUBD    #$0001           ;  .    TIME-OUT ON SEQUENCE ?
-         STD     &lt;TIMEOUT         ;  .    .
-         BEQ     LVLN21           ;  .    .
+LVLN2    ldd     <TIMEOUT         ;  LOCK-UP ON GAME SEQUENCE
+         subd    #$0001           ;  .    TIME-OUT ON SEQUENCE ?
+         std     <TIMEOUT         ;  .    .
+         beq     LVLN21           ;  .    .
 ;
-         PSHS    DP               ;  .    DISPLAY BOTH PLAYERS SCORE
-         JSR     DPIO             ;  .    .
-         JSR     SCRBTH           ;  .    .
-         LDU     #M.END           ;  .    DISPLAY 'GAME OVER' MESSAGE
-         JSR     MESS             ;  .    .
-         PULS    DP               ;  .    .
+         pshs    dp               ;  .    DISPLAY BOTH PLAYERS SCORE
+         jsr     DPIO             ;  .    .
+         jsr     SCRBTH           ;  .    .
+         ldu     #M_END           ;  .    DISPLAY 'GAME OVER' MESSAGE
+         jsr     MESS             ;  .    .
+         puls    dp               ;  .    .
 ;
 ;==========================================================================JJH
-;        LDA     &lt;TRIGGR          ;  CODE DELETED - REV. B CHANGES   ======JJH
+;        lda     <TRIGGR          ;  CODE DELETED - REV. B CHANGES   ======JJH
 ;        BEQ     LVLN3            ;  .                               ======JJH
 ;==========================================================================JJH
 ;
-         LDX     #SCOR1           ;  ESCAPE FROM GAME LEVEL LOCK-UP
-         LDU     #HISCOR          ;  .    IS PLAYER #1 SCORE HIGHEST ?
-         JSR     HISCR            ;  .    .
+         ldx     #SCOR1           ;  ESCAPE FROM GAME LEVEL LOCK-UP
+         ldu     #HISCOR          ;  .    IS PLAYER #1 SCORE HIGHEST ?
+         jsr     HISCR            ;  .    .
 ;
-         LDX     #SCOR2           ;  .    IS PLAYER #2 SCORE HIGHEST ?
-         LDU     #HISCOR          ;  .    .
-         JSR     HISCR            ;  .    .
-;
-;==========================================================================JJH
-         LDA     &lt;TRIGGR          ;  CODE ADDED - REV. B CHANGES     ======JJH
-         BEQ     LVLN3            ;  .                               ======JJH
-;==========================================================================JJH
-;
-LVLN21   LDD     &lt;TIMEOUT         ;  LOCK TIME-OUT ?
-         LBNE    NEWGAME          ;  .    START GAME OVER
+         ldx     #SCOR2           ;  .    IS PLAYER #2 SCORE HIGHEST ?
+         ldu     #HISCOR          ;  .    .
+         jsr     HISCR            ;  .    .
 ;
 ;==========================================================================JJH
-;        CLR     $CBFE            ;  CODE DELETED - REV. B CHANGES   ======JJH
-;        JMP     $F01C            ;  .                               ======JJH
+         lda     <TRIGGR          ;  CODE ADDED - REV. B CHANGES     ======JJH
+         beq     LVLN3            ;  .                               ======JJH
+;==========================================================================JJH
+;
+LVLN21   ldd     <TIMEOUT         ;  LOCK TIME-OUT ?
+         lbne    NEWGAME          ;  .    START GAME OVER
+;
+;==========================================================================JJH
+;        clr     $CBFE            ;  CODE DELETED - REV. B CHANGES   ======JJH
+;        jmp     $F01C            ;  .                               ======JJH
 ;==========================================================================JJH
 ;
 ;==========================================================================JJH
-         JMP     REVB.0           ;  CODE ADDED - REV. B CHANGES     ======JJH
-         NOP                      ;  .    FILLER                     ======JJH
-         NOP                      ;  .    .                          ======JJH
-         NOP                      ;  .    .                          ======JJH
+         jmp     REVB_0           ;  CODE ADDED - REV. B CHANGES     ======JJH
+         nop                      ;  .    FILLER                     ======JJH
+         nop                      ;  .    .                          ======JJH
+         nop                      ;  .    .                          ======JJH
 ;==========================================================================JJH
 ;
 ;
-LVLN3    PSHS    DP               ;  SAVE "DP" REGISTER
-         JSR     WAIT             ;  WAIT FOR FRAME BOUNDARY
-         JSR     GMINE            ;  HANDLE MINE GAME LOGIC
-         JSR     GSHIP            ;  HANDLE SWEEPER GAME LOGIC
-         JSR     GBULLET          ;  HANDLE BULLET GAME LOGIC
-         JSR     MSHIP            ;  HANDLE MINE-LAYER GAME LOGIC
+LVLN3    pshs    dp               ;  SAVE "DP" REGISTER
+         jsr     WAIT             ;  WAIT FOR FRAME BOUNDARY
+         jsr     GMINE            ;  HANDLE MINE GAME LOGIC
+         jsr     GSHIP            ;  HANDLE SWEEPER GAME LOGIC
+         jsr     GBULLET          ;  HANDLE BULLET GAME LOGIC
+         jsr     MSHIP            ;  HANDLE MINE-LAYER GAME LOGIC
 ;
-         PULS    DP               ;  SET "DP" REGISTER TO RAM
-         SETDP   $C8              ;  .
+         puls    dp               ;  SET "DP" REGISTER TO RAM
+         setdp   $C8              ;  .
 ;
-         JSR     CBULMIN          ;  HANDLE BULLET/MINE COLLISIONS
-         JSR     CMINSHIP         ;  HANDLE SHIP/MINE COLLISIONS
-         JSR     CSHPLYR          ;  HANDLE SHIP/LAYER COLLISIONS
-         JSR     TAIL             ;  HANDLE TAIL-END LOGIC
-         BCS     LVLN3            ;  .    MORE GAME LOGIC ?
+         jsr     CBULMIN          ;  HANDLE BULLET/MINE COLLISIONS
+         jsr     CMINSHIP         ;  HANDLE SHIP/MINE COLLISIONS
+         jsr     CSHPLYR          ;  HANDLE SHIP/LAYER COLLISIONS
+         jsr     TAIL             ;  HANDLE TAIL-END LOGIC
+         bcs     LVLN3            ;  .    MORE GAME LOGIC ?
 ;
-         LDA     &lt;ABORT           ;  RESTART CURRENT GAME POSITION ?
-         LBEQ    LEVELN           ;  .    WAS GAME ABORTED ?
-         LDA     &lt;LOCK            ;  .    .    LOCK-UP ON GAME SEQUENCE ?
-         LBNE    LVLN2            ;  .    .    .
-         JMP     LVLN1            ;  .    .    RESTART GAME SEQUENCE
+         lda     <ABORT           ;  RESTART CURRENT GAME POSITION ?
+         lbeq    LEVELN           ;  .    WAS GAME ABORTED ?
+         lda     <LOCK            ;  .    .    LOCK-UP ON GAME SEQUENCE ?
+         lbne    LVLN2            ;  .    .    .
+         jmp     LVLN1            ;  .    .    RESTART GAME SEQUENCE
 ;
 ;
 ;  ***********************************************
@@ -652,415 +652,415 @@ LVLN3    PSHS    DP               ;  SAVE "DP" REGISTER
 ;  HANDLE MINE-LAYING SEQUENCE
 ;  ===========================
 ;
-         SETDP   $C8
+         setdp   $C8
 ;        =====   ===
 ;
-MINLAY   STX     &lt;MINTABLE        ;  SET-UP FOR INITIAL MINE-LAYING
-         LDD     #$7F00           ;  .    SET POSITION OF MINE-LAYER
-         STD     &lt;LAYRYX          ;  .    .
-         STA     &lt;STAR1           ;  .    SET MINE-LAYER ZOOM VALUE
+MINLAY   stx     <MINTABLE        ;  SET-UP FOR INITIAL MINE-LAYING
+         ldd     #$7F00           ;  .    SET POSITION OF MINE-LAYER
+         std     <LAYRYX          ;  .    .
+         sta     <STAR1           ;  .    SET MINE-LAYER ZOOM VALUE
 ;
-         LDA     #$20             ;  SET MINE INSERTION TIME
-         STA     &lt;TMR1            ;  .
-         LDX     #INSINT          ;  .
-         STX     &lt;TMR1+1          ;  .
-         LDX     #MIN.TBL         ;  .    SET-UP FOR MINE INSERTION
-         STX     &lt;STAR3           ;  .    .    NEXT MINE TABLE ENTRY
-         LDA     #MINES + 1       ;  .    .    TOTAL MINES TO INSERT
-         STA     &lt;STAR2           ;  .    .    .
+         lda     #$20             ;  SET MINE INSERTION TIME
+         sta     <TMR1            ;  .
+         ldx     #INSINT          ;  .
+         stx     <TMR1+1          ;  .
+         ldx     #MIN_TBL         ;  .    SET-UP FOR MINE INSERTION
+         stx     <STAR3           ;  .    .    NEXT MINE TABLE ENTRY
+         lda     #MINES + 1       ;  .    .    TOTAL MINES TO INSERT
+         sta     <STAR2           ;  .    .    .
 ;
-         CLR     &lt;TSTAT           ;  SET-UP FOR MINE-LAYING TUNE
-         LDU     #LAYTUNE         ;  .
-         JSR     SPLAY            ;  .
-;
-;
-MNLY1    PSHS    DP               ;  DEPOSIT INITIAL MINES
-         JSR     STAIL            ;  .    DRAW EXPLOSIONS AND SHIP COUNTER
-         JSR     REPLAY           ;  .    SET-UP FOR TUNE
-;
-         LDA     &lt;FRAME           ;  .    CHANGE ZOOM VALUE ?
-         BITA    #$01             ;  .    .
-         BNE     MNLY2            ;  .    .
-         DEC     &lt;STAR1           ;  .    .    INCREMENT LAYER ZOOM VALUE
-;
-MNLY2    JSR     WAIT             ;  .    WAIT FOR FRAME BOUNDARY
-         SETDP   $D0              ;  .    .
-         JSR     SCRBTH           ;  .    DISPLAY BOTH PLAYER'S SCORES
-         JSR     REQOUT           ;  .    PLAY LAYING TUNE
-         JSR     GMINE            ;  .    HANDLE MINE GAME LOGIC
-;
-         JSR     INT3Q            ;  .    DISPLAY MINE-LAYER
-         LDB     STAR1            ;  .    .    SKIP IF ZOOM VALUE IS ZERO
-         BEQ     MNLY3            ;  .    .    .
-         LDX     #LLAYR           ;  .    .    DRAW LEFT PACKET
-         LDY     LAYRYX           ;  .    .    .
-         JSR     APACK            ;  .    .    .
-         LDX     #RLAYR           ;  .    .    DRAW RIGHT PACKET
-         JSR     APACK            ;  .    .    .
-         LDX     #MLAYR           ;  .    .    DRAW MIDDLE PACKET
-         JSR     APACK            ;  .    .    .
-;
-         PULS    DP               ;  .    .
-         SETDP   $C8              ;  .    .
-         DEC     &lt;LAYRYX          ;  .    .
-         BRA     MNLY1            ;  .    .
+         clr     <TSTAT           ;  SET-UP FOR MINE-LAYING TUNE
+         ldu     #LAYTUNE         ;  .
+         jsr     SPLAY            ;  .
 ;
 ;
-MNLY3    PULS    DP               ;  GROW FOUR LARGE MINES
-         SETDP   $C8              ;  .    .
+MNLY1    pshs    dp               ;  DEPOSIT INITIAL MINES
+         jsr     STAIL            ;  .    DRAW EXPLOSIONS AND SHIP COUNTER
+         jsr     REPLAY           ;  .    SET-UP FOR TUNE
 ;
-         CLR     &lt;TMR1            ;  .
-         LDA     #$04             ;  .    SET MINE COUNT
-         STA     &lt;STAR1           ;  .    .
-         LDA     #$7F             ;  .    SET GROWING DELAY TIME
-         STA     &lt;STAR2           ;  .    .
+         lda     <FRAME           ;  .    CHANGE ZOOM VALUE ?
+         bita    #$01             ;  .    .
+         bne     MNLY2            ;  .    .
+         dec     <STAR1           ;  .    .    INCREMENT LAYER ZOOM VALUE
 ;
-MNLY4    LDA     &lt;STAR1           ;  .    START SEQUENTIAL MINE GROWTH
-         BEQ     MNLY7            ;  .    .
+MNLY2    jsr     WAIT             ;  .    WAIT FOR FRAME BOUNDARY
+         setdp   $D0              ;  .    .
+         jsr     SCRBTH           ;  .    DISPLAY BOTH PLAYER'S SCORES
+         jsr     REQOUT           ;  .    PLAY LAYING TUNE
+         jsr     GMINE            ;  .    HANDLE MINE GAME LOGIC
 ;
-         LDB     &lt;STAR2           ;  .    .    GROWING DELAY TIME ?
-         BEQ     MNLY5            ;  .    .    .
-         DEC     &lt;STAR2           ;  .    .    .    DECREMENT DELAY TIMER
-         BRA     MNLY6            ;  .    .    .    SKIP MINE GROWTH
+         jsr     INT3Q            ;  .    DISPLAY MINE-LAYER
+         ldb     STAR1            ;  .    .    SKIP IF ZOOM VALUE IS ZERO
+         beq     MNLY3            ;  .    .    .
+         ldx     #LLAYR           ;  .    .    DRAW LEFT PACKET
+         ldy     LAYRYX           ;  .    .    .
+         jsr     APACK            ;  .    .    .
+         ldx     #RLAYR           ;  .    .    DRAW RIGHT PACKET
+         jsr     APACK            ;  .    .    .
+         ldx     #MLAYR           ;  .    .    DRAW MIDDLE PACKET
+         jsr     APACK            ;  .    .    .
 ;
-MNLY5    LDB     &lt;FRAME           ;  .    .    ADJUST GROWTH-TO-GROWTH TIME
-         ANDB    #$1F             ;  .    .    .
-         BNE     MNLY6            ;  .    .    .
+         puls    dp               ;  .    .
+         setdp   $C8              ;  .    .
+         dec     <LAYRYX          ;  .    .
+         bra     MNLY1            ;  .    .
 ;
-         DECA                     ;  .    GROW ONE LARGE MINE
-         STA     &lt;STAR1           ;  .    .    DECREMENT MINE COUNTER
 ;
-         LDX     &lt;MINTABLE        ;  .    .    SET SEED ENTRY FOR GROWTH
-         LDA     A,X              ;  .    .    .    SET MINE TYPE
-         LDB     #$03             ;  .    .    .    SET MINE SIZE (LARGE)
-         JSR     RANSEED          ;  .    .    .    FIND AND SET ENTRY
+MNLY3    puls    dp               ;  GROW FOUR LARGE MINES
+         setdp   $C8              ;  .    .
 ;
-MNLY6    PSHS    DP               ;  .    WAIT FOR FRAME BOUNDARY
-         JSR     WAIT             ;  .    .
-         SETDP   $D0              ;  .    .
+         clr     <TMR1            ;  .
+         lda     #$04             ;  .    SET MINE COUNT
+         sta     <STAR1           ;  .    .
+         lda     #$7F             ;  .    SET GROWING DELAY TIME
+         sta     <STAR2           ;  .    .
 ;
-         JSR     INTMAX           ;  .    DISPLAY ACTIVE MINE-FIELD MESSAGE
-         LDU     #M.MNFLD         ;  .    .    DRAW MINE-FIELD MESSAGE
-         JSR     MESS             ;  .    .    .
-         LDY     #$E000           ;  .    .    DRAW MINE-FIELD COUNTER
-         LDU     #PMNLVL          ;  .    .    .    FIND MESSAGE FOR ACTIVE PLAYER
-         LDA     ACTPLY           ;  .    .    .    .
-         LDU     A,U              ;  .    .    .    .
-         JSR     AMESS            ;  .    .    .
+MNLY4    lda     <STAR1           ;  .    START SEQUENTIAL MINE GROWTH
+         beq     MNLY7            ;  .    .
 ;
-         JSR     GMINE            ;  .    HANDLE MINE GAME LOGIC
-         JSR     GSHIP            ;  .    HANDLE SWEEPER GAME LOGIC
-         JSR     GBULLET          ;  .    HANDLE BULLET GAME LOGIC
+         ldb     <STAR2           ;  .    .    GROWING DELAY TIME ?
+         beq     MNLY5            ;  .    .    .
+         dec     <STAR2           ;  .    .    .    DECREMENT DELAY TIMER
+         bra     MNLY6            ;  .    .    .    SKIP MINE GROWTH
 ;
-         PULS    DP               ;  .    SET "DP" REGISTER TO RAM
-         SETDP   $C8              ;  .    .
+MNLY5    ldb     <FRAME           ;  .    .    ADJUST GROWTH-TO-GROWTH TIME
+         andb    #$1F             ;  .    .    .
+         bne     MNLY6            ;  .    .    .
 ;
-         JSR     CBULMIN          ;  .    HANDLE BULLET/MINE COLLISIONS
-         JSR     TAIL             ;  .    HANDLE TAIL-END LOGIC
-         BRA     MNLY4            ;  .    .
+         deca                     ;  .    GROW ONE LARGE MINE
+         sta     <STAR1           ;  .    .    DECREMENT MINE COUNTER
 ;
-MNLY7    RTS                      ;  RETURN TO CALLER
+         ldx     <MINTABLE        ;  .    .    SET SEED ENTRY FOR GROWTH
+         lda     a,x              ;  .    .    .    SET MINE TYPE
+         ldb     #$03             ;  .    .    .    SET MINE SIZE (LARGE)
+         jsr     RANSEED          ;  .    .    .    FIND AND SET ENTRY
+;
+MNLY6    pshs    dp               ;  .    WAIT FOR FRAME BOUNDARY
+         jsr     WAIT             ;  .    .
+         setdp   $D0              ;  .    .
+;
+         jsr     INTMAX           ;  .    DISPLAY ACTIVE MINE-FIELD MESSAGE
+         ldu     #M_MNFLD         ;  .    .    DRAW MINE-FIELD MESSAGE
+         jsr     MESS             ;  .    .    .
+         ldy     #$E000           ;  .    .    DRAW MINE-FIELD COUNTER
+         ldu     #PMNLVL          ;  .    .    .    FIND MESSAGE FOR ACTIVE PLAYER
+         lda     ACTPLY           ;  .    .    .    .
+         ldu     a,u              ;  .    .    .    .
+         jsr     AMESS            ;  .    .    .
+;
+         jsr     GMINE            ;  .    HANDLE MINE GAME LOGIC
+         jsr     GSHIP            ;  .    HANDLE SWEEPER GAME LOGIC
+         jsr     GBULLET          ;  .    HANDLE BULLET GAME LOGIC
+;
+         puls    dp               ;  .    SET "DP" REGISTER TO RAM
+         setdp   $C8              ;  .    .
+;
+         jsr     CBULMIN          ;  .    HANDLE BULLET/MINE COLLISIONS
+         jsr     TAIL             ;  .    HANDLE TAIL-END LOGIC
+         bra     MNLY4            ;  .    .
+;
+MNLY7    rts                      ;  RETURN TO CALLER
 ;
 ;
 ;  INITIAL MINE INSERTION
 ;  ======================
 ;
 ;
-INSINT   SETDP   $C8              ;  TIMER "DP" SET TO RAM
+INSINT   setdp   $C8              ;  TIMER "DP" SET TO RAM
 ;
-         DEC     &lt;STAR2           ;  END-OF-MINE INSERTION ?
-         BEQ     INSINT9          ;  .
+         dec     <STAR2           ;  END-OF-MINE INSERTION ?
+         beq     INSINT9          ;  .
 ;
-         INC     &lt;MINMAX          ;  BUMP MINE-SEED COUNTER
+         inc     <MINMAX          ;  BUMP MINE-SEED COUNTER
 ;
-         JSR     RANDOM           ;  RESET INSERTION TIME
-         ANDA    #$07             ;  .
-         ADDA    #$04             ;  .
-         STA     &lt;TMR1            ;  .
+         jsr     RANDOM           ;  RESET INSERTION TIME
+         anda    #$07             ;  .
+         adda    #$04             ;  .
+         sta     <TMR1            ;  .
 ;
-         LDU     &lt;STAR3           ;  INSERT INITIAL MINE BEHAVIOR PARAMETERS
+         ldu     <STAR3           ;  INSERT INITIAL MINE BEHAVIOR PARAMETERS
 ;
-         LDA     #$80             ;  .    SET MINE TO INITIAL LOCATION
-         STA     MIN.FLG,U        ;  .    .
+         lda     #$80             ;  .    SET MINE TO INITIAL LOCATION
+         sta     MIN_FLG,u        ;  .    .
 ;
-         LDD     &lt;LAYRYX          ;  .    SET SEED RESTING LOCATION
-         ADDA    #$08             ;  .    .    FUDGE MINE UP FOR LAYER OPENING
-         STA     MIN.YW,U         ;  .    .    SET WORKING VALUES
-         CLR     MIN.YW+1,U       ;  .    .    .
-         STB     MIN.XW,U         ;  .    .    .
-         CLR     MIN.XW+1,U       ;  .    .    .
+         ldd     <LAYRYX          ;  .    SET SEED RESTING LOCATION
+         adda    #$08             ;  .    .    FUDGE MINE UP FOR LAYER OPENING
+         sta     MIN_YW,u         ;  .    .    SET WORKING VALUES
+         clr     MIN_YW+1,u       ;  .    .    .
+         stb     MIN_XW,u         ;  .    .    .
+         clr     MIN_XW+1,u       ;  .    .    .
 ;
-INSINT0  JSR     RANDOM           ;  .    SET SEED DESTINATION LOCATION
-         TSTA                     ;  .    .    SET MINIMUM DISTANCE FROM CENTRE
-         BMI     INSINT3          ;  .    .    .
+INSINT0  jsr     RANDOM           ;  .    SET SEED DESTINATION LOCATION
+         tsta                     ;  .    .    SET MINIMUM DISTANCE FROM CENTRE
+         bmi     INSINT3          ;  .    .    .
 ;
-INSINT1  CMPA    #$10             ;  .    .    .    'X' IS POSITIVE
-         BGE     INSINT2          ;  .    .    .    .    BELOW 'X' WINDOW ?
-         ADDA    #$0C             ;  .    .    .    .    .    FUDGE IT UP
-INSINT2  CMPA    #$60             ;  .    .    .    .    ABOVE 'X' WINDOW ?
-         BLE     INSINT5          ;  .    .    .    .    .    FUDGE IT DOWN
-         BRA     INSINT0          ;  .    .    .    .    .    .
+INSINT1  cmpa    #$10             ;  .    .    .    'X' IS POSITIVE
+         bge     INSINT2          ;  .    .    .    .    BELOW 'X' WINDOW ?
+         adda    #$0C             ;  .    .    .    .    .    FUDGE IT UP
+INSINT2  cmpa    #$60             ;  .    .    .    .    ABOVE 'X' WINDOW ?
+         ble     INSINT5          ;  .    .    .    .    .    FUDGE IT DOWN
+         bra     INSINT0          ;  .    .    .    .    .    .
 ;
-INSINT3  CMPA    #$F0             ;  .    .    .    'X' IS NEGATIVE
-         BLE     INSINT4          ;  .    .    .    .    ABOVE 'X' WINDOW ?
-         SUBA    #$0C             ;  .    .    .    .    .    FUDGE IT DOWN
-INSINT4  CMPA    #$A0             ;  .    .    .    .    BELOW 'X' WINDOW ?
-         BGE     INSINT5          ;  .    .    .    .    .    FUDGE IT UP
-         BRA     INSINT0          ;  .    .    .    .    .    .
+INSINT3  cmpa    #$F0             ;  .    .    .    'X' IS NEGATIVE
+         ble     INSINT4          ;  .    .    .    .    ABOVE 'X' WINDOW ?
+         suba    #$0C             ;  .    .    .    .    .    FUDGE IT DOWN
+INSINT4  cmpa    #$A0             ;  .    .    .    .    BELOW 'X' WINDOW ?
+         bge     INSINT5          ;  .    .    .    .    .    FUDGE IT UP
+         bra     INSINT0          ;  .    .    .    .    .    .
 ;
-INSINT5  STA     MIN.T2,U         ;  .    .    .    .
+INSINT5  sta     MIN_T2,u         ;  .    .    .    .
 ;
-         TFR     A,B              ;  .    SET DISPLACEMENT VALUE ($01 OR $FF)
-         SEX                      ;  .    .
-         ORA     #$01             ;  .    .
-         STA     MIN.T1,U         ;  .    .
+         tfr     a,b              ;  .    SET DISPLACEMENT VALUE ($01 OR $FF)
+         sex                      ;  .    .
+         ora     #$01             ;  .    .
+         sta     MIN_T1,u         ;  .    .
 ;
-         CLR     MIN.SIZ,U        ;  .    SET INITIAL ZOOM VALUE
+         clr     MIN_SIZ,u        ;  .    SET INITIAL ZOOM VALUE
 ;
-         LEAY    MIN.LEN,U        ;  .    BUMP TO NEXT ENTRY
-         STY     &lt;STAR3           ;  .    .
+         leay    MIN_LEN,u        ;  .    BUMP TO NEXT ENTRY
+         sty     <STAR3           ;  .    .
 ;
-INSINT9  RTS                      ;  RETURN TO CALLER
+INSINT9  rts                      ;  RETURN TO CALLER
 ;
 ;
-MINSZ    DB      0                ;  MINE SIZE TABLE
-         DB      MIN.SIZ3         ;  .    SMALL
-         DB      MIN.SIZ2         ;  .    MEDIUM
-         DB      MIN.SIZ1         ;  .    LARGE
+MINSZ    db      0                ;  MINE SIZE TABLE
+         db      MIN_SIZ3         ;  .    SMALL
+         db      MIN_SIZ2         ;  .    MEDIUM
+         db      MIN_SIZ1         ;  .    LARGE
 ;
-MINSPD   DB      0                ;  MINE SPEED TABLE
-         DB      MIN.SPD3         ;  .    SMALL
-         DB      MIN.SPD2         ;  .    MEDIUM
-         DB      MIN.SPD1         ;  .    LARGE
+MINSPD   db      0                ;  MINE SPEED TABLE
+         db      MIN_SPD3         ;  .    SMALL
+         db      MIN_SPD2         ;  .    MEDIUM
+         db      MIN_SPD1         ;  .    LARGE
 ;
-MINSCR   DW      $0100            ;  MINE SCORE TABLE
-         DW      $0500            ;  .
-         DW      $0325            ;  .
-         DW      $0750            ;  .
+MINSCR   dw      $0100            ;  MINE SCORE TABLE
+         dw      $0500            ;  .
+         dw      $0325            ;  .
+         dw      $0750            ;  .
 ;
-MINSSCR  DW      0                ;  MINE SCORE VS. SPEED TABLE
-         DW      $0100            ;  .    SMALL
-         DW      $0035            ;  .    MEDIUM
-         DW      $0000            ;  .    LARGE
+MINSSCR  dw      0                ;  MINE SCORE VS. SPEED TABLE
+         dw      $0100            ;  .    SMALL
+         dw      $0035            ;  .    MEDIUM
+         dw      $0000            ;  .    LARGE
 ;
-MINBOX   DW      0                ;  MINE COLLISION BOX PARAMETERS
-         DW      MIN.BOX3         ;  .
-         DW      MIN.BOX2         ;  .
-         DW      MIN.BOX1         ;  .
+MINBOX   dw      0                ;  MINE COLLISION BOX PARAMETERS
+         dw      MIN_BOX3         ;  .
+         dw      MIN_BOX2         ;  .
+         dw      MIN_BOX1         ;  .
 ;
-MINOBJ   DW      MINE1            ;  MINE PACKET TABLE
-         DW      MINE2            ;  .
-         DW      MINE3            ;  .
-         DW      MINE4            ;  .
+MINOBJ   dw      MINE1            ;  MINE PACKET TABLE
+         dw      MINE2            ;  .
+         dw      MINE3            ;  .
+         dw      MINE4            ;  .
 ;
 ;
 ;  STAR-SWEEPER GAME LOGIC
 ;  =======================
 ;
 ;
-GSHIP    PSHS    DP               ;  SAVE ENTRY "DP"
-         LDA     #$C8             ;  SET "DP" REGISTER TO RAM
-         TFR     A,DP             ;  .
-         SETDP   $C8              ;  .
+GSHIP    pshs    dp               ;  SAVE ENTRY "DP"
+         lda     #$C8             ;  SET "DP" REGISTER TO RAM
+         tfr     a,dp             ;  .
+         setdp   $C8              ;  .
 ;
-         LDA     &lt;ABORT           ;  GAME ABORTED ?
-         LBNE    SHPON2           ;  .    SKIP STAR-SWEEPER LOGIC
+         lda     <ABORT           ;  GAME ABORTED ?
+         lbne    SHPON2           ;  .    SKIP STAR-SWEEPER LOGIC
 ;
-         LDA     &lt;HYPFLAG         ;  STATUS OF HYPER-SPACE SEQUENCE ?
-         LBNE    HYPER1           ;  .    HYPER-SPACE SEQUENCE GOING ALREADY
-         LDA     &lt;S.HYPER         ;  .    HYPER-SPACE BUTTON PRESSED ?
-         LBNE    HYPER            ;  .    .
+         lda     <HYPFLAG         ;  STATUS OF HYPER-SPACE SEQUENCE ?
+         lbne    HYPER1           ;  .    HYPER-SPACE SEQUENCE GOING ALREADY
+         lda     <S_HYPER         ;  .    HYPER-SPACE BUTTON PRESSED ?
+         lbne    HYPER            ;  .    .
 ;
-GSHP1    LDA     &lt;S.THRST         ;  THRUSTING ?
-         BEQ     GSHP5            ;  .
+GSHP1    lda     <S_THRST         ;  THRUSTING ?
+         beq     GSHP5            ;  .
 ;
-         LDA     &lt;SHIPROT         ;  .    THRUSTING ALONG EXISTING AXIS ?
-         CMPA    &lt;SHIPDIR1        ;  .    .    ALONG FIRST AXIS ?
-         BEQ     GSHP3            ;  .    .    .
-         CMPA    &lt;SHIPDIR2        ;  .    .    ALONG SECOND AXIS ?
-         BEQ     GSHP2            ;  .    .    .
+         lda     <SHIPROT         ;  .    THRUSTING ALONG EXISTING AXIS ?
+         cmpa    <SHIPDIR1        ;  .    .    ALONG FIRST AXIS ?
+         beq     GSHP3            ;  .    .    .
+         cmpa    <SHIPDIR2        ;  .    .    ALONG SECOND AXIS ?
+         beq     GSHP2            ;  .    .    .
 ;
-         LDA     &lt;SHIPSPD1        ;  .    WHICH AXIS IS FREE ?
-         BEQ     GSHP3            ;  .    .    FIRST AXIS ?
-         LDA     &lt;SHIPSPD2        ;  .    .    SECOND AXIS ?
-         BNE     GSHP5            ;  .    .    .
+         lda     <SHIPSPD1        ;  .    WHICH AXIS IS FREE ?
+         beq     GSHP3            ;  .    .    FIRST AXIS ?
+         lda     <SHIPSPD2        ;  .    .    SECOND AXIS ?
+         bne     GSHP5            ;  .    .    .
 ;
-GSHP2    LDA     &lt;SHIPSPD2        ;  .    ACCELERATE SPEED ALONG AXIS #2
-         ADDA    #$0C             ;  .    .
-         CMPA    #$7F             ;  .    .    MAXIMUM SPEED ?
-         BHI     GSHP5            ;  .    .    .
-         STA     &lt;SHIPSPD2        ;  .    .    SAVE NEW SPEED
-         LDA     &lt;SHIPROT         ;  .    .    SET DIRECTION OF AXIS
-         STA     &lt;SHIPDIR2        ;  .    .    .
-         BRA     GSHP4            ;  .    .    SET THRUSTER SOUND
-;
-;
-GSHP3    LDA     &lt;SHIPSPD1        ;  .    ACCELERATE SPEED ALONG AXIS #1
-         ADDA    #$0C             ;  .    .
-         CMPA    #$7F             ;  .    .    MAXIMUM SPEED ?
-         BHI     GSHP5            ;  .    .    .
-         STA     &lt;SHIPSPD1        ;  .    .    SAVE NEW SPEED
-         LDA     &lt;SHIPROT         ;  .    .    SET DIRECTION OF AXIS
-         STA     &lt;SHIPDIR1        ;  .    .    .
-;
-GSHP4    INC     THRSND           ;  .    .    SET THRUSTER SOUND
-;
-GSHP5    LDA     &lt;SHIPSPD1        ;  DECELERATE SPEED ALONG FIRST AXIS
-         BEQ     GSHP6            ;  .
-         SUBA    #$02             ;  .
-         STA     &lt;SHIPSPD1        ;  .
-;
-         LDB     &lt;SHIPDIR1        ;  .    CALCULATE SHIP DISPLACEMENTS
-         JSR     MLTY8            ;  .    .    FORM DISPLACEMENTS
-         STY     &lt;DSHIPY1         ;  .    .    .    SAVE 'Y' DISPLACEMENT
-         STX     &lt;DSHIPX1         ;  .    .    .    SAVE 'X' DISPLACEMENT
-;
-GSHP6    LDA     &lt;SHIPSPD2        ;  DECELERATE SPEED ALONG SECOND AXIS
-         BEQ     GSHP7            ;  .
-         SUBA    #$02             ;  .
-         STA     &lt;SHIPSPD2        ;  .
-;
-         LDB     &lt;SHIPDIR2        ;  .    CALCULATE SHIP DISPLACEMENTS
-         JSR     MLTY8            ;  .    .    FORM DISPLACEMENTS
-         STY     &lt;DSHIPY2         ;  .    .    .    SAVE 'Y' DISPLACEMENT
-         STX     &lt;DSHIPX2         ;  .    .    .    SAVE 'X' DISPLACEMENT
-;
-GSHP7    LDD     &lt;WSHIPY          ;  MOVE SHIP 'Y' AXIS
-         ADDD    &lt;DSHIPY1         ;  .
-         ADDD    &lt;DSHIPY2         ;  .
-         STD     &lt;WSHIPY          ;  .
-;
-         LDD     &lt;WSHIPX          ;  MOVE SHIP 'X' AXIS
-         ADDD    &lt;DSHIPX1         ;  .
-         ADDD    &lt;DSHIPX2         ;  .
-         STD     &lt;WSHIPX          ;  .
-;
-GSHP8    LDA     &lt;POT0            ;  ROTATE STAR-SWEEPER ?
-         BEQ     SHPON1           ;  .    NO ROTATION ?
-         BMI     GSHP9            ;  .    ROTATE LEFT ?
-;
-         DEC     &lt;SHIPROT         ;  .    ROTATE RIGHT
-         BRA     SHPON0           ;  .    .
-;
-GSHP9    INC     &lt;SHIPROT         ;  .    ROTATE LEFT
-         BRA     SHPON0           ;  .    .
+GSHP2    lda     <SHIPSPD2        ;  .    ACCELERATE SPEED ALONG AXIS #2
+         adda    #$0C             ;  .    .
+         cmpa    #$7F             ;  .    .    MAXIMUM SPEED ?
+         bhi     GSHP5            ;  .    .    .
+         sta     <SHIPSPD2        ;  .    .    SAVE NEW SPEED
+         lda     <SHIPROT         ;  .    .    SET DIRECTION OF AXIS
+         sta     <SHIPDIR2        ;  .    .    .
+         bra     GSHP4            ;  .    .    SET THRUSTER SOUND
 ;
 ;
-SHPONLY  PSHS    DP               ;  SHIP-ONLY ENTRY POINT
+GSHP3    lda     <SHIPSPD1        ;  .    ACCELERATE SPEED ALONG AXIS #1
+         adda    #$0C             ;  .    .
+         cmpa    #$7F             ;  .    .    MAXIMUM SPEED ?
+         bhi     GSHP5            ;  .    .    .
+         sta     <SHIPSPD1        ;  .    .    SAVE NEW SPEED
+         lda     <SHIPROT         ;  .    .    SET DIRECTION OF AXIS
+         sta     <SHIPDIR1        ;  .    .    .
 ;
-SHPON0   JSR     SWPROT           ;  ROTATE STAR-SWEEPER
+GSHP4    inc     THRSND           ;  .    .    SET THRUSTER SOUND
 ;
-SHPON1   LDA     #$D0             ;  SET "DP" REGISTER TO I/O
-         TFR     A,DP             ;  .
-         SETDP   $D0              ;  .
+GSHP5    lda     <SHIPSPD1        ;  DECELERATE SPEED ALONG FIRST AXIS
+         beq     GSHP6            ;  .
+         suba    #$02             ;  .
+         sta     <SHIPSPD1        ;  .
 ;
-         JSR     INT3Q            ;  DISPLAY MINE-SWEEPER
-         LDB     #P.SHPSZ         ;  .    SET SIZE
-         LDY     #WSHIPY          ;  .    SET POSITION
-         LDX     #PACKET1         ;  .    SET SHIP PACKET ADDRESS
-         JSR     DPACK            ;  .    DRAW PACKET
+         ldb     <SHIPDIR1        ;  .    CALCULATE SHIP DISPLACEMENTS
+         jsr     MLTY8            ;  .    .    FORM DISPLACEMENTS
+         sty     <DSHIPY1         ;  .    .    .    SAVE 'Y' DISPLACEMENT
+         stx     <DSHIPX1         ;  .    .    .    SAVE 'X' DISPLACEMENT
 ;
-SHPON2   PULS    DP,PC            ;  RETURN TO CALLER
+GSHP6    lda     <SHIPSPD2        ;  DECELERATE SPEED ALONG SECOND AXIS
+         beq     GSHP7            ;  .
+         suba    #$02             ;  .
+         sta     <SHIPSPD2        ;  .
+;
+         ldb     <SHIPDIR2        ;  .    CALCULATE SHIP DISPLACEMENTS
+         jsr     MLTY8            ;  .    .    FORM DISPLACEMENTS
+         sty     <DSHIPY2         ;  .    .    .    SAVE 'Y' DISPLACEMENT
+         stx     <DSHIPX2         ;  .    .    .    SAVE 'X' DISPLACEMENT
+;
+GSHP7    ldd     <WSHIPY          ;  MOVE SHIP 'Y' AXIS
+         addd    <DSHIPY1         ;  .
+         addd    <DSHIPY2         ;  .
+         std     <WSHIPY          ;  .
+;
+         ldd     <WSHIPX          ;  MOVE SHIP 'X' AXIS
+         addd    <DSHIPX1         ;  .
+         addd    <DSHIPX2         ;  .
+         std     <WSHIPX          ;  .
+;
+GSHP8    lda     <POT0            ;  ROTATE STAR-SWEEPER ?
+         beq     SHPON1           ;  .    NO ROTATION ?
+         bmi     GSHP9            ;  .    ROTATE LEFT ?
+;
+         dec     <SHIPROT         ;  .    ROTATE RIGHT
+         bra     SHPON0           ;  .    .
+;
+GSHP9    inc     <SHIPROT         ;  .    ROTATE LEFT
+         bra     SHPON0           ;  .    .
+;
+;
+SHPONLY  pshs    dp               ;  SHIP-ONLY ENTRY POINT
+;
+SHPON0   jsr     SWPROT           ;  ROTATE STAR-SWEEPER
+;
+SHPON1   lda     #$D0             ;  SET "DP" REGISTER TO I/O
+         tfr     a,dp             ;  .
+         setdp   $D0              ;  .
+;
+         jsr     INT3Q            ;  DISPLAY MINE-SWEEPER
+         ldb     #P_SHPSZ         ;  .    SET SIZE
+         ldy     #WSHIPY          ;  .    SET POSITION
+         ldx     #PACKET1         ;  .    SET SHIP PACKET ADDRESS
+         jsr     DPACK            ;  .    DRAW PACKET
+;
+SHPON2   puls    dp,pc            ;  RETURN TO CALLER
 ;
 ;
 ;  HYPER-SPACE SEQUENCE
 ;  ====================
 ;
-         SETDP   $C8
+         setdp   $C8
 ;        =====   ===
 ;
-HYPER    LDA     #$80             ;  START HYPER-SPACE SEQUENCE
-         STA     &lt;HYPFLAG         ;  .    SET FLAG FOR RNG MIXING
-         JSR     RANDOM           ;  .    SET COUNTER
-         ANDA    #$03             ;  .    .
-         ADDA    #$03             ;  .    .
-         STA     &lt;HYPCNT          ;  .    .
-         INC     HYPSND           ;  .    SET HYPER-SPACE SOUND FLAG
+HYPER    lda     #$80             ;  START HYPER-SPACE SEQUENCE
+         sta     <HYPFLAG         ;  .    SET FLAG FOR RNG MIXING
+         jsr     RANDOM           ;  .    SET COUNTER
+         anda    #$03             ;  .    .
+         adda    #$03             ;  .    .
+         sta     <HYPCNT          ;  .    .
+         inc     HYPSND           ;  .    SET HYPER-SPACE SOUND FLAG
 ;
-HYPER1   LDA     &lt;HYPFLAG         ;  SELECT HYPER-SPACE SEQUENCE
-         BPL     HYPER30          ;  .    WAITING FOR NEW LOCATION ?
+HYPER1   lda     <HYPFLAG         ;  SELECT HYPER-SPACE SEQUENCE
+         bpl     HYPER30          ;  .    WAITING FOR NEW LOCATION ?
 ;
-HYPER20  DEC     &lt;HYPCNT          ;  WAIT FOR SHIP RE-APPERANCE
-         BEQ     HYPER21          ;  .    SEQUENCE DONE ?
+HYPER20  dec     <HYPCNT          ;  WAIT FOR SHIP RE-APPERANCE
+         beq     HYPER21          ;  .    SEQUENCE DONE ?
 ;
-         JSR     RANPOS           ;  .    STIR-UP RANDOM NUMBER GENERATOR
-         STA     &lt;WSHIPY          ;  .    .
-         CLR     &lt;WSHIPY + 1      ;  .    .
-         STB     &lt;WSHIPX          ;  .    .
-         CLR     &lt;WSHIPX + 1      ;  .    .
-         PULS    DP,PC            ;  .    .
+         jsr     RANPOS           ;  .    STIR-UP RANDOM NUMBER GENERATOR
+         sta     <WSHIPY          ;  .    .
+         clr     <WSHIPY + 1      ;  .    .
+         stb     <WSHIPX          ;  .    .
+         clr     <WSHIPX + 1      ;  .    .
+         puls    dp,pc            ;  .    .
 ;
-HYPER21  LSR     &lt;HYPFLAG         ;  .    SET FLAG FOR NEXT SEQUENCE
-         LDA     #$1F             ;  .    .
-         STA     &lt;HYPCNT          ;  .    .
-         PULS    DP,PC            ;  .    .
+HYPER21  lsr     <HYPFLAG         ;  .    SET FLAG FOR NEXT SEQUENCE
+         lda     #$1F             ;  .    .
+         sta     <HYPCNT          ;  .    .
+         puls    dp,pc            ;  .    .
 ;
 ;
-HYPER30  LDB     &lt;HYPCNT          ;  SHIP RE-APPERANCE
-         CMPB    #$E0             ;  .
-         BLE     HYPER31          ;  .
-         LDA     &lt;HYPCNT          ;  .
-         SUBA    #$04             ;  .
-         STA     &lt;HYPCNT          ;  .
+HYPER30  ldb     <HYPCNT          ;  SHIP RE-APPERANCE
+         cmpb    #$E0             ;  .
+         ble     HYPER31          ;  .
+         lda     <HYPCNT          ;  .
+         suba    #$04             ;  .
+         sta     <HYPCNT          ;  .
 ;
-         CLRA                     ;  .    DRAW STAR FIELD
-         JSR     H.STARS          ;  .    .
-         PULS    DP,PC            ;  .    .
+         clra                     ;  .    DRAW STAR FIELD
+         jsr     H_STARS          ;  .    .
+         puls    dp,pc            ;  .    .
 ;
-HYPER31  CLR     &lt;HYPCNT          ;  HYPER-SPACE SEQUENCE DONE
-         CLR     &lt;HYPFLAG         ;  .
-         JSR     HSWPRST          ;  .    INITIALIZE SWEEPER PARAMETERS
+HYPER31  clr     <HYPCNT          ;  HYPER-SPACE SEQUENCE DONE
+         clr     <HYPFLAG         ;  .
+         jsr     HSWPRST          ;  .    INITIALIZE SWEEPER PARAMETERS
 ;
-         PULS    DP,PC            ;  RETURN TO CALLER
+         puls    dp,pc            ;  RETURN TO CALLER
 
 ;
 ;
 ;  MINE-LAYER GAME LOGIC
 ;  =======================
 ;
-         SETDP   $D0
+         setdp   $D0
 ;        =====   ===
 ;
-MSHIP    LDA     LAYRSPD          ;  IS THE MINE-LAYER ON-SCREEN ?
-         BEQ     MSHIP1           ;  .
+MSHIP    lda     LAYRSPD          ;  IS THE MINE-LAYER ON-SCREEN ?
+         beq     MSHIP1           ;  .
 ;
-         PSHS    DP               ;  SAVE ENTRY "DP"
-         LDA     #$C8             ;  SET "DP" REGISTER TO RAM
-         TFR     A,DP             ;  .
-         SETDP   $C8              ;  .
+         pshs    dp               ;  SAVE ENTRY "DP"
+         lda     #$C8             ;  SET "DP" REGISTER TO RAM
+         tfr     a,dp             ;  .
+         setdp   $C8              ;  .
 ;
 ;==========================================================================JJH
-;        LDA     &lt;LAYRSPD         ;  CODE DELETED - REV. C CHANGES   ======JJH
+;        lda     <LAYRSPD         ;  CODE DELETED - REV. C CHANGES   ======JJH
 ;        BEQ     MSHIP1           ;  .                               ======JJH
 ;==========================================================================JJH
 ;
 ;==========================================================================JJH
-         NOP                      ;  CODE ADDED - REV. C CHANGES     ======JJH
-         NOP                      ;  .                               ======JJH
-         NOP                      ;  .                               ======JJH
-         NOP                      ;  .                               ======JJH
+         nop                      ;  CODE ADDED - REV. C CHANGES     ======JJH
+         nop                      ;  .                               ======JJH
+         nop                      ;  .                               ======JJH
+         nop                      ;  .                               ======JJH
 ;==========================================================================JJH
 ;
-         LDD     &lt;WLAYRY          ;  MOVE SHIP 'Y' AXIS
-         ADDD    &lt;DLAYRY          ;  .
-         STD     &lt;WLAYRY          ;  .
-         STA     &lt;LAYRYX          ;  .
+         ldd     <WLAYRY          ;  MOVE SHIP 'Y' AXIS
+         addd    <DLAYRY          ;  .
+         std     <WLAYRY          ;  .
+         sta     <LAYRYX          ;  .
 ;
-         LDD     &lt;WLAYRX          ;  MOVE SHIP 'X' AXIS
-         ADDD    &lt;DLAYRX          ;  .
-         STD     &lt;WLAYRX          ;  .
-         STA     &lt;LAYRYX+1        ;  .
+         ldd     <WLAYRX          ;  MOVE SHIP 'X' AXIS
+         addd    <DLAYRX          ;  .
+         std     <WLAYRX          ;  .
+         sta     <LAYRYX+1        ;  .
 ;
-         PULS    DP               ;  SET "DP" REGISTER TO I/O
-         SETDP   $D0              ;  .
+         puls    dp               ;  SET "DP" REGISTER TO I/O
+         setdp   $D0              ;  .
 ;
-         JSR     INT3Q            ;  DISPLAY MINI MINE-LAYER
-         LDB     #P.LYRSZ         ;  .    SET SIZE
-         LDY     LAYRYX           ;  .    SET POSITION
-         LDX     #LAYER           ;  .    SET PACKET ADDRESS
-         JSR     APACK            ;  .    DRAW PACKET
+         jsr     INT3Q            ;  DISPLAY MINI MINE-LAYER
+         ldb     #P_LYRSZ         ;  .    SET SIZE
+         ldy     LAYRYX           ;  .    SET POSITION
+         ldx     #LAYER           ;  .    SET PACKET ADDRESS
+         jsr     APACK            ;  .    DRAW PACKET
 ;
-MSHIP1   RTS                      ;  RETURN TO CALLER
+MSHIP1   rts                      ;  RETURN TO CALLER
 ;
 ;
 ;  MINE-LAYER PARAMETER MODIFICATIONS
@@ -1069,671 +1069,671 @@ MSHIP1   RTS                      ;  RETURN TO CALLER
 ;        FIRST MINE-LAYER MOTION MODIFICATION
 ;        ------------------------------------
 ;
-BEGLAYR  SETDP   $C8              ;  TIMER "DP" SET TO RAM
+BEGLAYR  setdp   $C8              ;  TIMER "DP" SET TO RAM
 ;
-         LDX     #INSLAYR         ;  SET-UP FOR GENERAL MINE-LAYER MOTION
-         STX     &lt;TMR3 + 1        ;  .
+         ldx     #INSLAYR         ;  SET-UP FOR GENERAL MINE-LAYER MOTION
+         stx     <TMR3 + 1        ;  .
 ;
-         JSR     RANDOM           ;  SELECT PRE-PROGRAMMED MINE-LAYING SEQUENCE
-         LDX     #RSTABL          ;  .
-         ANDA    #$06             ;  .
-         LDX     A,X              ;  .
+         jsr     RANDOM           ;  SELECT PRE-PROGRAMMED MINE-LAYING SEQUENCE
+         ldx     #RSTABL          ;  .
+         anda    #$06             ;  .
+         ldx     a,x              ;  .
 ;
-         LDD     X++              ;  SET INITIAL MINE-LAYER LOCATION
-         STD     &lt;LAYRYX          ;  .
-         STA     &lt;WLAYRY          ;  .    WORKING 'Y' LOCATION
-         CLR     &lt;WLAYRY + 1      ;  .    .
-         STB     &lt;WLAYRX          ;  .    WORKING 'X' LOCATION
-         CLR     &lt;WLAYRX + 1      ;  .    .
+         ldd     x++              ;  SET INITIAL MINE-LAYER LOCATION
+         std     <LAYRYX          ;  .
+         sta     <WLAYRY          ;  .    WORKING 'Y' LOCATION
+         clr     <WLAYRY + 1      ;  .    .
+         stb     <WLAYRX          ;  .    WORKING 'X' LOCATION
+         clr     <WLAYRX + 1      ;  .    .
 ;
-         BRA     INSLYR6          ;  FETCH MOTION MODIFICATIONS
+         bra     INSLYR6          ;  FETCH MOTION MODIFICATIONS
 ;
 ;
 ;        GENERAL MINE-LAYER MOTION MODIFICATIONS
 ;        ---------------------------------------
 ;
 ;
-INSLAYR  SETDP   $C8              ;  TIMER "DP" SET TO RAM
+INSLAYR  setdp   $C8              ;  TIMER "DP" SET TO RAM
 ;
-         LDA     &lt;RSMINES         ;  USE RANDOM MOTION OR PROGRAMMED SEQUENCE ?
-         BNE     INSLYR2          ;  .
-;
-;
-INSLYR1  JSR     RANDOM           ;  RANDOM MOTION
-         ANDA    #$7F             ;  .    SET PARAMETER CHANGE TIME
-         ADDA    #$30             ;  .    .
-         STA     &lt;TMR3            ;  .    .
-;
-         JSR     RANDOM           ;  .    SET MINE-LAYER DIRECTION
-         ANDA    #$3F             ;  .    .
-         STA     &lt;LAYRDIR         ;  .    .
-;
-         JSR     RANDOM           ;  .    SET MINE-LAYER SPEED
-         ADDA    #$10             ;  .    .
-         STA     &lt;LAYRSPD         ;  .    .
-         BRA     INSLYR7          ;  .    .
+         lda     <RSMINES         ;  USE RANDOM MOTION OR PROGRAMMED SEQUENCE ?
+         bne     INSLYR2          ;  .
 ;
 ;
-INSLYR2  LDA     &lt;ABORT           ;  PRE-PROGRAMMED MINE-LAYING SEQUENCE
-         BNE     INSLYR1          ;  .    GAME ABORTED ?
+INSLYR1  jsr     RANDOM           ;  RANDOM MOTION
+         anda    #$7F             ;  .    SET PARAMETER CHANGE TIME
+         adda    #$30             ;  .    .
+         sta     <TMR3            ;  .    .
 ;
-;        LDA     &lt;CMINES          ;  .    ALL ACTIVE MINES DESTROYED ?
+         jsr     RANDOM           ;  .    SET MINE-LAYER DIRECTION
+         anda    #$3F             ;  .    .
+         sta     <LAYRDIR         ;  .    .
+;
+         jsr     RANDOM           ;  .    SET MINE-LAYER SPEED
+         adda    #$10             ;  .    .
+         sta     <LAYRSPD         ;  .    .
+         bra     INSLYR7          ;  .    .
+;
+;
+INSLYR2  lda     <ABORT           ;  PRE-PROGRAMMED MINE-LAYING SEQUENCE
+         bne     INSLYR1          ;  .    GAME ABORTED ?
+;
+;        lda     <CMINES          ;  .    ALL ACTIVE MINES DESTROYED ?
 ;        BEQ     INSLYR1          ;  .    .
 ;
-         LDB     #MINES           ;  .    FIND HOLE FOR NEW MINE
-         LDU     #MIN.TBL         ;  .    .
+         ldb     #MINES           ;  .    FIND HOLE FOR NEW MINE
+         ldu     #MIN_TBL         ;  .    .
 ;
-INSLYR3  LDA     0,U              ;  .    .
-         BEQ     INSLYR4          ;  .    .
+INSLYR3  lda     0,u              ;  .    .
+         beq     INSLYR4          ;  .    .
 ;
-         LEAU    MIN.LEN,U        ;  .    .
-         DECB                     ;  .    .    END-OF-TABLE ?
-         BNE     INSLYR3          ;  .    .    .
-         BRA     INSLYR7          ;  .    .    .    WHAT THE HEY ?
-;
-;
-INSLYR4  INC     &lt;MINMAX          ;  .    INSERT NEW MINE
-         DEC     &lt;RSMINES         ;  .    .    DECREMENT RE-SEED MINE COUNT
-;
-         LDX     &lt;WLAYRY          ;  .    .    SET MINE TO LAYER POSITION
-         STX     MIN.YW,U         ;  .    .    .    WORKING DISPLACMENETS
-         LDX     &lt;WLAYRX          ;  .    .    .    .
-         STX     MIN.XW,U         ;  .    .    .    .
-;
-         LDA     #$40             ;  .    .    SET MINE-SEED TO IDLE
-         STA     MIN.FLG,U        ;  .    .    .
-;
-         LDA     &lt;RESEED          ;  .    .    MINE RE-SEEDING ALREADY STARTED ?
-         BNE     INSLYR5          ;  .    .    .
-;
-         LDX     #RSGROW          ;  .    .    SET-UP DELAYED MINE GROWTH
-         STX     &lt;TMR1 + 1        ;  .    .    .
-         JSR     RANDOM           ;  .    .    .    SET DELAY TIME
-         ANDA    #$7F             ;  .    .    .    .
-         ADDA    #$40             ;  .    .    .    .
-         STA     &lt;TMR1            ;  .    .    .    .
-;
-         INC     &lt;RESEED          ;  .    .    SET RE-SEEDING FLAG
-;
-INSLYR5  LDX     &lt;LAYRPTR         ;  .    FETCH PRE-PROGRAMMED VALUES
-INSLYR6  LDA     X+               ;  .    .    SET NEXT PARAMETER CHANGE TIME
-         STA     &lt;TMR3            ;  .    .    .
-;
-         LDA     X+               ;  .    .    SET MINE-LAYER DIRECTION
-         STA     &lt;LAYRDIR         ;  .    .    .
-;
-         LDA     X+               ;  .    .    SET MINE-LAYER SPEED
-         STA     &lt;LAYRSPD         ;  .    .    .
-         STX     &lt;LAYRPTR         ;  .    .    .    SAVE UPDATED SEQUENCE POINTER
+         leau    MIN_LEN,u        ;  .    .
+         decb                     ;  .    .    END-OF-TABLE ?
+         bne     INSLYR3          ;  .    .    .
+         bra     INSLYR7          ;  .    .    .    WHAT THE HEY ?
 ;
 ;
-INSLYR7  LDB     &lt;LAYRDIR         ;  CALCULATE SHIP DISPLACEMENTS FOR SPEED
-         JSR     MLTY8            ;  .    FORM DISPLACEMENTS
-         STY     &lt;DLAYRY          ;  .    .    SAVE 'Y' DISPLACEMENT
-         STX     &lt;DLAYRX          ;  .    .    SAVE 'X' DISPLACEMENT
+INSLYR4  inc     <MINMAX          ;  .    INSERT NEW MINE
+         dec     <RSMINES         ;  .    .    DECREMENT RE-SEED MINE COUNT
 ;
-         RTS                      ;  .    RETURN TO CALLER
+         ldx     <WLAYRY          ;  .    .    SET MINE TO LAYER POSITION
+         stx     MIN_YW,u         ;  .    .    .    WORKING DISPLACMENETS
+         ldx     <WLAYRX          ;  .    .    .    .
+         stx     MIN_XW,u         ;  .    .    .    .
+;
+         lda     #$40             ;  .    .    SET MINE-SEED TO IDLE
+         sta     MIN_FLG,u        ;  .    .    .
+;
+         lda     <RESEED          ;  .    .    MINE RE-SEEDING ALREADY STARTED ?
+         bne     INSLYR5          ;  .    .    .
+;
+         ldx     #RSGROW          ;  .    .    SET-UP DELAYED MINE GROWTH
+         stx     <TMR1 + 1        ;  .    .    .
+         jsr     RANDOM           ;  .    .    .    SET DELAY TIME
+         anda    #$7F             ;  .    .    .    .
+         adda    #$40             ;  .    .    .    .
+         sta     <TMR1            ;  .    .    .    .
+;
+         inc     <RESEED          ;  .    .    SET RE-SEEDING FLAG
+;
+INSLYR5  ldx     <LAYRPTR         ;  .    FETCH PRE-PROGRAMMED VALUES
+INSLYR6  lda     x+               ;  .    .    SET NEXT PARAMETER CHANGE TIME
+         sta     <TMR3            ;  .    .    .
+;
+         lda     x+               ;  .    .    SET MINE-LAYER DIRECTION
+         sta     <LAYRDIR         ;  .    .    .
+;
+         lda     x+               ;  .    .    SET MINE-LAYER SPEED
+         sta     <LAYRSPD         ;  .    .    .
+         stx     <LAYRPTR         ;  .    .    .    SAVE UPDATED SEQUENCE POINTER
+;
+;
+INSLYR7  ldb     <LAYRDIR         ;  CALCULATE SHIP DISPLACEMENTS FOR SPEED
+         jsr     MLTY8            ;  .    FORM DISPLACEMENTS
+         sty     <DLAYRY          ;  .    .    SAVE 'Y' DISPLACEMENT
+         stx     <DLAYRX          ;  .    .    SAVE 'X' DISPLACEMENT
+;
+         rts                      ;  .    RETURN TO CALLER
 ;
 ;
 ;        RE-SEEDED MINE GROWTH HANDLER
 ;        -----------------------------
 ;
 ;
-RSGROW   SETDP   $C8              ;  TIMER "DP" SET TO RAM
+RSGROW   setdp   $C8              ;  TIMER "DP" SET TO RAM
 ;
-         LDU     #TBLPTR1         ;  GROW FEATURED MINE
-         LDA     &lt;ACTPLY          ;  .    SELECT POINTER FOR ACTIVE PLAYER
-         LDU     A,U              ;  .    .
-         LDA     0,U              ;  .    SET MINE TYPE
-         LDB     #3               ;  .    SET MINE SIZE
-         JSR     RANSEED          ;  .    FIND AND SET ENTRY
+         ldu     #TBLPTR1         ;  GROW FEATURED MINE
+         lda     <ACTPLY          ;  .    SELECT POINTER FOR ACTIVE PLAYER
+         ldu     a,u              ;  .    .
+         lda     0,u              ;  .    SET MINE TYPE
+         ldb     #3               ;  .    SET MINE SIZE
+         jsr     RANSEED          ;  .    FIND AND SET ENTRY
 ;
-         LDX     #FRCGROW         ;  SET-UP FOR FORCED MINE GROWTH
-         STX     &lt;TMR1 + 1        ;  .
+         ldx     #FRCGROW         ;  SET-UP FOR FORCED MINE GROWTH
+         stx     <TMR1 + 1        ;  .
 ;
-         RTS                      ;  .    RETURN TO CALLER
+         rts                      ;  .    RETURN TO CALLER
 ;
 ;
 ;        FORCED MINE GROWTH HANDLER
 ;        --------------------------
 ;
 ;
-FRCGROW  SETDP   $C8              ;  TIMER "DP" SET TO RAM
+FRCGROW  setdp   $C8              ;  TIMER "DP" SET TO RAM
 ;
-         DEC     &lt;FRCTIME         ;  DOWN-COUNT FORCE TIMER
-         BEQ     FRC1             ;  .
-         LDA     #$FF             ;  .    RESET TIMER #1
-         STA     &lt;TMR1            ;  .    .
-         BRA     FRC9             ;  .    SKIP FORCED MINE GROWTH
+         dec     <FRCTIME         ;  DOWN-COUNT FORCE TIMER
+         beq     FRC1             ;  .
+         lda     #$FF             ;  .    RESET TIMER #1
+         sta     <TMR1            ;  .    .
+         bra     FRC9             ;  .    SKIP FORCED MINE GROWTH
 ;
-FRC1     JSR     RANDOM           ;  FETCH RANDOM NUMBER FOR MINE SIZE
-         TFR     A,B              ;  .    NUMBER MUST BE BETWEEN 1 - 3
-         ANDB    #$03             ;  .    .
-         BNE     FRC2             ;  .    .    BUMP IF ZERO
-         ADDB    #$01             ;  .    .    .
+FRC1     jsr     RANDOM           ;  FETCH RANDOM NUMBER FOR MINE SIZE
+         tfr     a,b              ;  .    NUMBER MUST BE BETWEEN 1 - 3
+         andb    #$03             ;  .    .
+         bne     FRC2             ;  .    .    BUMP IF ZERO
+         addb    #$01             ;  .    .    .
 ;
-FRC2     LDU     #TBLPTR1         ;  GROW FEATURED MINE
-         LDA     &lt;ACTPLY          ;  .    SELECT POINTER FOR ACTIVE PLAYER
-         LDU     A,U              ;  .    .
-         LDA     0,U              ;  .    SET MINE TYPE
-         JSR     RANSEED          ;  .    FIND AND SET ENTRY
+FRC2     ldu     #TBLPTR1         ;  GROW FEATURED MINE
+         lda     <ACTPLY          ;  .    SELECT POINTER FOR ACTIVE PLAYER
+         ldu     a,u              ;  .    .
+         lda     0,u              ;  .    SET MINE TYPE
+         jsr     RANSEED          ;  .    FIND AND SET ENTRY
 ;
-FRC9     RTS                      ;  .    RETURN TO CALLER
+FRC9     rts                      ;  .    RETURN TO CALLER
 ;
 ;
 ;        MINE-LAYER RE-SEEDING SEQUENCES
 ;        -------------------------------
 ;
 ;
-RSTABL   DW      RESEED1          ;  RE-SEEDING SEQUENCE LOOK-UP TABLE
-         DW      RESEED2          ;  .
-         DW      RESEED3          ;  .
-         DW      RESEED4          ;  .
+RSTABL   dw      RESEED1          ;  RE-SEEDING SEQUENCE LOOK-UP TABLE
+         dw      RESEED2          ;  .
+         dw      RESEED3          ;  .
+         dw      RESEED4          ;  .
 ;
 ;
-RESEED1  DW      $7F00            ;  RE-SEED SEQUENCE #1
-         DB      $28              ;  .    DELAY TO NEXT CHANGE
-         DB      $20              ;  .    DIRECTION OF CURRENT MOTION
-         DB      $30              ;  .    SPEED OF CURRENT MOTION
-         DB      $40,$28,$30      ;  .
-         DB      $28,$00,$10      ;  .
-         DB      $30,$10,$40      ;  .
-         DB      $18,$20,$50      ;  .
-         DB      $40,$30,$28      ;  .
-         DB      $30,$08,$60      ;  .
-         DB      $7F,$38,$70      ;  .
+RESEED1  dw      $7F00            ;  RE-SEED SEQUENCE #1
+         db      $28              ;  .    DELAY TO NEXT CHANGE
+         db      $20              ;  .    DIRECTION OF CURRENT MOTION
+         db      $30              ;  .    SPEED OF CURRENT MOTION
+         db      $40,$28,$30      ;  .
+         db      $28,$00,$10      ;  .
+         db      $30,$10,$40      ;  .
+         db      $18,$20,$50      ;  .
+         db      $40,$30,$28      ;  .
+         db      $30,$08,$60      ;  .
+         db      $7F,$38,$70      ;  .
 ;
 ;
-RESEED2  DW      $8000            ;  RE-SEED SEQUENCE #2
-         DB      $40              ;  .    DELAY TO NEXT CHANGE
-         DB      $00              ;  .    DIRECTION OF CURRENT MOTION
-         DB      $30              ;  .    SPEED OF CURRENT MOTION
-         DB      $20,$10,$50      ;  .
-         DB      $20,$28,$40      ;  .
-         DB      $30,$3E,$70      ;  .
-         DB      $18,$30,$60      ;  .
-         DB      $20,$18,$40      ;  .
-         DB      $30,$24,$50      ;  .
-         DB      $7F,$06,$70      ;  .
+RESEED2  dw      $8000            ;  RE-SEED SEQUENCE #2
+         db      $40              ;  .    DELAY TO NEXT CHANGE
+         db      $00              ;  .    DIRECTION OF CURRENT MOTION
+         db      $30              ;  .    SPEED OF CURRENT MOTION
+         db      $20,$10,$50      ;  .
+         db      $20,$28,$40      ;  .
+         db      $30,$3E,$70      ;  .
+         db      $18,$30,$60      ;  .
+         db      $20,$18,$40      ;  .
+         db      $30,$24,$50      ;  .
+         db      $7F,$06,$70      ;  .
 ;
 ;
-RESEED3  DW      $007F            ;  RE-SEED SEQUENCE #3
-         DB      $40              ;  .    DELAY TO NEXT CHANGE
-         DB      $10              ;  .    DIRECTION OF CURRENT MOTION
-         DB      $60              ;  .    SPEED OF CURRENT MOTION
-         DB      $28,$38,$30      ;  .
-         DB      $28,$08,$40      ;  .
-         DB      $30,$28,$7F      ;  .
-         DB      $20,$18,$30      ;  .
-         DB      $30,$08,$68      ;  .
-         DB      $40,$20,$50      ;  .
-         DB      $7F,$38,$70      ;  .
+RESEED3  dw      $007F            ;  RE-SEED SEQUENCE #3
+         db      $40              ;  .    DELAY TO NEXT CHANGE
+         db      $10              ;  .    DIRECTION OF CURRENT MOTION
+         db      $60              ;  .    SPEED OF CURRENT MOTION
+         db      $28,$38,$30      ;  .
+         db      $28,$08,$40      ;  .
+         db      $30,$28,$7F      ;  .
+         db      $20,$18,$30      ;  .
+         db      $30,$08,$68      ;  .
+         db      $40,$20,$50      ;  .
+         db      $7F,$38,$70      ;  .
 ;
 ;
-RESEED4  DW      $0080            ;  RE-SEED SEQUENCE #4
-         DB      $40              ;  .    DELAY TO NEXT CHANGE
-         DB      $30              ;  .    DIRECTION OF CURRENT MOTION
-         DB      $60              ;  .    SPEED OF CURRENT MOTION
-         DB      $38,$18,$30      ;  .
-         DB      $30,$20,$18      ;  .
-         DB      $20,$38,$40      ;  .
-         DB      $28,$10,$60      ;  .
-         DB      $20,$00,$30      ;  .
-         DB      $40,$38,$50      ;  .
-         DB      $7F,$1C,$70      ;  .
+RESEED4  dw      $0080            ;  RE-SEED SEQUENCE #4
+         db      $40              ;  .    DELAY TO NEXT CHANGE
+         db      $30              ;  .    DIRECTION OF CURRENT MOTION
+         db      $60              ;  .    SPEED OF CURRENT MOTION
+         db      $38,$18,$30      ;  .
+         db      $30,$20,$18      ;  .
+         db      $20,$38,$40      ;  .
+         db      $28,$10,$60      ;  .
+         db      $20,$00,$30      ;  .
+         db      $40,$38,$50      ;  .
+         db      $7F,$1C,$70      ;  .
 ;
 ;
 ;  BULLET GAME LOGIC
 ;  =================
 ;
-         SETDP   $D0
+         setdp   $D0
 ;        =====   ===
 ;
-GBULLET  LDA     #BULLETS         ;  DISPLAY 'BULLETS' TABLE
-         LDU     #BLT.TBL         ;  .
-         LDX     #S.FIRE          ;  .
+GBULLET  lda     #BULLETS         ;  DISPLAY 'BULLETS' TABLE
+         ldu     #BLT_TBL         ;  .
+         ldx     #S_FIRE          ;  .
 ;
-SBULLET  STA     TEMP1            ;  .
-         JSR     INTMAX           ;  .
+SBULLET  sta     TEMP1            ;  .
+         jsr     INTMAX           ;  .
 ;
-GBLT1    LDA     BLT.FLG,U        ;  .    BULLET ACTIVE ?
-         BEQ     GBLT4            ;  .    .
+GBLT1    lda     BLT_FLG,u        ;  .    BULLET ACTIVE ?
+         beq     GBLT4            ;  .    .
 ;
-         DEC     BLT.DC,U         ;  .    DECREMENT BULLET DOWN-COUNTER
-         BEQ     GBLT3            ;  .    .
+         dec     BLT_DC,u         ;  .    DECREMENT BULLET DOWN-COUNTER
+         beq     GBLT3            ;  .    .
 ;
-         LDD     BLT.WY,U         ;  .    CALCULATE NEW BULLET POSITION
-         ADDD    BLT.YD,U         ;  .    .    'Y' POSITION
-         STD     BLT.WY,U         ;  .    .    .
+         ldd     BLT_WY,u         ;  .    CALCULATE NEW BULLET POSITION
+         addd    BLT_YD,u         ;  .    .    'Y' POSITION
+         std     BLT_WY,u         ;  .    .    .
 ;
-         LDD     BLT.WX,U         ;  .    .    'X' POSITION
-         ADDD    BLT.XD,U         ;  .    .    .
-         STD     BLT.WX,U         ;  .    .    .
+         ldd     BLT_WX,u         ;  .    .    'X' POSITION
+         addd    BLT_XD,u         ;  .    .    .
+         std     BLT_WX,u         ;  .    .    .
 ;
-         LEAY    BLT.WY,U         ;  .    DISPLAY BULLET FOR THIS ENTRY
-         JSR     DDOT             ;  .    .    POSITION BULLET
+         leay    BLT_WY,u         ;  .    DISPLAY BULLET FOR THIS ENTRY
+         jsr     DDOT             ;  .    .    POSITION BULLET
 ;
-GBLT2    LEAU    BLT.LEN,U        ;  .    BUMP TO NEXT ENTRY
-         DEC     TEMP1            ;  .    .    END-OF-BULLET TABLE ?
-         BNE     GBLT1            ;  .    .    .
-         RTS                      ;  .    .    RETURN TO CALLER
+GBLT2    leau    BLT_LEN,u        ;  .    BUMP TO NEXT ENTRY
+         dec     TEMP1            ;  .    .    END-OF-BULLET TABLE ?
+         bne     GBLT1            ;  .    .    .
+         rts                      ;  .    .    RETURN TO CALLER
 ;
-GBLT3    CLR     BLT.FLG,U        ;  .    THIS ENTRY HAS MOVED OFF-SCREEN
-         DEC     CBULLET          ;  .    .    DECREMENT ACTIVE BULLET COUNTER
+GBLT3    clr     BLT_FLG,u        ;  .    THIS ENTRY HAS MOVED OFF-SCREEN
+         dec     CBULLET          ;  .    .    DECREMENT ACTIVE BULLET COUNTER
 ;
-GBLT4    LDA     ABORT            ;  .    ZERO ENTRY FOUND, GAME ABORTED ?
-         BNE     GBLT2            ;  .    .
+GBLT4    lda     ABORT            ;  .    ZERO ENTRY FOUND, GAME ABORTED ?
+         bne     GBLT2            ;  .    .
 ;
-         LDA     HYPFLAG          ;  .    .    HYPER-SPACE SEQUENCE ACTIVE ?
-         BNE     GBLT2            ;  .    .    .
+         lda     HYPFLAG          ;  .    .    HYPER-SPACE SEQUENCE ACTIVE ?
+         bne     GBLT2            ;  .    .    .
 ;
-         LDA     0,X              ;  .    INSERT NEW BULLET ?
-         BEQ     GBLT2            ;  .    .    IS FIRE BUTTON DEPRESSED ?
+         lda     0,x              ;  .    INSERT NEW BULLET ?
+         beq     GBLT2            ;  .    .    IS FIRE BUTTON DEPRESSED ?
 ;
-         CLR     0,X              ;  .    .    CLEAR 'FIRE' FLAG
-         INC     BLTSND           ;  .    .    SET BULLET SOUND FLAG
+         clr     0,x              ;  .    .    CLEAR 'FIRE' FLAG
+         inc     BLTSND           ;  .    .    SET BULLET SOUND FLAG
 ;
-         INC     BLT.FLG,U        ;  .    .    SET BULLET 'ON'
-         LDD     WSHIPY           ;  .    .    SET SHIP WORKING POSITION
-         STD     BLT.WY,U         ;  .    .    .    'Y' AXIS
-         LDD     WSHIPX           ;  .    .    .    'X' AXIS
-         STD     BLT.WX,U         ;  .    .    .    .
-         LDD     DBLTY            ;  .    .    SET BULLET DISPLACEMENT VALUES
-         STD     BLT.YD,U         ;  .    .    .    'Y' AXIS
-         LDD     DBLTX            ;  .    .    .    'X' AXIS
-         STD     BLT.XD,U         ;  .    .    .    .
-         LDA     #$18             ;  .    .    SET DOWN-COUNTERS
-         STA     BLT.DC,U         ;  .    .    .
-         INC     CBULLET          ;  .    .    BUMP ACTIVE BULLET COUNTER
-         BRA     GBLT2            ;  .    .
+         inc     BLT_FLG,u        ;  .    .    SET BULLET 'ON'
+         ldd     WSHIPY           ;  .    .    SET SHIP WORKING POSITION
+         std     BLT_WY,u         ;  .    .    .    'Y' AXIS
+         ldd     WSHIPX           ;  .    .    .    'X' AXIS
+         std     BLT_WX,u         ;  .    .    .    .
+         ldd     DBLTY            ;  .    .    SET BULLET DISPLACEMENT VALUES
+         std     BLT_YD,u         ;  .    .    .    'Y' AXIS
+         ldd     DBLTX            ;  .    .    .    'X' AXIS
+         std     BLT_XD,u         ;  .    .    .    .
+         lda     #$18             ;  .    .    SET DOWN-COUNTERS
+         sta     BLT_DC,u         ;  .    .    .
+         inc     CBULLET          ;  .    .    BUMP ACTIVE BULLET COUNTER
+         bra     GBLT2            ;  .    .
 ;
 ;
 ;  MINE GAME LOGIC
 ;  ===============
 ;
-         SETDP   $D0
+         setdp   $D0
 ;        =====   ===
 ;
-GMINE    LDA     #MINES           ;  SET-UP TO DISPLAY MINE TABLE
-         STA     TEMP1            ;  .
-         LDU     #MIN.TBL         ;  .
+GMINE    lda     #MINES           ;  SET-UP TO DISPLAY MINE TABLE
+         sta     TEMP1            ;  .
+         ldu     #MIN_TBL         ;  .
 ;
-GMIN1    LDA     MIN.FLG,U        ;  FETCH MINE FLAG
-         BNE     GMIN3            ;  .    SKIP THIS ENTRY ?
+GMIN1    lda     MIN_FLG,u        ;  FETCH MINE FLAG
+         bne     GMIN3            ;  .    SKIP THIS ENTRY ?
 ;
-GMIN2    LEAU    MIN.LEN,U        ;  .    .    BUMP TO NEXT ENTRY
-         DEC     TEMP1            ;  .    .    .    END-OF-OBJECT TABLE ?
-         BNE     GMIN1            ;  .    .    .    .
-         RTS                      ;  .    .    .    RETURN TO CALLER
+GMIN2    leau    MIN_LEN,u        ;  .    .    BUMP TO NEXT ENTRY
+         dec     TEMP1            ;  .    .    .    END-OF-OBJECT TABLE ?
+         bne     GMIN1            ;  .    .    .    .
+         rts                      ;  .    .    .    RETURN TO CALLER
 ;
-GMIN3    LBMI    MINIT            ;  .    MINE MOVING TO INITIAL POSITION ?
-         BITA    #$40             ;  .    IDLE MINE ?
-         LBNE    MIDLE            ;  .    .
-         BITA    #$20             ;  .    MINE ZOOMING UP FROM SEED ?
-         LBNE    MZOOM            ;  .    .
-         BITA    #$10             ;  .    IDLE MINE ?
-         LBNE    MWAIT            ;  .    .
-         BITA    #$01             ;  .    MINE COLLISION DETECTED ?
-         LBNE    MBOOM            ;  .    .
+GMIN3    lbmi    MINIT            ;  .    MINE MOVING TO INITIAL POSITION ?
+         bita    #$40             ;  .    IDLE MINE ?
+         lbne    MIDLE            ;  .    .
+         bita    #$20             ;  .    MINE ZOOMING UP FROM SEED ?
+         lbne    MZOOM            ;  .    .
+         bita    #$10             ;  .    IDLE MINE ?
+         lbne    MWAIT            ;  .    .
+         bita    #$01             ;  .    MINE COLLISION DETECTED ?
+         lbne    MBOOM            ;  .    .
 ;        
-MMOVE    LDA     MIN.PAK,U        ;  MINE IN MOTION
+MMOVE    lda     MIN_PAK,u        ;  MINE IN MOTION
 ;
-         CMPA    #FIRBALL         ;  .    'RELEASED' FIRE-BALL ?
-         BEQ     MFBALL           ;  .    .
+         cmpa    #FIRBALL         ;  .    'RELEASED' FIRE-BALL ?
+         beq     MFBALL           ;  .    .
 ;
-         BITA    #$01             ;  .    'DUMB' MINE MOTION ?
-         BEQ     MOVDUMB          ;  .    .
-;
-;
-MOVMAG   LDA     HYPFLAG          ;  HYPER-SPACE ACTIVE ?
-         BNE     MOVDUMB          ;  .    IF SO, USE 'DUMB' MINE MOTION
-;
-         LDA     ABORT            ;  GAME ABORTED ?
-         BNE     MOVDUMB          ;  .    IF SO, USE 'DUMB' MINE MOTION
-;
-         PSHS    DP               ;  SAVE ENTRY "DP"
-         JSR     DPRAM            ;  SET "DP" REGISTER TO RAM
-         SETDP   $C8              ;  .
-;
-         LDA     &lt;WSHIPY          ;  CALCULATE DELTA YX VALUES
-         SUBA    MIN.YW,U         ;  .
-         LDB     &lt;WSHIPX          ;  .
-         SUBB    MIN.XW,U         ;  .
-;
-         JSR     CMPASS           ;  .    CALCULATE ANGLE TO SHIP
-         SUBA    #$10             ;  .    .
-         STA     &lt;ETMP1           ;  .    .
-;
-         LDX     #MINSPD          ;  .    CALCULATE NEW DISPLACEMENTS
-         LDB     MIN.BSZ,U        ;  .    .    FETCH MINE SPEED FOR SIZE
-         LDA     B,X              ;  .    .    .
-         LDB     &lt;ETMP1           ;  .    .    FETCH DIRECTION
-         JSR     MLTY8            ;  .    .    FETCH NEW DISPLACEMENTS
-         STY     MIN.YD,U         ;  .    .    .    SAVE 'Y' DISPLACEMENT
-         STX     MIN.XD,U         ;  .    .    .    SAVE 'X' DISPLACEMENT
-;
-         PULS    DP               ;  .    RECOVER DIRECT REGISTER
-         SETDP   $D0              ;  .    .
+         bita    #$01             ;  .    'DUMB' MINE MOTION ?
+         beq     MOVDUMB          ;  .    .
 ;
 ;
-MOVDUMB  LDD     MIN.YW,U         ;  CALCULATE NEW ABSOLUTE 'Y' VALUE
-         ADDD    MIN.YD,U         ;  .
-         STD     MIN.YW,U         ;  .
+MOVMAG   lda     HYPFLAG          ;  HYPER-SPACE ACTIVE ?
+         bne     MOVDUMB          ;  .    IF SO, USE 'DUMB' MINE MOTION
 ;
-         LDD     MIN.XW,U         ;  CALCULATE NEW ABSOLUTE 'X' VALUE
-         ADDD    MIN.XD,U         ;  .
-         STD     MIN.XW,U         ;  .
+         lda     ABORT            ;  GAME ABORTED ?
+         bne     MOVDUMB          ;  .    IF SO, USE 'DUMB' MINE MOTION
 ;
+         pshs    dp               ;  SAVE ENTRY "DP"
+         jsr     DPRAM            ;  SET "DP" REGISTER TO RAM
+         setdp   $C8              ;  .
 ;
-MDRAW    JSR     INT3Q            ;  DISPLAY MINE PACKET FOR THIS ENTRY
-         LDX     #MINOBJ          ;  .    LOOK-UP PACKET ADDRESS
-         LDA     MIN.PAK,U        ;  .    .
-         ASLA                     ;  .    .
-         LDX     A,X              ;  .    .
-         LEAY    MIN.YW,U         ;  .    SET POSITION
-         LDB     MIN.SIZ,U        ;  .    SET ZOOM VALUE
-         JSR     DPACK            ;  .    .
+         lda     <WSHIPY          ;  CALCULATE DELTA YX VALUES
+         suba    MIN_YW,u         ;  .
+         ldb     <WSHIPX          ;  .
+         subb    MIN_XW,u         ;  .
 ;
-         JMP     GMIN2            ;  DO NEXT MINE ENTRY
+         jsr     CMPASS           ;  .    CALCULATE ANGLE TO SHIP
+         suba    #$10             ;  .    .
+         sta     <ETMP1           ;  .    .
 ;
+         ldx     #MINSPD          ;  .    CALCULATE NEW DISPLACEMENTS
+         ldb     MIN_BSZ,u        ;  .    .    FETCH MINE SPEED FOR SIZE
+         lda     b,x              ;  .    .    .
+         ldb     <ETMP1           ;  .    .    FETCH DIRECTION
+         jsr     MLTY8            ;  .    .    FETCH NEW DISPLACEMENTS
+         sty     MIN_YD,u         ;  .    .    .    SAVE 'Y' DISPLACEMENT
+         stx     MIN_XD,u         ;  .    .    .    SAVE 'X' DISPLACEMENT
 ;
-MFBALL   LDD     MIN.YW,U         ;  HANDLE 'RELEASED' FIRE-BALL
-         ADDD    MIN.YD,U         ;  .    'Y' AXIS
-         BVS     MFBALL1          ;  .    .    OFF-SCREEN ?
-         STD     MIN.YW,U         ;  .    .
-;
-         LDD     MIN.XW,U         ;  .    'X' AXIS
-         ADDD    MIN.XD,U         ;  .    .
-         BVS     MFBALL1          ;  .    .    OFF-SCREEN ?
-         STD     MIN.XW,U         ;  .    .
-;
-         JSR     INTMAX           ;  .    DRAW FIRE-BALL
-         LEAY    MIN.YW,U         ;  .    .    SET POSITION
-         LDX     #PACKET2         ;  .    .    DRAW PACKET
-         LDB     #$04             ;  .    .    .
-         JSR     DPACK            ;  .    .    .
-         JMP     GMIN2            ;  .
-;
-MFBALL1  CLR     MIN.FLG,U        ;  .    MINE OFF-SCREEN - CLEAR ENTRY
-         DEC     CMINES           ;  .    .
-         JMP     GMIN2            ;  .    .
+         puls    dp               ;  .    RECOVER DIRECT REGISTER
+         setdp   $D0              ;  .    .
 ;
 ;
-MINIT    LDA     MIN.XW,U         ;  HANDLE INITIAL MINE MOTION
-         ADDA    MIN.T1,U         ;  .    ADD DISPLACEMENT VALUE
-         STA     MIN.XW,U         ;  .
+MOVDUMB  ldd     MIN_YW,u         ;  CALCULATE NEW ABSOLUTE 'Y' VALUE
+         addd    MIN_YD,u         ;  .
+         std     MIN_YW,u         ;  .
 ;
-         CMPA    MIN.T2,U         ;  .    HAS MINE REACHED DESTINATION ?
-         BNE     MIDLE            ;  .    .
-;
-         LSR     MIN.FLG,U        ;  .    MINE HAS REACHED IDLE DESTINATION
-;
-;
-MIDLE    JSR     INT3Q            ;  IDLE MINE ACTION
-         LEAY    MIN.YW,U         ;  .    DRAW MINE SEED
-         JSR     DDOT             ;  .    .
-         JMP     GMIN2            ;  .    .
+         ldd     MIN_XW,u         ;  CALCULATE NEW ABSOLUTE 'X' VALUE
+         addd    MIN_XD,u         ;  .
+         std     MIN_XW,u         ;  .
 ;
 ;
-MZOOM    LDA     MIN.BSZ,U        ;  HANDLE THE MINE ZOOMING
-         CMPA    #$03             ;  .    SMALL OR MEDIUM MINE ?
-         BNE     MZOOM1           ;  .    .     SKIP ZOOMING
+MDRAW    jsr     INT3Q            ;  DISPLAY MINE PACKET FOR THIS ENTRY
+         ldx     #MINOBJ          ;  .    LOOK-UP PACKET ADDRESS
+         lda     MIN_PAK,u        ;  .    .
+         asla                     ;  .    .
+         ldx     a,x              ;  .    .
+         leay    MIN_YW,u         ;  .    SET POSITION
+         ldb     MIN_SIZ,u        ;  .    SET ZOOM VALUE
+         jsr     DPACK            ;  .    .
 ;
-         LDA     MIN.SIZ,U        ;  IS MINE ZOOMING DONE ?
-         CMPA    MIN.T1,U         ;  .
-         BGE     MZOOM1           ;  .
-;
-         ADDA    #$08             ;  .    ZOOM MINE TO PRESET VALUE
-         STA     MIN.SIZ,U        ;  .    .
-         BRA     MZOOM9           ;  .    .
-;
-MZOOM1   LSR     MIN.FLG,U        ;  MINE HAS REACHED ITS PROPER SIZE
-;
-         LDA     MIN.T1,U         ;  .    SET ACTUAL MINE SIZE
-         STA     MIN.SIZ,U        ;  .    .
-;
-         LDA     #$18             ;  .    SET MINE IDLE TIME
-         STA     MIN.T1,U         ;  .    .
-;
-         LDA     MINMAX           ;  .    LAST MINE-SEED ?
-         BNE     MZOOM9           ;  .    .
-;
-         LDA     RESEED           ;  .    .    MINE RE-SEEDING ALREADY STARTED ?
-         BNE     MZOOM9           ;  .    .    .
-;
-         LDA     #$7F             ;  .    .    SET-UP FOR MINE-LAYER INSERTION
-         STA     TMR3             ;  .    .    .
-;
-MZOOM9   JMP     MDRAW            ;  .    DRAW MINE
+         jmp     GMIN2            ;  DO NEXT MINE ENTRY
 ;
 ;
-MWAIT    DEC     MIN.T1,U         ;  IDLE MINE
-         BNE     MWAIT9           ;  .
+MFBALL   ldd     MIN_YW,u         ;  HANDLE 'RELEASED' FIRE-BALL
+         addd    MIN_YD,u         ;  .    'Y' AXIS
+         bvs     MFBALL1          ;  .    .    OFF-SCREEN ?
+         std     MIN_YW,u         ;  .    .
 ;
-         LSR     MIN.FLG,U        ;  .    SET MINE FLAG FOR NEXT ACTIVITY
+         ldd     MIN_XW,u         ;  .    'X' AXIS
+         addd    MIN_XD,u         ;  .    .
+         bvs     MFBALL1          ;  .    .    OFF-SCREEN ?
+         std     MIN_XW,u         ;  .    .
 ;
-MWAIT9   JMP     MDRAW            ;  .    DRAW MINE
+         jsr     INTMAX           ;  .    DRAW FIRE-BALL
+         leay    MIN_YW,u         ;  .    .    SET POSITION
+         ldx     #PACKET2         ;  .    .    DRAW PACKET
+         ldb     #$04             ;  .    .    .
+         jsr     DPACK            ;  .    .    .
+         jmp     GMIN2            ;  .
+;
+MFBALL1  clr     MIN_FLG,u        ;  .    MINE OFF-SCREEN - CLEAR ENTRY
+         dec     CMINES           ;  .    .
+         jmp     GMIN2            ;  .    .
 ;
 ;
-MBOOM    CLR     MIN.FLG,U        ;  HANDLE MINE COLLISION
+MINIT    lda     MIN_XW,u         ;  HANDLE INITIAL MINE MOTION
+         adda    MIN_T1,u         ;  .    ADD DISPLACEMENT VALUE
+         sta     MIN_XW,u         ;  .
 ;
-         LDA     MIN.PAK,U        ;  DETERMINE TYPE AND SIZE OF CURRENT MINE
-         CMPA    #$04             ;  .    RELEASED FIRE-BALL ?
-         BEQ     MBOOM9           ;  .    .
-         LDB     MIN.BSZ,U        ;  .    SET NEW MINE SIZE
-         DECB                     ;  .    .    SET TO NEXT SMALLER SIZE
-         BEQ     MBOOM9           ;  .    .    .
+         cmpa    MIN_T2,u         ;  .    HAS MINE REACHED DESTINATION ?
+         bne     MIDLE            ;  .    .
 ;
-         PSHS    A,DP             ;  ESTABLISH TWO NEW MINES
-         LDA     #$C8             ;  .    SET "DP" REGISTER TO RAM
-         TFR     A,DP             ;  .    .
+         lsr     MIN_FLG,u        ;  .    MINE HAS REACHED IDLE DESTINATION
 ;
-         LDA     0,S              ;  .    GROW TWO NEW MINES
-         JSR     RANSEED          ;  .    .
-         JSR     RANSEED          ;  .    .
-         PULS    A,DP             ;  .
 ;
-MBOOM9   JMP     GMIN2            ;  .    DO NEXT MINE ENTRY
+MIDLE    jsr     INT3Q            ;  IDLE MINE ACTION
+         leay    MIN_YW,u         ;  .    DRAW MINE SEED
+         jsr     DDOT             ;  .    .
+         jmp     GMIN2            ;  .    .
+;
+;
+MZOOM    lda     MIN_BSZ,u        ;  HANDLE THE MINE ZOOMING
+         cmpa    #$03             ;  .    SMALL OR MEDIUM MINE ?
+         bne     MZOOM1           ;  .    .     SKIP ZOOMING
+;
+         lda     MIN_SIZ,u        ;  IS MINE ZOOMING DONE ?
+         cmpa    MIN_T1,u         ;  .
+         bge     MZOOM1           ;  .
+;
+         adda    #$08             ;  .    ZOOM MINE TO PRESET VALUE
+         sta     MIN_SIZ,u        ;  .    .
+         bra     MZOOM9           ;  .    .
+;
+MZOOM1   lsr     MIN_FLG,u        ;  MINE HAS REACHED ITS PROPER SIZE
+;
+         lda     MIN_T1,u         ;  .    SET ACTUAL MINE SIZE
+         sta     MIN_SIZ,u        ;  .    .
+;
+         lda     #$18             ;  .    SET MINE IDLE TIME
+         sta     MIN_T1,u         ;  .    .
+;
+         lda     MINMAX           ;  .    LAST MINE-SEED ?
+         bne     MZOOM9           ;  .    .
+;
+         lda     RESEED           ;  .    .    MINE RE-SEEDING ALREADY STARTED ?
+         bne     MZOOM9           ;  .    .    .
+;
+         lda     #$7F             ;  .    .    SET-UP FOR MINE-LAYER INSERTION
+         sta     TMR3             ;  .    .    .
+;
+MZOOM9   jmp     MDRAW            ;  .    DRAW MINE
+;
+;
+MWAIT    dec     MIN_T1,u         ;  IDLE MINE
+         bne     MWAIT9           ;  .
+;
+         lsr     MIN_FLG,u        ;  .    SET MINE FLAG FOR NEXT ACTIVITY
+;
+MWAIT9   jmp     MDRAW            ;  .    DRAW MINE
+;
+;
+MBOOM    clr     MIN_FLG,u        ;  HANDLE MINE COLLISION
+;
+         lda     MIN_PAK,u        ;  DETERMINE TYPE AND SIZE OF CURRENT MINE
+         cmpa    #$04             ;  .    RELEASED FIRE-BALL ?
+         beq     MBOOM9           ;  .    .
+         ldb     MIN_BSZ,u        ;  .    SET NEW MINE SIZE
+         decb                     ;  .    .    SET TO NEXT SMALLER SIZE
+         beq     MBOOM9           ;  .    .    .
+;
+         pshs    a,dp             ;  ESTABLISH TWO NEW MINES
+         lda     #$C8             ;  .    SET "DP" REGISTER TO RAM
+         tfr     a,dp             ;  .    .
+;
+         lda     0,s              ;  .    GROW TWO NEW MINES
+         jsr     RANSEED          ;  .    .
+         jsr     RANSEED          ;  .    .
+         puls    a,dp             ;  .
+;
+MBOOM9   jmp     GMIN2            ;  .    DO NEXT MINE ENTRY
 ;
 ;
 ;  TAIL-END OF GAME LOGIC SEQUENCE
 ;  ===============================
 ;
 ;
-TAIL     PSHS    DP               ;  SET "DP" REGISTER TO I/O
-         JSR     DPIO             ;  .
-         SETDP   $D0              ;  .
+TAIL     pshs    dp               ;  SET "DP" REGISTER TO I/O
+         jsr     DPIO             ;  .
+         setdp   $D0              ;  .
 ;
-DEXPL    JSR     INTMAX           ;  DRAW EXPLOSIONS
-         LDU     #EXP.TBL         ;  .
-         LDA     #EXPLSN          ;  .
-         STA     TEMP1            ;  .
+DEXPL    jsr     INTMAX           ;  DRAW EXPLOSIONS
+         ldu     #EXP_TBL         ;  .
+         lda     #EXPLSN          ;  .
+         sta     TEMP1            ;  .
 ;
-EXPL1    LDA     EXP.FLG,U        ;  .    EXPLOSION ACTIVE ?
-         LBEQ    EXPL9            ;  .    .
+EXPL1    lda     EXP_FLG,u        ;  .    EXPLOSION ACTIVE ?
+         lbeq    EXPL9            ;  .    .
 ;
-         LDB     EXP.CNT,U        ;  .    BUMP EXPLOSION COUNTER
-         CMPB    EXP.SIZ,U        ;  .    .    EXPLOSION FULLY EXPANDED ?
-         BHS     EXPL10           ;  .    .    .
-         ADDB    #$03             ;  .    .
-         STB     EXP.CNT,U        ;  .    .
+         ldb     EXP_CNT,u        ;  .    BUMP EXPLOSION COUNTER
+         cmpb    EXP_SIZ,u        ;  .    .    EXPLOSION FULLY EXPANDED ?
+         bhs     EXPL10           ;  .    .    .
+         addb    #$03             ;  .    .
+         stb     EXP_CNT,u        ;  .    .
 ;
-         LDY     EXP.YX,U         ;  .    DRAW EXPANDING EXPLOSION CLOUD
-         LDX     #EXPLODE         ;  .    .
-         JSR     APACK            ;  .    .
+         ldy     EXP_YX,u         ;  .    DRAW EXPANDING EXPLOSION CLOUD
+         ldx     #EXPLODE         ;  .    .
+         jsr     APACK            ;  .    .
 ;
-EXPL10   TSTA                     ;  .    SWEEPER EXPLODING ?
-         LBPL    EXPL2            ;  .    .
+EXPL10   tsta                     ;  .    SWEEPER EXPLODING ?
+         lbpl    EXPL2            ;  .    .
 ;
-         DEC     SEXPCNT          ;  .    .    SWEEPER EXPLODING
-         LBEQ    EXPL3            ;  .    .    .    EXPLOSION COMPLETE ?
+         dec     SEXPCNT          ;  .    .    SWEEPER EXPLODING
+         lbeq    EXPL3            ;  .    .    .    EXPLOSION COMPLETE ?
 ;
-         LDA     FRAME            ;  .    .    .    BUMP EXPLOSION ON EVEN FRAME
-         ANDA    #$01             ;  .    .    .    .
-         BNE     EXPL11           ;  .    .    .    .
-         INC     SEXP1            ;  .    .    .    .
+         lda     FRAME            ;  .    .    .    BUMP EXPLOSION ON EVEN FRAME
+         anda    #$01             ;  .    .    .    .
+         bne     EXPL11           ;  .    .    .    .
+         inc     SEXP1            ;  .    .    .    .
 ;
-EXPL11   LDA     SEXP1            ;  .    .    .    DISPLAY SWEEPER EXPLOSION
-         LDY     #$7F00           ;  .    .    .    .
-         LDX     #SHPEX1          ;  .    .    .    .
-         JSR     DSHPEXP          ;  .    .    .    .
+EXPL11   lda     SEXP1            ;  .    .    .    DISPLAY SWEEPER EXPLOSION
+         ldy     #$7F00           ;  .    .    .    .
+         ldx     #SHPEX1          ;  .    .    .    .
+         jsr     DSHPEXP          ;  .    .    .    .
 ;
-         LDY     #$6080           ;  .    .    .    .
-         LDX     #SHPEX2          ;  .    .    .    .
-         JSR     DSHPEXP          ;  .    .    .    .
+         ldy     #$6080           ;  .    .    .    .
+         ldx     #SHPEX2          ;  .    .    .    .
+         jsr     DSHPEXP          ;  .    .    .    .
 ;
-         LDY     #$8050           ;  .    .    .    .
-         LDX     #SHPEX3          ;  .    .    .    .
-         JSR     DSHPEXP          ;  .    .    .    .
+         ldy     #$8050           ;  .    .    .    .
+         ldx     #SHPEX3          ;  .    .    .    .
+         jsr     DSHPEXP          ;  .    .    .    .
 ;
-         LDY     #$A080           ;  .    .    .    .
-         LDX     #SHPEX4          ;  .    .    .    .
-         JSR     DSHPEXP          ;  .    .    .    .
-         BRA     EXPL9            ;  .    .    .    .
+         ldy     #$A080           ;  .    .    .    .
+         ldx     #SHPEX4          ;  .    .    .    .
+         jsr     DSHPEXP          ;  .    .    .    .
+         bra     EXPL9            ;  .    .    .    .
 ;
-EXPL3    DEC     SHIPCNT          ;  .    RESET SWEEPER EXPLOSION
+EXPL3    dec     SHIPCNT          ;  .    RESET SWEEPER EXPLOSION
 ;
-         CLR     CMINES           ;  .    .    CLEAR ACTIVE MINE COUNT
-         CLR     MINMAX           ;  .    .    CLEAR MAXIMUM MINE COUNT
+         clr     CMINES           ;  .    .    CLEAR ACTIVE MINE COUNT
+         clr     MINMAX           ;  .    .    CLEAR MAXIMUM MINE COUNT
 ;
-         LDA     PLAYRS           ;  .    .    SWITCH PLAYERS ?
-         BEQ     EXPL30           ;  .    .    .
+         lda     PLAYRS           ;  .    .    SWITCH PLAYERS ?
+         beq     EXPL30           ;  .    .    .
 ;
-         LDA     ACTPLY           ;  .    .    .    SAVE CURRENT PLAYER STATUS
-         LSRA                     ;  .    .    .    .
-         LDX     #SHIPCNT0        ;  .    .    .    .    SAVE SHIP COUNTER
-         LDB     SHIPCNT          ;  .    .    .    .    .
-         STB     A,X              ;  .    .    .    .    .
+         lda     ACTPLY           ;  .    .    .    SAVE CURRENT PLAYER STATUS
+         lsra                     ;  .    .    .    .
+         ldx     #SHIPCNT0        ;  .    .    .    .    SAVE SHIP COUNTER
+         ldb     SHIPCNT          ;  .    .    .    .    .
+         stb     a,x              ;  .    .    .    .    .
 ;
-         LDA     SHIPCNT0         ;  .    CONTINUE GAME ?
-         BNE     EXPL31           ;  .    .
-         LDA     SHIPCNT1         ;  .    .
-         BEQ     EXPL32           ;  .    .
+         lda     SHIPCNT0         ;  .    CONTINUE GAME ?
+         bne     EXPL31           ;  .    .
+         lda     SHIPCNT1         ;  .    .
+         beq     EXPL32           ;  .    .
 ;
-EXPL31   LDA     ACTPLY           ;  .    .    .    BUMP PLAYER FLAG
-         ADDA    #$02             ;  .    .    .    .
-         ANDA    #$02             ;  .    .    .    .
-         STA     ACTPLY           ;  .    .    .    .
+EXPL31   lda     ACTPLY           ;  .    .    .    BUMP PLAYER FLAG
+         adda    #$02             ;  .    .    .    .
+         anda    #$02             ;  .    .    .    .
+         sta     ACTPLY           ;  .    .    .    .
 ;
-         LSRA                     ;  .    .    .    FETCH NEW PLAYER STATUS
-         LDX     #SHIPCNT0        ;  .    .    .    .    FETCH SHIP COUNTER
-         LDB     A,X              ;  .    .    .    .    .
-         STB     SHIPCNT          ;  .    .    .    .    .
-         BEQ     EXPL31           ;  .    .    .    .    .    SKIP IF NO SHIPS
+         lsra                     ;  .    .    .    FETCH NEW PLAYER STATUS
+         ldx     #SHIPCNT0        ;  .    .    .    .    FETCH SHIP COUNTER
+         ldb     a,x              ;  .    .    .    .    .
+         stb     SHIPCNT          ;  .    .    .    .    .
+         beq     EXPL31           ;  .    .    .    .    .    SKIP IF NO SHIPS
 ;
-EXPL30   LDA     SHIPCNT          ;  .    .    ONE PLAYER - SHIPS LEFT ?
-         BNE     EXPL8            ;  .    .    .
+EXPL30   lda     SHIPCNT          ;  .    .    ONE PLAYER - SHIPS LEFT ?
+         bne     EXPL8            ;  .    .    .
 ;
-EXPL32   LDA     #$01             ;  .    .    LOCK-UP ON GAME SEQUENCE
-         STA     LOCK             ;  .    .    .
-         BRA     EXPL8            ;  .    .    .
-;
-;
-EXPL2    LDB     EXP.CNT,U        ;  .    EXPLOSION COMPLETE ?
-         CMPB    EXP.SIZ,U        ;  .    .
-         BLO     EXPL9            ;  .    .
-;
-EXPL8    CLR     EXP.FLG,U        ;  .    .    RESET EXPLOSION ENTRY
-         DEC     CEXPLS           ;  .    .    .
-;
-EXPL9    LEAU    EXP.LEN,U        ;  .    BUMP TO NEXT ENTRY
-         DEC     TEMP1            ;  .    .
-         LBNE    EXPL1            ;  .    .
-;
-         JSR     SOUND            ;  UPDATE SOUND HANDLER
-         BRA     SHPCNT0          ;  .
+EXPL32   lda     #$01             ;  .    .    LOCK-UP ON GAME SEQUENCE
+         sta     LOCK             ;  .    .    .
+         bra     EXPL8            ;  .    .    .
 ;
 ;
-STAIL    PSHS    DP               ;  SHORT 'TAIL' ENTRY
-         JSR     DPIO             ;  .    SET "DP" REGISTER TO I/O
+EXPL2    ldb     EXP_CNT,u        ;  .    EXPLOSION COMPLETE ?
+         cmpb    EXP_SIZ,u        ;  .    .
+         blo     EXPL9            ;  .    .
 ;
-SHPCNT0  JSR     INT3Q            ;  DISPLAY REMAINING SHIPS
-         LDX     #$8038           ;  .    SET INITIAL POSITION
-         STX     TEMP2            ;  .    .
+EXPL8    clr     EXP_FLG,u        ;  .    .    RESET EXPLOSION ENTRY
+         dec     CEXPLS           ;  .    .    .
+;
+EXPL9    leau    EXP_LEN,u        ;  .    BUMP TO NEXT ENTRY
+         dec     TEMP1            ;  .    .
+         lbne    EXPL1            ;  .    .
+;
+         jsr     SOUND            ;  UPDATE SOUND HANDLER
+         bra     SHPCNT0          ;  .
+;
+;
+STAIL    pshs    dp               ;  SHORT 'TAIL' ENTRY
+         jsr     DPIO             ;  .    SET "DP" REGISTER TO I/O
+;
+SHPCNT0  jsr     INT3Q            ;  DISPLAY REMAINING SHIPS
+         ldx     #$8038           ;  .    SET INITIAL POSITION
+         stx     TEMP2            ;  .    .
 ;==========================================================================JJH
-;        LDA     SHIPCNT          ;  CODE DELETED - REV. C CHANGES   ======JJH
+;        lda     SHIPCNT          ;  CODE DELETED - REV. C CHANGES   ======JJH
 ;        BEQ     SHPCNT9          ;  .                               ======JJH
-;        STA     TEMP1            ;  .                               ======JJH
+;        sta     TEMP1            ;  .                               ======JJH
 ;==========================================================================JJH
 ;
 ;==========================================================================JJH
-         JSR     REVC.1           ;  CODE ADDED - REV. C CHANGES     ======JJH
-         BEQ     SHPCNT9          ;  .                               ======JJH
-         NOP                      ;  .                               ======JJH
-         NOP                      ;  .                               ======JJH
-         NOP                      ;  .                               ======JJH
+         jsr     REVC_1           ;  CODE ADDED - REV. C CHANGES     ======JJH
+         beq     SHPCNT9          ;  .                               ======JJH
+         nop                      ;  .                               ======JJH
+         nop                      ;  .                               ======JJH
+         nop                      ;  .                               ======JJH
 ;==========================================================================JJH
 ;
-SHPCNT1  DEC     TEMP1            ;  .    DRAW THIS SHIP ?
-         BEQ     SHPCNT9          ;  .    .
+SHPCNT1  dec     TEMP1            ;  .    DRAW THIS SHIP ?
+         beq     SHPCNT9          ;  .    .
 ;
-         LDA     TEMP2 + 1        ;  .    MOVE SHIP POSITION
-         ADDA    #$06             ;  .    .
-         STA     TEMP2 + 1        ;  .    .
+         lda     TEMP2 + 1        ;  .    MOVE SHIP POSITION
+         adda    #$06             ;  .    .
+         sta     TEMP2 + 1        ;  .    .
 ;
-         LDB     #$04             ;  .    DRAW SHIP COUNTER
-         LDY     TEMP2            ;  .    .    SET POSITION
-         LDX     #NSHIP           ;  .    .    SET PACKET ADDRESS
-         JSR     APACK            ;  .    .    .
-         BRA     SHPCNT1          ;  .    .    DO IT AGAIN
+         ldb     #$04             ;  .    DRAW SHIP COUNTER
+         ldy     TEMP2            ;  .    .    SET POSITION
+         ldx     #NSHIP           ;  .    .    SET PACKET ADDRESS
+         jsr     APACK            ;  .    .    .
+         bra     SHPCNT1          ;  .    .    DO IT AGAIN
 ;
-SHPCNT9  PULS    DP               ;  SET "DP" REGISTER TO RAM
-         SETDP   $C8              ;  .
+SHPCNT9  puls    dp               ;  SET "DP" REGISTER TO RAM
+         setdp   $C8              ;  .
 ;
-         LDA     &lt;FRAME           ;  ROTATE FIREBALL
-         ANDA    #$01             ;  .    FORM ROTATION ANGLE
-         LSLA                     ;  .    .
-         LSLA                     ;  .    .
-         LSLA                     ;  .    .
-         LDX     #MINE5           ;  .    FETCH SOURCE PACKET ADDRESS
-         LDU     #PACKET2         ;  .    FETCH DESTINATION PACKET ADDRESS
-         JSR     PROT             ;  .    ROTATE PACKET
+         lda     <FRAME           ;  ROTATE FIREBALL
+         anda    #$01             ;  .    FORM ROTATION ANGLE
+         lsla                     ;  .    .
+         lsla                     ;  .    .
+         lsla                     ;  .    .
+         ldx     #MINE5           ;  .    FETCH SOURCE PACKET ADDRESS
+         ldu     #PACKET2         ;  .    FETCH DESTINATION PACKET ADDRESS
+         jsr     PROT             ;  .    ROTATE PACKET
 ;
-         LDB     &lt;CEXPLS          ;  END-OF-SEQUENCE
-         BNE     TAIL1            ;  .    EXPLOSIONS DONE ?
-         LDA     &lt;ABORT           ;  .    GAME ABORTED ?
-         BNE     TAIL0            ;  .    .
+         ldb     <CEXPLS          ;  END-OF-SEQUENCE
+         bne     TAIL1            ;  .    EXPLOSIONS DONE ?
+         lda     <ABORT           ;  .    GAME ABORTED ?
+         bne     TAIL0            ;  .    .
 ;
 ;==========================================================================JJH
-;        LDB     &lt;CMINES          ;  CODE DELETED - REV. C CHANGES   ======JJH
+;        ldb     <CMINES          ;  CODE DELETED - REV. C CHANGES   ======JJH
 ;        BNE     TAIL1            ;  .                               ======JJH
-;        LDB     &lt;MINMAX          ;  .                               ======JJH
+;        ldb     <MINMAX          ;  .                               ======JJH
 ;        BNE     TAIL1            ;  .                               ======JJH
 ;==========================================================================JJH
 ;
 ;==========================================================================JJH
-         LDB     &lt;CMINES          ;  CODE ADDED - REV. C CHANGES     ======JJH
-         ORB     &lt;MINMAX          ;  .                               ======JJH
-         ORB     &lt;LAYRSPD         ;  .                               ======JJH
-         BNE     TAIL1            ;  .                               ======JJH
+         ldb     <CMINES          ;  CODE ADDED - REV. C CHANGES     ======JJH
+         orb     <MINMAX          ;  .                               ======JJH
+         orb     <LAYRSPD         ;  .                               ======JJH
+         bne     TAIL1            ;  .                               ======JJH
 ;==========================================================================JJH
 ;
-TAIL0    ANDCC   #$FE             ;  SET 'C' TO '0' - LEVEL COMPLETE
-         RTS                      ;  .    RETURN TO CALLER
+TAIL0    andcc   #$FE             ;  SET 'C' TO '0' - LEVEL COMPLETE
+         rts                      ;  .    RETURN TO CALLER
 ;
-TAIL1    ORCC    #$01             ;  SET 'C' TO '1' - MORE GAME LOGIC
-         RTS                      ;  .    RETURN TO CALLER
+TAIL1    orcc    #$01             ;  SET 'C' TO '1' - MORE GAME LOGIC
+         rts                      ;  .    RETURN TO CALLER
 ;
 ;
 ;        SHIP EXPLOSION HANDLER
 ;        ----------------------
 ;
-         SETDP   $D0
+         setdp   $D0
 ;
-DSHPEXP  PSHS    A,X,Y            ;  SAVE ENTRY VALUES
-         LDX     #WSHIPY          ;  POSITION TO CENETER OF EXPLOSION
-         JSR     POSWID           ;  .
+DSHPEXP  pshs    a,x,y            ;  SAVE ENTRY VALUES
+         ldx     #WSHIPY          ;  POSITION TO CENETER OF EXPLOSION
+         jsr     POSWID           ;  .
 ;
-         LDA     0,S              ;  POSITION SHIP FRAGMENT
-         STA     &lt;T1LOLC          ;  .
-         TFR     Y,D              ;  .
-         JSR     POSITN           ;  .
+         lda     0,s              ;  POSITION SHIP FRAGMENT
+         sta     <T1LOLC          ;  .
+         tfr     y,d              ;  .
+         jsr     POSITN           ;  .
 ;
-         LDB     #P.SHPSZ         ;  DRAW SHIP FRAGMENT
-         LDX     1,S              ;  .
-         JSR     TPACK            ;  .
+         ldb     #P_SHPSZ         ;  DRAW SHIP FRAGMENT
+         ldx     1,s              ;  .
+         jsr     TPACK            ;  .
 ;
-         PULS    A,X,Y,PC         ;  RETURN TO CALLER
+         puls    a,x,y,pc         ;  RETURN TO CALLER
 ;
 ;
 ;  SET EXPLOSION IN TABLE
@@ -1747,44 +1747,44 @@ DSHPEXP  PSHS    A,X,Y            ;  SAVE ENTRY VALUES
 ;        RETURN VALUES:
 ;             SAME AS ENTRY VALUES
 ;
-         SETDP   $C8
+         setdp   $C8
 ;        =====   ===
 ;
-SETEXP   PSHS    A,B,X            ;  SAVE ENTRY VALUES
+SETEXP   pshs    a,b,x            ;  SAVE ENTRY VALUES
 ;
-         LDX     #EXP.TBL         ;  FIND OPENING IN EXPLOSION TABLE
-         LDA     #EXPLSN          ;  .
+         ldx     #EXP_TBL         ;  FIND OPENING IN EXPLOSION TABLE
+         lda     #EXPLSN          ;  .
 ;
-STEX1    LDB     EXP.FLG,X        ;  .    EXPLOSION ENTRY ACTIVE ?
-         BEQ     STEX2            ;  .    .
+STEX1    ldb     EXP_FLG,x        ;  .    EXPLOSION ENTRY ACTIVE ?
+         beq     STEX2            ;  .    .
 ;
-         LEAX    EXP.LEN,X        ;  .    BUMP TO NEXT ENTRY
-         DECA                     ;  .    .
-         BNE     STEX1            ;  .    .
-         BRA     STEX4            ;  .    .    NO ROOM FOR MORE EXPLOSIONS
+         leax    EXP_LEN,x        ;  .    BUMP TO NEXT ENTRY
+         deca                     ;  .    .
+         bne     STEX1            ;  .    .
+         bra     STEX4            ;  .    .    NO ROOM FOR MORE EXPLOSIONS
 ;
-STEX2    LDA     0,S              ;  ENTER EXPLOSION PARAMETERS
-         ANDA    #$80             ;  .    SET EXPLOSION FLAG 
-         INCA                     ;  .    .
-         STA     EXP.FLG,X        ;  .    .
+STEX2    lda     0,s              ;  ENTER EXPLOSION PARAMETERS
+         anda    #$80             ;  .    SET EXPLOSION FLAG 
+         inca                     ;  .    .
+         sta     EXP_FLG,x        ;  .    .
 ;
-         BPL     STEX3            ;  .    .    EXPLOSION FATAL TO SWEEPER ?
-         INC     &lt;ABORT           ;  .    .    .    SET ABORT FLAG
+         bpl     STEX3            ;  .    .    EXPLOSION FATAL TO SWEEPER ?
+         inc     <ABORT           ;  .    .    .    SET ABORT FLAG
 ;
-STEX3    LDA     0,S              ;  .    SET STARTING EXPLOSION SIZE
-         ANDA    #$7F             ;  .    .
-         STA     EXP.CNT,X        ;  .    .
+STEX3    lda     0,s              ;  .    SET STARTING EXPLOSION SIZE
+         anda    #$7F             ;  .    .
+         sta     EXP_CNT,x        ;  .    .
 ;
-         LDA     1,S              ;  .    SET MAXIMUM EXPLOSION SIZE
-         STA     EXP.SIZ,X        ;  .    .
+         lda     1,s              ;  .    SET MAXIMUM EXPLOSION SIZE
+         sta     EXP_SIZ,x        ;  .    .
 ;
-         LDD     2,S              ;  .    SET EXPLOSION CENTRE
-         STD     EXP.YX,X         ;  .    .
+         ldd     2,s              ;  .    SET EXPLOSION CENTRE
+         std     EXP_YX,x         ;  .    .
 ;
-         INC     &lt;CEXPLS          ;  .    BUMP ACTIVE EXPLOSION COUNTER
-         INC     EXPLSND          ;  .    TRIGGER EXPLOSION SOUND
+         inc     <CEXPLS          ;  .    BUMP ACTIVE EXPLOSION COUNTER
+         inc     EXPLSND          ;  .    TRIGGER EXPLOSION SOUND
 ;
-STEX4    PULS    A,B,X,PC         ;  RETURN TO CALLER
+STEX4    puls    a,b,x,pc         ;  RETURN TO CALLER
 ;
 ;
 ;  FORM 'YX' DISPLACEMENTS
@@ -1798,245 +1798,245 @@ STEX4    PULS    A,B,X,PC         ;  RETURN TO CALLER
 ;             Y = 'Y' DISPLACEMENT VALUE (MSB/LSB)
 ;             X = 'X' DISPLACEMENT VALUE (MSB/LSB)
 ;
-         SETDP   $C8
+         setdp   $C8
 ;        =====   ===
 ;
-MLTY8    PSHS    A,B,X,Y          ;  SAVE ENTRY VALUES
+MLTY8    pshs    a,b,x,y          ;  SAVE ENTRY VALUES
 ;
-         JSR     LNROT            ;  CALCULATE SHIP DISPLACEMENTS
-         STA     4,S              ;  .
+         jsr     LNROT            ;  CALCULATE SHIP DISPLACEMENTS
+         sta     4,s              ;  .
 ;
-         SEX                      ;  .    FORM 'X' DISPLACEMENT (8X)
-         ASLB                     ;  .    .    MULTIPLY BY EIGHT
-         ROLA                     ;  .    .    .
-         ASLB                     ;  .    .    .
-         ROLA                     ;  .    .    .
-         ASLB                     ;  .    .    .
-         ROLA                     ;  .    .    .
-         STD     2,S              ;  .    .    .
+         sex                      ;  .    FORM 'X' DISPLACEMENT (8X)
+         aslb                     ;  .    .    MULTIPLY BY EIGHT
+         rola                     ;  .    .    .
+         aslb                     ;  .    .    .
+         rola                     ;  .    .    .
+         aslb                     ;  .    .    .
+         rola                     ;  .    .    .
+         std     2,s              ;  .    .    .
 ;
-         LDB     4,S              ;  .    FORM 'Y' DISPLACEMENT (8X)
-         SEX                      ;  .    .    EXTEND SIGN
-         ASLB                     ;  .    .    MULTIPLY BY EIGHT
-         ROLA                     ;  .    .    .
-         ASLB                     ;  .    .    .
-         ROLA                     ;  .    .    .
-         ASLB                     ;  .    .    .
-         ROLA                     ;  .    .    .
-         STD     4,S              ;  .    .    .
+         ldb     4,s              ;  .    FORM 'Y' DISPLACEMENT (8X)
+         sex                      ;  .    .    EXTEND SIGN
+         aslb                     ;  .    .    MULTIPLY BY EIGHT
+         rola                     ;  .    .    .
+         aslb                     ;  .    .    .
+         rola                     ;  .    .    .
+         aslb                     ;  .    .    .
+         rola                     ;  .    .    .
+         std     4,s              ;  .    .    .
 ;
-         PULS    A,B,X,Y,PC       ;  .    RETURN TO CALLER
+         puls    a,b,x,y,pc       ;  .    RETURN TO CALLER
 ;
 ;
 ;
-MLTY16   PSHS    A,B,X,Y          ;  SAVE ENTRY VALUES
+MLTY16   pshs    a,b,x,y          ;  SAVE ENTRY VALUES
 ;
-         BSR     MLTY8            ;  CALCULATE 16X SHIP DISPLACEMENTS
+         bsr     MLTY8            ;  CALCULATE 16X SHIP DISPLACEMENTS
 ;
-         LDD     -4,S             ;  .    FORM 'Y' DISPLACEMENT (16X)
-         ASLB                     ;  .    .    MULTIPLY BY TWO
-         ROLA                     ;  .    .    .
-         STD     4,S              ;  .    .    .
+         ldd     -4,s             ;  .    FORM 'Y' DISPLACEMENT (16X)
+         aslb                     ;  .    .    MULTIPLY BY TWO
+         rola                     ;  .    .    .
+         std     4,s              ;  .    .    .
 ;
-         LDD     -6,S             ;  .    FORM 'X' DISPLACEMENT (16X)
-         ASLB                     ;  .    .    MULTIPLY BY TWO
-         ROLA                     ;  .    .    .
-         STD     2,S              ;  .    .    .
+         ldd     -6,s             ;  .    FORM 'X' DISPLACEMENT (16X)
+         aslb                     ;  .    .    MULTIPLY BY TWO
+         rola                     ;  .    .    .
+         std     2,s              ;  .    .    .
 ;
-         PULS    A,B,X,Y,PC       ;  .    RETURN TO CALLER
+         puls    a,b,x,y,pc       ;  .    RETURN TO CALLER
 ;
 ;
 ;  INITIALIZE STAR-SWEEPER
 ;  =======================
 ;
 ;
-SWPINT   LDA     #$D0             ;  SET "DP" REGISTER TO I/O
-         TFR     A,DP             ;  .
-         SETDP   $D0              ;  .
+SWPINT   lda     #$D0             ;  SET "DP" REGISTER TO I/O
+         tfr     a,dp             ;  .
+         setdp   $D0              ;  .
 ;
-         JSR     INTPSG           ;  INITIALIZE SOUND GENERATOR
+         jsr     INTPSG           ;  INITIALIZE SOUND GENERATOR
 ;
-         LDA     #$C8             ;  SET "DP" REGISTER TO RAM
-         TFR     A,DP             ;  .
-         SETDP   $C8              ;  .
+         lda     #$C8             ;  SET "DP" REGISTER TO RAM
+         tfr     a,dp             ;  .
+         setdp   $C8              ;  .
 ;
-         CLR     &lt;TMR1            ;  CLEAR PROGRAMMABLE TIMERS
-         CLR     &lt;TMR2            ;  .
-         CLR     &lt;TMR3            ;  .
-         CLR     &lt;TMR4            ;  .
+         clr     <TMR1            ;  CLEAR PROGRAMMABLE TIMERS
+         clr     <TMR2            ;  .
+         clr     <TMR3            ;  .
+         clr     <TMR4            ;  .
 ;
-         LDX     #BLT.TBL         ;  CLEAR TABLES
-CLROBJ   CLR     X+               ;  .
-         CMPX    #FSTAR           ;  .
-         BNE     CLROBJ           ;  .
+         ldx     #BLT_TBL         ;  CLEAR TABLES
+CLROBJ   clr     x+               ;  .
+         cmpx    #FSTAR           ;  .
+         bne     CLROBJ           ;  .
 ;
-         LDD     #$0000           ;  CLEAR MINE-LAYER PARAMETERS
-         STD     &lt;WLAYRY          ;  .
-         STD     &lt;WLAYRX          ;  .
-         STD     &lt;DLAYRY          ;  .
-         STD     &lt;DLAYRX          ;  .
-         STA     &lt;LAYRSPD         ;  .    CLEAR LAYER SPEED
+         ldd     #$0000           ;  CLEAR MINE-LAYER PARAMETERS
+         std     <WLAYRY          ;  .
+         std     <WLAYRX          ;  .
+         std     <DLAYRY          ;  .
+         std     <DLAYRX          ;  .
+         sta     <LAYRSPD         ;  .    CLEAR LAYER SPEED
 ;
-         STA     &lt;ABORT           ;  RESET ABORT FLAG
-         STA     &lt;LOCK            ;  RESET LOCK-UP FLAG
+         sta     <ABORT           ;  RESET ABORT FLAG
+         sta     <LOCK            ;  RESET LOCK-UP FLAG
 ;
-         STA     &lt;CBULLET         ;  CLEAR ACTIVE BULLET COUNTER
-         STA     &lt;CMINES          ;  CLEAR ACTIVE MINE COUNTER
-         STA     &lt;CEXPLS          ;  CLEAR ACTIVE EXPLOSION COUNTER
+         sta     <CBULLET         ;  CLEAR ACTIVE BULLET COUNTER
+         sta     <CMINES          ;  CLEAR ACTIVE MINE COUNTER
+         sta     <CEXPLS          ;  CLEAR ACTIVE EXPLOSION COUNTER
 ;
-         STA     SEXP1            ;  SET SHIP EXPLOSION COUNTERS
-         LDB     #$40             ;  .    SHIP EXPLOSION DURATION
-         STB     SEXPCNT          ;  .    .
+         sta     SEXP1            ;  SET SHIP EXPLOSION COUNTERS
+         ldb     #$40             ;  .    SHIP EXPLOSION DURATION
+         stb     SEXPCNT          ;  .    .
 ;
-         STA     &lt;MINMAX          ;  RESET MINE-SEED COUNTER
-         STA     &lt;RESEED          ;  RESET MINE RE-SEEDING COUNTER
+         sta     <MINMAX          ;  RESET MINE-SEED COUNTER
+         sta     <RESEED          ;  RESET MINE RE-SEEDING COUNTER
 ;
-         LDX     #$0800           ;  SET LONG TIME-OUT DELAY
-         STX     TIMEOUT          ;  .
+         ldx     #$0800           ;  SET LONG TIME-OUT DELAY
+         stx     TIMEOUT          ;  .
 ;
-         LDA     #$07             ;  SET MINE RE-SEED COUNT
-         STA     &lt;RSMINES         ;  .
+         lda     #$07             ;  SET MINE RE-SEED COUNT
+         sta     <RSMINES         ;  .
 ;
-         LDX     #BEGLAYR         ;  SET-UP FOR FIRST MINE-LAYER MODIFICATION
-         STX     &lt;TMR3 + 1        ;  .
+         ldx     #BEGLAYR         ;  SET-UP FOR FIRST MINE-LAYER MODIFICATION
+         stx     <TMR3 + 1        ;  .
 ;
 ;
 ;  RESET STAR-SWEEPER PARAMETERS
 ;  =============================
 ;
 ;
-SWPRST   LDD     #0               ;  CLEAR STAR-SWEEPER PARAMETERS
-         STD     &lt;WSHIPY          ;  .    WORKING POSITIONS
-         STD     &lt;WSHIPX          ;  .    .
+SWPRST   ldd     #0               ;  CLEAR STAR-SWEEPER PARAMETERS
+         std     <WSHIPY          ;  .    WORKING POSITIONS
+         std     <WSHIPX          ;  .    .
 ;
-HSWPRST  LDD     #$0000           ;  .    SHIP ROTATION
-         STA     &lt;SHIPROT         ;  .    .
-         STD     &lt;DSHIPY1         ;  .    AXIS #1 DISPLACEMENTS
-         STD     &lt;DSHIPX1         ;  .    .
-         STA     &lt;SHIPSPD1        ;  .    .    CLEAR SHIP SPEED
-         STA     &lt;SHIPDIR1        ;  .    .    CLEAR SHIP DIRECTION
-         STD     &lt;DSHIPY2         ;  .    AXIS #2 DISPLACEMENTS
-         STD     &lt;DSHIPX2         ;  .    .
-         STA     &lt;SHIPSPD2        ;  .    .    CLEAR SHIP SPEED
-         STA     &lt;SHIPDIR2        ;  .    .    CLEAR SHIP DIRECTION
+HSWPRST  ldd     #$0000           ;  .    SHIP ROTATION
+         sta     <SHIPROT         ;  .    .
+         std     <DSHIPY1         ;  .    AXIS #1 DISPLACEMENTS
+         std     <DSHIPX1         ;  .    .
+         sta     <SHIPSPD1        ;  .    .    CLEAR SHIP SPEED
+         sta     <SHIPDIR1        ;  .    .    CLEAR SHIP DIRECTION
+         std     <DSHIPY2         ;  .    AXIS #2 DISPLACEMENTS
+         std     <DSHIPX2         ;  .    .
+         sta     <SHIPSPD2        ;  .    .    CLEAR SHIP SPEED
+         sta     <SHIPDIR2        ;  .    .    CLEAR SHIP DIRECTION
 ;
-SWPROT   LDA     &lt;SHIPROT         ;  ROTATE SWEEPER
-         LDX     #NSHIP           ;  .
-         LDU     #PACKET1         ;  .
-         JSR     PROT             ;  .
+SWPROT   lda     <SHIPROT         ;  ROTATE SWEEPER
+         ldx     #NSHIP           ;  .
+         ldu     #PACKET1         ;  .
+         jsr     PROT             ;  .
 ;
-         LDA     #$7F             ;  CALCULATE NEW BULLET DISPLACEMENTS
-         LDB     &lt;SHIPROT         ;  .    FETCH DIRECTION
-         JSR     MLTY16           ;  .    FORM DISPLACEMENTS
-         STY     DBLTY            ;  .    .    SAVE 'Y' DISPLACEMENT
-         STX     DBLTX            ;  .    .    SAVE 'X' DISPLACEMENT
+         lda     #$7F             ;  CALCULATE NEW BULLET DISPLACEMENTS
+         ldb     <SHIPROT         ;  .    FETCH DIRECTION
+         jsr     MLTY16           ;  .    FORM DISPLACEMENTS
+         sty     DBLTY            ;  .    .    SAVE 'Y' DISPLACEMENT
+         stx     DBLTX            ;  .    .    SAVE 'X' DISPLACEMENT
 ;
-         RTS                      ;  RETURN TO CALLER
+         rts                      ;  RETURN TO CALLER
 ;
 ;
 ;  FALL THRU STAR FIELD AS LEAD-IN TO NEXT SEQUENCE
 ;  ================================================
 ;
-         SETDP   $C8
+         setdp   $C8
 ;        =====   ===
 ;
-FALL     PSHS    X,Y              ;  SAVE THE INDEX REGISTERS
-         PSHS    DP               ;  SAVE THE ENTRY "DP"
+FALL     pshs    x,y              ;  SAVE THE INDEX REGISTERS
+         pshs    dp               ;  SAVE THE ENTRY "DP"
 ;
-         JSR     DPIO             ;  SET "DP" REGISTER TO I/O
-         JSR     INTPSG           ;  CLEAR-OUT SOUND
+         jsr     DPIO             ;  SET "DP" REGISTER TO I/O
+         jsr     INTPSG           ;  CLEAR-OUT SOUND
 ;
-         PULS    DP               ;  SET "DP" REGISTER TO RAM
+         puls    dp               ;  SET "DP" REGISTER TO RAM
 ;
-         LDA     #$A0             ;  SET MINIMUM FALL-THRU TIME
-         STA     &lt;TEMP1           ;  .
+         lda     #$A0             ;  SET MINIMUM FALL-THRU TIME
+         sta     <TEMP1           ;  .
 ;
-FALL1    LDA     &lt;WSHIPY          ;  MOVE SHIP TO CENTER POSITION
-         BEQ     FALL2            ;  .    'Y' AXIS
-         BMI     FALL10           ;  .    .
-         DECA                     ;  .    .    CURRENT POSITION POSITIVE
-         BRA     FALL11           ;  .    .    .
+FALL1    lda     <WSHIPY          ;  MOVE SHIP TO CENTER POSITION
+         beq     FALL2            ;  .    'Y' AXIS
+         bmi     FALL10           ;  .    .
+         deca                     ;  .    .    CURRENT POSITION POSITIVE
+         bra     FALL11           ;  .    .    .
 ;
-FALL10   INCA                     ;  .    .    CURRENT POSITION NEGATIVE
-FALL11   STA     &lt;WSHIPY          ;  .    .    .
-         CLR     &lt;WSHIPY + 1      ;  .    .    .
+FALL10   inca                     ;  .    .    CURRENT POSITION NEGATIVE
+FALL11   sta     <WSHIPY          ;  .    .    .
+         clr     <WSHIPY + 1      ;  .    .    .
 ;
-FALL2    LDA     &lt;WSHIPX          ;  .    'X' AXIS
-         BEQ     FALL3            ;  .    .
-         BMI     FALL20           ;  .    
-         DECA                     ;  .    .    CURRENT POSITION POSITIVE
-         BRA     FALL21           ;  .    .    .
+FALL2    lda     <WSHIPX          ;  .    'X' AXIS
+         beq     FALL3            ;  .    .
+         bmi     FALL20           ;  .    
+         deca                     ;  .    .    CURRENT POSITION POSITIVE
+         bra     FALL21           ;  .    .    .
 ;
-FALL20   INCA                     ;  .    .    CURRENT POSITION NEGATIVE
-FALL21   STA     &lt;WSHIPX          ;  .    .    .
-         CLR     &lt;WSHIPX + 1      ;  .    .    .
+FALL20   inca                     ;  .    .    CURRENT POSITION NEGATIVE
+FALL21   sta     <WSHIPX          ;  .    .    .
+         clr     <WSHIPX + 1      ;  .    .    .
 ;
-FALL3    LDA     &lt;SHIPROT         ;  .    ROTATION
-         BEQ     FALL4            ;  .    .
-         CMPA    #$1F             ;  .    .
-         BGT     FALL30           ;  .    .    ROTATE LEFT
-         DECA                     ;  .    .    .
-         BRA     FALL31           ;  .    .    .
+FALL3    lda     <SHIPROT         ;  .    ROTATION
+         beq     FALL4            ;  .    .
+         cmpa    #$1F             ;  .    .
+         bgt     FALL30           ;  .    .    ROTATE LEFT
+         deca                     ;  .    .    .
+         bra     FALL31           ;  .    .    .
 ;
-FALL30   INCA                     ;  .    .    ROTATE RIGHT
-FALL31   ANDA    #$3F             ;  .    .    .
-         STA     &lt;SHIPROT         ;  .    .    .
+FALL30   inca                     ;  .    .    ROTATE RIGHT
+FALL31   anda    #$3F             ;  .    .    .
+         sta     <SHIPROT         ;  .    .    .
 ;
-FALL4    JSR     SHPONLY          ;  ROTATE AND DISPLAY STAR-SWEEPER
+FALL4    jsr     SHPONLY          ;  ROTATE AND DISPLAY STAR-SWEEPER
 ;
-         LDX     #ZSTAR           ;  ADVANCE STAR FIELD
-         LDB     #$08             ;  .
-FALL5    LDA     0,X              ;  .
-         ADDA    #$03             ;  .
-         STA     X+               ;  .
-         DECB                     ;  .
-         BNE     FALL5            ;  .
+         ldx     #ZSTAR           ;  ADVANCE STAR FIELD
+         ldb     #$08             ;  .
+FALL5    lda     0,x              ;  .
+         adda    #$03             ;  .
+         sta     x+               ;  .
+         decb                     ;  .
+         bne     FALL5            ;  .
 ;
-         PSHS    DP               ;  SET "DP" REGISTER TO I/O
-         JSR     DPIO             ;  .
-         SETDP   $D0              ;  .
+         pshs    dp               ;  SET "DP" REGISTER TO I/O
+         jsr     DPIO             ;  .
+         setdp   $D0              ;  .
 ;
-         JSR     SCRBTH           ;  DISPLAY PLAYER SCORES
+         jsr     SCRBTH           ;  DISPLAY PLAYER SCORES
 ;
-         CLRB                     ;  DISPLAY STAR FIELDS
-         LDA     #$20             ;  .
-         JSR     D.STARS          ;  .
-         JSR     F.STARS          ;  .
+         clrb                     ;  DISPLAY STAR FIELDS
+         lda     #$20             ;  .
+         jsr     D_STARS          ;  .
+         jsr     F_STARS          ;  .
 ;
-         PULS    DP               ;  SET "DP" REGISTER TO RAM
-         SETDP   $C8              ;  .
+         puls    dp               ;  SET "DP" REGISTER TO RAM
+         setdp   $C8              ;  .
 ;  
-FALL91   LDA     &lt;WSHIPY          ;  FALL-THRU COMPLETED ?
-         LBNE    FALL1            ;  .
-         LDA     &lt;WSHIPX          ;  .
-         LBNE    FALL1            ;  .
-         LDA     &lt;SHIPROT         ;  .
-         LBNE    FALL1            ;  .
-         DEC     &lt;TEMP1           ;  .    END-OF-SEQUENCE ?
-         LBNE    FALL1            ;  .    .
+FALL91   lda     <WSHIPY          ;  FALL-THRU COMPLETED ?
+         lbne    FALL1            ;  .
+         lda     <WSHIPX          ;  .
+         lbne    FALL1            ;  .
+         lda     <SHIPROT         ;  .
+         lbne    FALL1            ;  .
+         dec     <TEMP1           ;  .    END-OF-SEQUENCE ?
+         lbne    FALL1            ;  .    .
 ;
-         JSR     SWPINT           ;  RESET VALUES
-         PULS    X,Y,PC           ;  .    RETURN TO CALLER
+         jsr     SWPINT           ;  RESET VALUES
+         puls    x,y,pc           ;  .    RETURN TO CALLER
 ;
 ;
 ;  INITIALIZE STAR FIELDS
 ;  ======================
 ;
 ;
-I.STARS  LDX     #STAR.1
-         LDY     #FSTAR
-         LDU     #ZSTAR
+I_STARS  ldx     #STAR_1
+         ldy     #FSTAR
+         ldu     #ZSTAR
 ;
-         LDB     #$08
-         LDA     #$16
+         ldb     #$08
+         lda     #$16
 ;
-ST.101   STX     Y++
-         LEAX    8,X
-         STA     U+
-         ADDA    #$0F
-         DECB
-         BNE     ST.101
-         RTS
+ST_101   stx     y++
+         leax    8,x
+         sta     u+
+         adda    #$0F
+         decb
+         bne     ST_101
+         rts
 ;
 ;
 ;  ZOOM STAR FIELDS FORWARD AND DISPLAY
@@ -2049,18 +2049,18 @@ ST.101   STX     Y++
 ;        RETURN VALUES
 ;             SAME AS ENTRY
 ;
-         SETDP   $D0
+         setdp   $D0
 ;        =====   ===
 ;
-F.STARS  PSHS    A,B,X,DP         ;  SAVE ENTRY VALUES
+F_STARS  pshs    a,b,x,dp         ;  SAVE ENTRY VALUES
 ;
-         LDX     #ZSTAR           ;  BUMP ZOOM VALUES
-         LDA     #$08             ;  .
-ST.201   INC     X+               ;  .
-         DECA                     ;  .
-         BNE     ST.201           ;  .
+         ldx     #ZSTAR           ;  BUMP ZOOM VALUES
+         lda     #$08             ;  .
+ST_201   inc     x+               ;  .
+         deca                     ;  .
+         bne     ST_201           ;  .
 ;
-         BRA     DSTARS1          ;  DISPLAY NEW STAR FIELDS
+         bra     DSTARS1          ;  DISPLAY NEW STAR FIELDS
 ;
 ;
 ;  DISPLAY STAR FIELDS
@@ -2073,50 +2073,50 @@ ST.201   INC     X+               ;  .
 ;        RETURN VALUES
 ;             SAME AS ENTRY
 ;
-         SETDP   $D0
+         setdp   $D0
 ;        =====   ===
 ;
-D.STARS  PSHS    A,B,X,DP         ;  SAVE ENTRY VALUES
+D_STARS  pshs    a,b,x,dp         ;  SAVE ENTRY VALUES
 ;
-DSTARS1  LDA     #$D0             ;  SET "DP" REGISTER TO I/O
-         TFR     A,DP             ;  .
+DSTARS1  lda     #$D0             ;  SET "DP" REGISTER TO I/O
+         tfr     a,dp             ;  .
 ;
-         LDA     #$09             ;  SET FIELD COUNT
-         PSHS    A                ;  .
+         lda     #$09             ;  SET FIELD COUNT
+         pshs    a                ;  .
 ;
-ST.000   DEC     0,S              ;  MOVE TO NEXT STAR FIELD
-         BNE     ST.010           ;  .
+ST_000   dec     0,s              ;  MOVE TO NEXT STAR FIELD
+         bne     ST_010           ;  .
 ;
-         JSR     ZERGND           ;  ZERO INTEGRATORS
+         jsr     ZERGND           ;  ZERO INTEGRATORS
 ;
-         PULS    A                ;  RETURN TO CALLER
-         PULS    A,B,X,DP,PC      ;  .
+         puls    a                ;  RETURN TO CALLER
+         puls    a,b,x,dp,pc      ;  .
 ;
 ;
-ST.010   JSR     ZERGND           ;  TURN-OFF CRT GUN AND ZERO INTEGRATORS
+ST_010   jsr     ZERGND           ;  TURN-OFF CRT GUN AND ZERO INTEGRATORS
 ;
-         LDA     #$03             ;  SET DOT COUNT
-         STA     LIST             ;  .
+         lda     #$03             ;  SET DOT COUNT
+         sta     LIST             ;  .
 ;
-         LDA     0,S              ;  FETCH ZOOM VALUE FOR THIS FIELD
-         DECA                     ;  .
-         LDX     #ZSTAR           ;  .
-         LDB     A,X              ;  .
-         ANDB    #$7F             ;  .
+         lda     0,s              ;  FETCH ZOOM VALUE FOR THIS FIELD
+         deca                     ;  .
+         ldx     #ZSTAR           ;  .
+         ldb     a,x              ;  .
+         andb    #$7F             ;  .
 ;
-         CMPB    1,S              ;  HAS STAR FIELD REACHED ITS LIMIT ?
-         BLS     ST.000           ;  .    IF SO, FETCH NEXT STAR FIELD
-         SUBB    2,S              ;  .    MODIFY VECTOR LENGTH WITH ZOOM VALUE
-         BLE     ST.000           ;  .    .
-         STB     &lt;T1LOLC          ;  .    SET VECTOR LENGTH
+         cmpb    1,s              ;  HAS STAR FIELD REACHED ITS LIMIT ?
+         bls     ST_000           ;  .    IF SO, FETCH NEXT STAR FIELD
+         subb    2,s              ;  .    MODIFY VECTOR LENGTH WITH ZOOM VALUE
+         ble     ST_000           ;  .    .
+         stb     <T1LOLC          ;  .    SET VECTOR LENGTH
 ;
-         LDX     #FSTAR           ;  FETCH STAR FIELD POINTER
-         LSLA                     ;  .
-         LDX     A,X              ;  .
+         ldx     #FSTAR           ;  FETCH STAR FIELD POINTER
+         lsla                     ;  .
+         ldx     a,x              ;  .
 ;
-         JSR     INTMAX           ;  SET BRIGHTNESS
-         JSR     DIFDOT           ;  DRAW STAR FIELD
-         BRA     ST.000           ;  SET-UP FOR NEXT STAR-FIELD
+         jsr     INTMAX           ;  SET BRIGHTNESS
+         jsr     DIFDOT           ;  DRAW STAR FIELD
+         bra     ST_000           ;  SET-UP FOR NEXT STAR-FIELD
 ;
 ;
 ;  DISPLAY STAR FIELDS FOR HYPERSPACE SEQUENCE
@@ -2129,73 +2129,73 @@ ST.010   JSR     ZERGND           ;  TURN-OFF CRT GUN AND ZERO INTEGRATORS
 ;        RETURN VALUES
 ;             SAME AS ENTRY
 ;
-         SETDP   $D0
+         setdp   $D0
 ;        =====   ===
 ;
-H.STARS  PSHS    A,B,X,DP         ;  SAVE ENTRY VALUES
+H_STARS  pshs    a,b,x,dp         ;  SAVE ENTRY VALUES
 ;
-         LDA     #$D0             ;  SET "DP" REGISTER TO I/O
-         TFR     A,DP             ;  .
+         lda     #$D0             ;  SET "DP" REGISTER TO I/O
+         tfr     a,dp             ;  .
 ;
-         LDA     #$09             ;  SET FIELD COUNT
-         PSHS    A                ;  .
+         lda     #$09             ;  SET FIELD COUNT
+         pshs    a                ;  .
 ;
-ST.200   DEC     0,S              ;  MOVE TO NEXT STAR FIELD
-         BNE     ST.210           ;  .
+ST_200   dec     0,s              ;  MOVE TO NEXT STAR FIELD
+         bne     ST_210           ;  .
 ;
-         JSR     ZERGND           ;  ZERO INTEGRATORS
+         jsr     ZERGND           ;  ZERO INTEGRATORS
 ;
-         PULS    A                ;  RETURN TO CALLER
-         PULS    A,B,X,DP,PC      ;  .
+         puls    a                ;  RETURN TO CALLER
+         puls    a,b,x,dp,pc      ;  .
 ;
 ;
-ST.210   JSR     ZERGND           ;  TURN-OFF CRT GUN AND ZERO INTEGRATORS
+ST_210   jsr     ZERGND           ;  TURN-OFF CRT GUN AND ZERO INTEGRATORS
 ;
-         LDA     #$03             ;  SET DOT COUNTER
-         STA     LIST             ;  .
+         lda     #$03             ;  SET DOT COUNTER
+         sta     LIST             ;  .
 ;
-         LDX     #WSHIPY          ;  POSITION FOR SWEEPER CENTER
-         JSR     POSWID           ;  .
+         ldx     #WSHIPY          ;  POSITION FOR SWEEPER CENTER
+         jsr     POSWID           ;  .
 ;
-         LDB     0,S              ;  FETCH ZOOM VALUE FOR THIS FIELD
-         LSLB                     ;  .
-         LSLB                     ;  .
-         ADDB    2,S              ;  .
-         BLE     ST.200           ;  .    SKIP THIS STAR FIELD ?
-         ANDB    #$7F             ;  .    SET VECTOR LENGTH
-         STB     &lt;T1LOLC          ;  .    .
+         ldb     0,s              ;  FETCH ZOOM VALUE FOR THIS FIELD
+         lslb                     ;  .
+         lslb                     ;  .
+         addb    2,s              ;  .
+         ble     ST_200           ;  .    SKIP THIS STAR FIELD ?
+         andb    #$7F             ;  .    SET VECTOR LENGTH
+         stb     <T1LOLC          ;  .    .
 ;
-         LDX     #FSTAR           ;  FETCH STAR FIELD POINTER
-         LDA     0,S              ;  .
-         DECA                     ;  .
-         LSLA                     ;  .
-         LDX     A,X              ;  .
+         ldx     #FSTAR           ;  FETCH STAR FIELD POINTER
+         lda     0,s              ;  .
+         deca                     ;  .
+         lsla                     ;  .
+         ldx     a,x              ;  .
 ;
-         JSR     INTMAX           ;  SET BRIGHTNESS
-         JSR     DIFDOT           ;  DRAW STAR FIELD
-         BRA     ST.200           ;  SET-UP FOR NEXT STAR-FIELD
+         jsr     INTMAX           ;  SET BRIGHTNESS
+         jsr     DIFDOT           ;  DRAW STAR FIELD
+         bra     ST_200           ;  SET-UP FOR NEXT STAR-FIELD
 ;
 ;
 ;  DETERMINE RANDOM 'Y:X' POSITION
 ;  ===============================
 ;
-         SETDP   $C8
+         setdp   $C8
 ;        =====   ===
 ;
-RANPOS   PSHS    D                ;  SAVE ENTRY VALUES
+RANPOS   pshs    d                ;  SAVE ENTRY VALUES
 ;
-         JSR     RANDOM           ;  'Y' POSITION
-         STA     0,S              ;  .
+         jsr     RANDOM           ;  'Y' POSITION
+         sta     0,s              ;  .
 ;
-RANPOS1  JSR     RANDOM           ;  'X' POSITION
-         CMPA    #$60             ;  .
-         BGT     RANPOS1          ;  .
-         CMPA    #$A0             ;  .
-         BLT     RANPOS1          ;  .
-         STA     1,S              ;  .
+RANPOS1  jsr     RANDOM           ;  'X' POSITION
+         cmpa    #$60             ;  .
+         bgt     RANPOS1          ;  .
+         cmpa    #$A0             ;  .
+         blt     RANPOS1          ;  .
+         sta     1,s              ;  .
 ;
-         PULS    D                ;  RETURN TO CALLER
-         RTS                      ;  .
+         puls    d                ;  RETURN TO CALLER
+         rts                      ;  .
 ;
 ;
 ;  SELECT RANDOM SEED/MINE ENTRY
@@ -2208,100 +2208,100 @@ RANPOS1  JSR     RANDOM           ;  'X' POSITION
 ;        RETURN VALUES:
 ;             SAME AS ENTRY VALUES
 ;
-         SETDP   $C8
+         setdp   $C8
 ;        =====   ===
 ;
-RANSEED  PSHS    A,B,X,Y,U        ;  SAVE ENTRY VALUES
+RANSEED  pshs    a,b,x,y,u        ;  SAVE ENTRY VALUES
 ;
-         LDA     &lt;MINMAX          ;  ALL THE MINES DISPLAYED ?
-         LBEQ    RANS9            ;  .
-         DEC     &lt;MINMAX          ;  .
+         lda     <MINMAX          ;  ALL THE MINES DISPLAYED ?
+         lbeq    RANS9            ;  .
+         dec     <MINMAX          ;  .
 ;
-         JSR     RANDOM           ;  SET-UP FOR RANDOM ENTRY
-         ANDA    #$1F             ;  .    ENTRY MUST BE BETWEEN $00 AND $1B
-RANS1    STA     &lt;ETMP9           ;  .    .
-         CMPA    #27              ;  .    .
-         BLS     RANS2            ;  .    .
-         SUBA    #$4              ;  .    .    TOO BIG - FUDGE DOWN
-         BRA     RANS1            ;  .    .    .
+         jsr     RANDOM           ;  SET-UP FOR RANDOM ENTRY
+         anda    #$1F             ;  .    ENTRY MUST BE BETWEEN $00 AND $1B
+RANS1    sta     <ETMP9           ;  .    .
+         cmpa    #27              ;  .    .
+         bls     RANS2            ;  .    .
+         suba    #$4              ;  .    .    TOO BIG - FUDGE DOWN
+         bra     RANS1            ;  .    .    .
 ;
-RANS2    LDB     #MIN.LEN         ;  .    CALCULATE ACTUAL MINE ENTRY
-         MUL                      ;  .    .
-         ADDD    #MIN.TBL         ;  .    .
-         TFR     D,U              ;  .    .
+RANS2    ldb     #MIN_LEN         ;  .    CALCULATE ACTUAL MINE ENTRY
+         mul                      ;  .    .
+         addd    #MIN_TBL         ;  .    .
+         tfr     d,u              ;  .    .
 ;
-         LDA     MIN.FLG,U        ;  .    MINE ENTRY ACTIVE ?
-         ANDA    #$C0             ;  .    .    MOVING TO INITIAL POSITION OR IDLE ?
-         BNE     RANS3            ;  .    .
-         INC     &lt;ETMP9           ;  .    .    TRY ANOTHER ENTRY
-         LDA     &lt;ETMP9           ;  .    .    .
-         CMPA    #27              ;  .    .    .    STILL WITHIN RANGE ?
-         BLE     RANS2            ;  .    .    .    .
+         lda     MIN_FLG,u        ;  .    MINE ENTRY ACTIVE ?
+         anda    #$C0             ;  .    .    MOVING TO INITIAL POSITION OR IDLE ?
+         bne     RANS3            ;  .    .
+         inc     <ETMP9           ;  .    .    TRY ANOTHER ENTRY
+         lda     <ETMP9           ;  .    .    .
+         cmpa    #27              ;  .    .    .    STILL WITHIN RANGE ?
+         ble     RANS2            ;  .    .    .    .
 ;
-         CLR     &lt;ETMP9           ;  .    .    .    OUT-OF-RANGE
-         CLRA                     ;  .    .    .    .
-         BRA     RANS2            ;  .    .    .    .
+         clr     <ETMP9           ;  .    .    .    OUT-OF-RANGE
+         clra                     ;  .    .    .    .
+         bra     RANS2            ;  .    .    .    .
 ;
-RANS3    LDA     0,S              ;  .    SET MINE TYPE
-         STA     MIN.PAK,U        ;  .    .
+RANS3    lda     0,s              ;  .    SET MINE TYPE
+         sta     MIN_PAK,u        ;  .    .
 ;
-         LDX     #MINSCR          ;  .    SELECT MINE'S BASIC SCORE
-         ASLA                     ;  .    .
-         LDY     A,X              ;  .    .
-         STY     &lt;ETMP7           ;  .    .
+         ldx     #MINSCR          ;  .    SELECT MINE'S BASIC SCORE
+         asla                     ;  .    .
+         ldy     a,x              ;  .    .
+         sty     <ETMP7           ;  .    .
 ;
-         LDB     #$20             ;  .    SET ZOOM FLAG
-         STB     MIN.FLG,U        ;  .    .
+         ldb     #$20             ;  .    SET ZOOM FLAG
+         stb     MIN_FLG,u        ;  .    .
 ;
-         LDX     #MINSPD          ;  .    SELECT MINE SPEED
-         LDA     1,S              ;  .    .    FETCH MINE SIZE
-         LDB     A,X              ;  .    .
-         STB     &lt;ETMP9           ;  .    .
+         ldx     #MINSPD          ;  .    SELECT MINE SPEED
+         lda     1,s              ;  .    .    FETCH MINE SIZE
+         ldb     a,x              ;  .    .
+         stb     <ETMP9           ;  .    .
 ;
-         LDX     #MINSZ           ;  .    SET MINE SIZE
-         LDB     A,X              ;  .    .
-         STB     MIN.T1,U         ;  .    .
-         STA     MIN.BSZ,U        ;  .    .
+         ldx     #MINSZ           ;  .    SET MINE SIZE
+         ldb     a,x              ;  .    .
+         stb     MIN_T1,u         ;  .    .
+         sta     MIN_BSZ,u        ;  .    .
 ;
-         LDX     #MINBOX          ;  .    SELECT COLLISION BOX PARAMETERS
-         LSLA                     ;  .    .
-         LDY     A,X              ;  .    .
-         STY     MIN.BOX,U        ;  .    .
+         ldx     #MINBOX          ;  .    SELECT COLLISION BOX PARAMETERS
+         lsla                     ;  .    .
+         ldy     a,x              ;  .    .
+         sty     MIN_BOX,u        ;  .    .
 ;
-         LDX     #MINSSCR         ;  .    SELECT MINE'S SCORE VS. SPEED VALUE
-         LDY     A,X              ;  .    .
-         STY     &lt;ETMP5           ;  .    .
+         ldx     #MINSSCR         ;  .    SELECT MINE'S SCORE VS. SPEED VALUE
+         ldy     a,x              ;  .    .
+         sty     <ETMP5           ;  .    .
 ;
-         CMPA    #$06             ;  .    SET 'POP' SOUND
-         BNE     RANS4            ;  .    .    BIG MINES ONLY
-         INC     POPSND           ;  .    .    .
+         cmpa    #$06             ;  .    SET 'POP' SOUND
+         bne     RANS4            ;  .    .    BIG MINES ONLY
+         inc     POPSND           ;  .    .    .
 ;
-RANS4    LDA     &lt;ETMP5 + 1       ;  .    CALCULATE MINE SCORE VALUE
-         ADDA    &lt;ETMP7 + 1       ;  .    .    LSB
-         DAA                      ;  .    .    .
-         STA     MIN.SCR+1,U      ;  .    .    .
-         LDA     &lt;ETMP5           ;  .    .    MSB
-         ADCA    &lt;ETMP7           ;  .    .    .
-         DAA                      ;  .    .    .
-         STA     MIN.SCR,U        ;  .    .    .
+RANS4    lda     <ETMP5 + 1       ;  .    CALCULATE MINE SCORE VALUE
+         adda    <ETMP7 + 1       ;  .    .    LSB
+         daa                      ;  .    .    .
+         sta     MIN_SCR+1,u      ;  .    .    .
+         lda     <ETMP5           ;  .    .    MSB
+         adca    <ETMP7           ;  .    .    .
+         daa                      ;  .    .    .
+         sta     MIN_SCR,u        ;  .    .    .
 ;
-         LDA     &lt;ETMP9           ;  .    CALCULATE MINE DISPLACEMENTS
-         JSR     CONE             ;  .    .    SELECT ANGLE
-         JSR     MLTY8            ;  .    .    FORM DISPLACEMENTS
-         STY     MIN.YD,U         ;  .    .    .    SAVE 'Y' DISPLACEMENTS
-         STX     MIN.XD,U         ;  .    .    .    SAVE 'X' DISPLACEMENTS
+         lda     <ETMP9           ;  .    CALCULATE MINE DISPLACEMENTS
+         jsr     CONE             ;  .    .    SELECT ANGLE
+         jsr     MLTY8            ;  .    .    FORM DISPLACEMENTS
+         sty     MIN_YD,u         ;  .    .    .    SAVE 'Y' DISPLACEMENTS
+         stx     MIN_XD,u         ;  .    .    .    SAVE 'X' DISPLACEMENTS
 ;
-         INC     &lt;CMINES          ;  .    BUMP ACTIVE MINE COUNTER
+         inc     <CMINES          ;  .    BUMP ACTIVE MINE COUNTER
 ;
-         LDA     &lt;RESEED          ;  .    RESET FORCED MINE GROWTH TIMER
-         BEQ     RANS9            ;  .    .    SKIP IF NOT RE-SEEDED
+         lda     <RESEED          ;  .    RESET FORCED MINE GROWTH TIMER
+         beq     RANS9            ;  .    .    SKIP IF NOT RE-SEEDED
 ;
-         LDA     #$FF             ;  .    .    RESET TIMER #1
-         STA     &lt;TMR1            ;  .    .    .
-         LDA     #$03             ;  .    .    RESET FORCE COUNTER
-         STA     &lt;FRCTIME         ;  .    .    .
+         lda     #$FF             ;  .    .    RESET TIMER #1
+         sta     <TMR1            ;  .    .    .
+         lda     #$03             ;  .    .    RESET FORCE COUNTER
+         sta     <FRCTIME         ;  .    .    .
 ;
-RANS9    PULS    A,B,X,Y,U,PC     ;  RETURN TO CALLER
+RANS9    puls    a,b,x,y,u,pc     ;  RETURN TO CALLER
 ;   
 ;
 ;  SELECT DIRECTION WITHIN LIMIT CONES
@@ -2313,28 +2313,28 @@ RANS9    PULS    A,B,X,Y,U,PC     ;  RETURN TO CALLER
 ;        RETURN VALUES
 ;             B = RANDOM ANGLE WITHIN LIMIT CONES
 ;
-         SETDP   $C8
+         setdp   $C8
 ;        =====   ===
 ;
-CONE     PSHS    A,B              ;  SAVE ENTRY VALUES
+CONE     pshs    a,b              ;  SAVE ENTRY VALUES
 ;
-         JSR     RANDOM           ;  FETCH RANDOM NUMBER
-         TFR     A,B              ;  .    SET-UP FOR CONE TESTS
-         ANDA    #$30             ;  .    .
-         STA     1,S              ;  .    .
+         jsr     RANDOM           ;  FETCH RANDOM NUMBER
+         tfr     a,b              ;  .    SET-UP FOR CONE TESTS
+         anda    #$30             ;  .    .
+         sta     1,s              ;  .    .
 ;
-         ANDB    #$0F             ;  LIMIT DIRECTION WITHIN CONE
-         CMPB    #$04             ;  .    TEST AGAINST LOW-END LIMIT
-         BHS     CONE1            ;  .    .
-         ADDB    #$04             ;  .    .    MOVE LOW-END UP
+         andb    #$0F             ;  LIMIT DIRECTION WITHIN CONE
+         cmpb    #$04             ;  .    TEST AGAINST LOW-END LIMIT
+         bhs     CONE1            ;  .    .
+         addb    #$04             ;  .    .    MOVE LOW-END UP
 ;
-CONE1    CMPB    #$0C             ;  .    TEST AGAINST UPPER-END LIMIT
-         BLS     CONE2            ;  .    .
-         SUBB    #$04             ;  .    .    MOVE UPPER-END DOWN
+CONE1    cmpb    #$0C             ;  .    TEST AGAINST UPPER-END LIMIT
+         bls     CONE2            ;  .    .
+         subb    #$04             ;  .    .    MOVE UPPER-END DOWN
 ;
-CONE2    ADDB    1,S              ;  ADD QUADRANT TO DIRECTION
-         STB     1,S              ;  .
-         PULS    A,B,PC           ;  .    RETURN TO CALLER
+CONE2    addb    1,s              ;  ADD QUADRANT TO DIRECTION
+         stb     1,s              ;  .
+         puls    a,b,pc           ;  .    RETURN TO CALLER
 ;
 ;
 ;  POSITION AND DRAW DOT
@@ -2347,19 +2347,19 @@ CONE2    ADDB    1,S              ;  ADD QUADRANT TO DIRECTION
 ;             SAME AS ENTRY VALUES
 ;
 ;
-         SETDP   $D0
+         setdp   $D0
 ;        =====   ===
 ;
-ADOT     PSHS    A,B              ;  SAVE ENTRY VALUES
+ADOT     pshs    a,b              ;  SAVE ENTRY VALUES
 ;
-         LDA     #$7F             ;  POSITION DOT
-         STA     &lt;T1LOLC          ;  .    SET VECTOR LENGTH
-         TFR     Y,D              ;  .    SET 'YX' POSITION
-         JSR     DOTAB            ;  .    .
+         lda     #$7F             ;  POSITION DOT
+         sta     <T1LOLC          ;  .    SET VECTOR LENGTH
+         tfr     y,d              ;  .    SET 'YX' POSITION
+         jsr     DOTAB            ;  .    .
 ;
-         JSR     ZERGND           ;  ZERO INTEGRATORS
+         jsr     ZERGND           ;  ZERO INTEGRATORS
 ;
-         PULS    A,B,PC           ;  RETURN TO CALLER
+         puls    a,b,pc           ;  RETURN TO CALLER
 ;
 ;
 ;  POSITION WITH 16-BIT VALUES AND DRAW DOT
@@ -2372,21 +2372,21 @@ ADOT     PSHS    A,B              ;  SAVE ENTRY VALUES
 ;             SAME AS ENTRY VALUES
 ;
 ;
-         SETDP   $D0
+         setdp   $D0
 ;        =====   ===
 ;
-DDOT     PSHS    A,B              ;  SAVE ENTRY VALUES
+DDOT     pshs    a,b              ;  SAVE ENTRY VALUES
 ;
-         LDA     #$7F             ;  POSITION DOT
-         STA     &lt;T1LOLC          ;  .    SET VECTOR LENGTH
+         lda     #$7F             ;  POSITION DOT
+         sta     <T1LOLC          ;  .    SET VECTOR LENGTH
 ;
-         LDA     0,Y              ;  .    SET 'YX' POSITION
-         LDB     2,Y              ;  .    .
-         JSR     DOTAB            ;  .    .
+         lda     0,y              ;  .    SET 'YX' POSITION
+         ldb     2,y              ;  .    .
+         jsr     DOTAB            ;  .    .
 ;
-         JSR     ZERGND           ;  ZERO INTEGRATORS
+         jsr     ZERGND           ;  ZERO INTEGRATORS
 ;
-         PULS    A,B,PC           ;  RETURN TO CALLER
+         puls    a,b,pc           ;  RETURN TO CALLER
 ;
 ;
 ;  POSITION AND DRAW PACKET
@@ -2401,18 +2401,18 @@ DDOT     PSHS    A,B              ;  SAVE ENTRY VALUES
 ;             SAME AS ENTRY VALUES
 ;
 ;
-         SETDP   $D0
+         setdp   $D0
 ;        =====   ===
 ;
-APACK    PSHS    A,B,X            ;  SAVE ENTRY VALUES
+APACK    pshs    a,b,x            ;  SAVE ENTRY VALUES
 ;
-         TFR     Y,D              ;  .    SET 'YX' POSITION
-         JSR     POSITD           ;  .    .
+         tfr     y,d              ;  .    SET 'YX' POSITION
+         jsr     POSITD           ;  .    .
 ;
-         LDB     1,S              ;  DRAW PACKET
-         JSR     TPACK            ;  .    DRAW PACKET
+         ldb     1,s              ;  DRAW PACKET
+         jsr     TPACK            ;  .    DRAW PACKET
 ;
-         PULS    A,B,X,PC         ;  RETURN TO CALLER
+         puls    a,b,x,pc         ;  RETURN TO CALLER
 ;
 ;
 ;  POSITION WITH 16-BIT VALUES AND DRAW PACKET
@@ -2427,19 +2427,19 @@ APACK    PSHS    A,B,X            ;  SAVE ENTRY VALUES
 ;             SAME AS ENTRY VALUES
 ;
 ;
-         SETDP   $D0
+         setdp   $D0
 ;        =====   ===
 ;
-DPACK    PSHS    A,B,X            ;  SAVE ENTRY VALUES
+DPACK    pshs    a,b,x            ;  SAVE ENTRY VALUES
 ;
-         TFR     Y,X              ;  POSITION PACKET
-         JSR     POSWID           ;  .
+         tfr     y,x              ;  POSITION PACKET
+         jsr     POSWID           ;  .
 ;
-         LDB     1,S              ;  DRAW PACKET
-         LDX     2,S              ;  .    FETCH PACKET POINTER
-         JSR     TPACK            ;  .    DRAW PACKET
+         ldb     1,s              ;  DRAW PACKET
+         ldx     2,s              ;  .    FETCH PACKET POINTER
+         jsr     TPACK            ;  .    DRAW PACKET
 ;
-         PULS    A,B,X,PC         ;  RETURN TO CALLER
+         puls    a,b,x,pc         ;  RETURN TO CALLER
 ;
 ;
 ;  DRAW COMPACT RASTER MESSAGE
@@ -2452,17 +2452,17 @@ DPACK    PSHS    A,B,X            ;  SAVE ENTRY VALUES
 ;             SAME AS ENTRY VALUES
 ;
 ;
-         SETDP   $D0
+         setdp   $D0
 ;        =====   ===
 ;
-MESS     PSHS    A,B,X,U          ;  SAVE ENTRY VALUES
+MESS     pshs    a,b,x,u          ;  SAVE ENTRY VALUES
 ;
-         LDA     #$7F             ;  POSITION PACKET
-         STA     &lt;T1LOLC          ;  .    SET VECTOR LENGTH
+         lda     #$7F             ;  POSITION PACKET
+         sta     <T1LOLC          ;  .    SET VECTOR LENGTH
 ;
-         JSR     RSTSIZ           ;  DRAW RASTER MESSAGE
+         jsr     RSTSIZ           ;  DRAW RASTER MESSAGE
 ;
-         PULS    A,B,X,U,PC       ;  RETURN TO CALLER
+         puls    a,b,x,u,pc       ;  RETURN TO CALLER
 ;
 ;
 ;  POSITION AND DRAW RASTER MESSAGE
@@ -2476,522 +2476,522 @@ MESS     PSHS    A,B,X,U          ;  SAVE ENTRY VALUES
 ;             SAME AS ENTRY VALUES
 ;
 ;
-         SETDP   $D0
+         setdp   $D0
 ;        =====   ===
 ;
-AMESS    PSHS    A,B,X,U          ;  SAVE ENTRY VALUES
+AMESS    pshs    a,b,x,u          ;  SAVE ENTRY VALUES
 ;
-         TFR     Y,D              ;  .    SET 'YX' POSITION
-         JSR     POSITD           ;  .    .
+         tfr     y,d              ;  .    SET 'YX' POSITION
+         jsr     POSITD           ;  .    .
 ;
-         JSR     RASTER           ;  .    DRAW PACKET
+         jsr     RASTER           ;  .    DRAW PACKET
 ;
-         PULS    A,B,X,Y,PC       ;  RETURN TO CALLER
+         puls    a,b,x,y,pc       ;  RETURN TO CALLER
 ;
 ;
 ;  DRAW ACTIVE PLAYER'S SCORES
 ;  ===========================
 ;
-         SETDP   $D0
+         setdp   $D0
 ;        =====   ===
 ;
-SCRMES   JSR     INTMAX           ;  SET MAXIMUM INTENSITY
+SCRMES   jsr     INTMAX           ;  SET MAXIMUM INTENSITY
 ;
-         LDD     #$FC38           ;  SET RASTER SIZE
-         STD     SIZRAS           ;  .
+         ldd     #$FC38           ;  SET RASTER SIZE
+         std     SIZRAS           ;  .
 ;
-         LDA     ACTPLY           ;  FETCH POSITION OF SCORE
-         LDY     #PSCRPTR         ;  .
-         LDY     A,Y              ;  .
+         lda     ACTPLY           ;  FETCH POSITION OF SCORE
+         ldy     #PSCRPTR         ;  .
+         ldy     a,y              ;  .
 ;
-         LDU     #SCRPTR          ;  FETCH ADDRESS OF SCORE
-         LDU     A,U              ;  .
-         BSR     AMESS            ;  .
+         ldu     #SCRPTR          ;  FETCH ADDRESS OF SCORE
+         ldu     a,u              ;  .
+         bsr     AMESS            ;  .
 ;
-         RTS                      ;  RETURN TO CALLER
+         rts                      ;  RETURN TO CALLER
 ;
 ;
 ;  DRAW BOTH PLAYER'S SCORES
 ;  =========================
 ;
-         SETDP   $D0
+         setdp   $D0
 ;        =====   ===
 ;
-SCRBTH   JSR     INTMAX           ;  SET MAXIMUM INTENSITY
+SCRBTH   jsr     INTMAX           ;  SET MAXIMUM INTENSITY
 ;
-         LDD     #$FC38           ;  SET RASTER SIZE
-         STD     SIZRAS           ;  .
+         ldd     #$FC38           ;  SET RASTER SIZE
+         std     SIZRAS           ;  .
 ;
-         LDY     #PSCOR1          ;  DRAW PLAYER #1 SCORE
-         LDU     #SCOR1           ;  .
-         BSR     AMESS            ;  .
+         ldy     #PSCOR1          ;  DRAW PLAYER #1 SCORE
+         ldu     #SCOR1           ;  .
+         bsr     AMESS            ;  .
 ;
-         LDA     PLAYRS           ;  ONE OR TWO PLAYERS ?
-         BEQ     BOTH9            ;  .
-         LDY     #PSCOR2          ;  .    DRAW PLAYER #2 SCORE
-         LDU     #SCOR2           ;  .    .
-         BSR     AMESS            ;  .    .
+         lda     PLAYRS           ;  ONE OR TWO PLAYERS ?
+         beq     BOTH9            ;  .
+         ldy     #PSCOR2          ;  .    DRAW PLAYER #2 SCORE
+         ldu     #SCOR2           ;  .    .
+         bsr     AMESS            ;  .    .
 ;
-BOTH9    RTS                      ;  RETURN TO CALLER
+BOTH9    rts                      ;  RETURN TO CALLER
 ;
 ;
 ;  WAIT FOR FRAME BOUNDARY AND INPUT FROM CONTROLLER
 ;  =================================================
 ;
 ;
-WAIT     JSR     FRWAIT           ;  WAIT FOR FRAME BOUNDARY
-         PSHS    DP               ;  .
-         SETDP   $D0              ;  .
+WAIT     jsr     FRWAIT           ;  WAIT FOR FRAME BOUNDARY
+         pshs    dp               ;  .
+         setdp   $D0              ;  .
 ;
-         JSR     DEFLOK           ;  PREVENT SCAN COLLAPSE
-         JSR     SCRMES           ;  DRAW PLAYER'S SCORES
+         jsr     DEFLOK           ;  PREVENT SCAN COLLAPSE
+         jsr     SCRMES           ;  DRAW PLAYER'S SCORES
 ;
-         LDA     SBTN             ;  INPUT CONSOLE SWITCHES
-         JSR     DBNCE            ;  .
-         LDD     SJOY             ;  READ JOYSTICK
-         STD     EPOT0            ;  .    ENABLE BOTH POTS ON JOYSTICK #1
-         STD     EPOT2            ;  .    ENABLE BOTH POTS ON JOYSTICK #2
-         JSR     JOYBIT           ;  .
+         lda     SBTN             ;  INPUT CONSOLE SWITCHES
+         jsr     DBNCE            ;  .
+         ldd     SJOY             ;  READ JOYSTICK
+         std     EPOT0            ;  .    ENABLE BOTH POTS ON JOYSTICK #1
+         std     EPOT2            ;  .    ENABLE BOTH POTS ON JOYSTICK #2
+         jsr     JOYBIT           ;  .
 ;
-         LDA     #$C8             ;  SET "DP" REGISTER TO RAM
-         TFR     A,DP             ;  .
-         SETDP   $C8              ;  .
+         lda     #$C8             ;  SET "DP" REGISTER TO RAM
+         tfr     a,dp             ;  .
+         setdp   $C8              ;  .
 ;
-TIMER    LDA     &lt;TMR1            ;  DOWN-COUNT TIMER #1
-         BEQ     DCT2             ;  .    IS TIMER INHIBITED ?
-         DEC     &lt;TMR1            ;  .
-         BNE     DCT2             ;  .
-         JSR     [TMR1+1]         ;  .    EXECUTE THE USER PROGRAM
+TIMER    lda     <TMR1            ;  DOWN-COUNT TIMER #1
+         beq     DCT2             ;  .    IS TIMER INHIBITED ?
+         dec     <TMR1            ;  .
+         bne     DCT2             ;  .
+         jsr     [TMR1+1]         ;  .    EXECUTE THE USER PROGRAM
 ;
-DCT2     LDA     &lt;TMR2            ;  DOWN-COUNT TIMER #2
-         BEQ     DCT3             ;  .    IS TIMER INHIBITED ?
-         DEC     &lt;TMR2            ;  .
-         BNE     DCT3             ;  .
-         JSR     [TMR2+1]         ;  .    EXECUTE THE USER PROGRAM
+DCT2     lda     <TMR2            ;  DOWN-COUNT TIMER #2
+         beq     DCT3             ;  .    IS TIMER INHIBITED ?
+         dec     <TMR2            ;  .
+         bne     DCT3             ;  .
+         jsr     [TMR2+1]         ;  .    EXECUTE THE USER PROGRAM
 ;
-DCT3     LDA     &lt;TMR3            ;  DOWN-COUNT TIMER #3
-         BEQ     DCT4             ;  .    IS TIMER INHIBITED ?
-         DEC     &lt;TMR3            ;  .
-         BNE     DCT4             ;  .
-         JSR     [TMR3+1]         ;  .    EXECUTE THE USER PROGRAM
+DCT3     lda     <TMR3            ;  DOWN-COUNT TIMER #3
+         beq     DCT4             ;  .    IS TIMER INHIBITED ?
+         dec     <TMR3            ;  .
+         bne     DCT4             ;  .
+         jsr     [TMR3+1]         ;  .    EXECUTE THE USER PROGRAM
 ;
-DCT4     LDA     &lt;TMR4            ;  DOWN-COUNT TIMER #4
-         BEQ     WAIT9            ;  .    IS TIMER INHIBITED ?
-         DEC     &lt;TMR4            ;  .
-         BNE     WAIT9            ;  .
-         JSR     [TMR4+1]         ;  .    EXECUTE THE USER PROGRAM
+DCT4     lda     <TMR4            ;  DOWN-COUNT TIMER #4
+         beq     WAIT9            ;  .    IS TIMER INHIBITED ?
+         dec     <TMR4            ;  .
+         bne     WAIT9            ;  .
+         jsr     [TMR4+1]         ;  .    EXECUTE THE USER PROGRAM
 ;
-WAIT9    PULS    DP,PC            ;  RETURN TO CALLER
+WAIT9    puls    dp,pc            ;  RETURN TO CALLER
 ;
 ;
 ;  HANDLE BULLET VS. MINE COLLISIONS
 ;  =================================
 ;
-         SETDP   $C8
+         setdp   $C8
 ;        =====   ===
 ;
-CBULMIN  LDA     &lt;CBULLET         ;  ACTIVE BULLETS ?
-         BEQ     CBUL20           ;  .
+CBULMIN  lda     <CBULLET         ;  ACTIVE BULLETS ?
+         beq     CBUL20           ;  .
 ;
-         LDY     #BLT.TBL         ;  FIND BULLET TO COMPARE WITH
-         LDA     #BULLETS         ;  .
-         STA     &lt;TEMP1           ;  .
+         ldy     #BLT_TBL         ;  FIND BULLET TO COMPARE WITH
+         lda     #BULLETS         ;  .
+         sta     <TEMP1           ;  .
 ;
-CBUL1    TST     BLT.FLG,Y        ;  .    BULLET ACTIVE ?
-         BNE     CBUL3            ;  .    .
+CBUL1    tst     BLT_FLG,y        ;  .    BULLET ACTIVE ?
+         bne     CBUL3            ;  .    .
 ;
-CBUL2    LEAY    BLT.LEN,Y        ;  .    BUMP TO NEXT ENTRY
-         DEC     &lt;TEMP1           ;  .    .    END OF TABLE ?
-         BNE     CBUL1            ;  .    .    .
-CBUL20   RTS                      ;  .    RETURN - NO ACTIVE BULLET FOUND
-;
-;
-CBUL3    LDA     &lt;LAYRSPD         ;  COMPARE BULLET VS. MINE-LAYER
-         BEQ     CBUL30           ;  .    IS MINE-LAYER OFF-SCREEN ?
-;
-         PSHS    Y                ;  .    FINE COLLISION TEST
-         LDA     BLT.WY,Y         ;  .    .    FETCH BULLET POSITION
-         LDB     BLT.WX,Y         ;  .    .    .
-         TFR     D,X              ;  .    .    .
-         LDD     #P.LYRBX         ;  .    .    FETCH MINE-LAYER BOX SIZE
-         LDY     &lt;LAYRYX          ;  .    .    FETCH MINE-LAYER POSITION
-         JSR     BXTEST           ;  .    .    DO BOX TEST
-         PULS    Y                ;  .    .    .    FAILED COLLISION ?
-         BCC     CBUL30           ;  .    .    .    .
-;
-         CLR     BLT.FLG,Y        ;  .    COLLISION DETECTED - RESET CONDITIONS
-         CLR     &lt;LAYRSPD         ;  .    .    RESET MINE LAYER
-         CLR     &lt;TMR3            ;  .    .    .    INSERTION TIMER
-;
-         LDX     #SCRPTR          ;  .    .    ADD POINTS TO ACTIVE PLAYER SCORE
-         LDA     &lt;ACTPLY          ;  .    .    .    PLAYER #1 OR #2 ?
-         LDX     A,X              ;  .    .    .    .
-         LDD     #$1000           ;  .    .    .
-         JSR     SCRADD           ;  .    .    .
-;
-         LDA     #$30             ;  .    .    ENTER COLLISION IN EXPLOSION TABLE
-         LDB     #$70             ;  .    .    .    SET EXPLOSION SIZE
-         LDX     &lt;LAYRYX          ;  .    .    .    SET EXPLOSION CENTRE
-         JSR     SETEXP           ;  .    .    .    SET EXPLOSION IN TABLE
-;
-         DEC     &lt;CBULLET         ;  .    .    DECREMENT ACTIVE BULLET COUNTER
-         BRA     CBUL20           ;  .    .    .
+CBUL2    leay    BLT_LEN,y        ;  .    BUMP TO NEXT ENTRY
+         dec     <TEMP1           ;  .    .    END OF TABLE ?
+         bne     CBUL1            ;  .    .    .
+CBUL20   rts                      ;  .    RETURN - NO ACTIVE BULLET FOUND
 ;
 ;
-CBUL30   LDU     #MIN.TBL         ;  FIND MINE TO COMPARE AGAINST BULLET
-         LDA     #MINES           ;  .
-         STA     &lt;TEMP2           ;  .
+CBUL3    lda     <LAYRSPD         ;  COMPARE BULLET VS. MINE-LAYER
+         beq     CBUL30           ;  .    IS MINE-LAYER OFF-SCREEN ?
 ;
-CBUL4    LDA     MIN.FLG,U        ;  .    MINE ACTIVE ?
-         ANDA    #$3F             ;  .    .
-         BNE     CBUL6            ;  .    .
+         pshs    y                ;  .    FINE COLLISION TEST
+         lda     BLT_WY,y         ;  .    .    FETCH BULLET POSITION
+         ldb     BLT_WX,y         ;  .    .    .
+         tfr     d,x              ;  .    .    .
+         ldd     #P_LYRBX         ;  .    .    FETCH MINE-LAYER BOX SIZE
+         ldy     <LAYRYX          ;  .    .    FETCH MINE-LAYER POSITION
+         jsr     BXTEST           ;  .    .    DO BOX TEST
+         puls    y                ;  .    .    .    FAILED COLLISION ?
+         bcc     CBUL30           ;  .    .    .    .
 ;
-CBUL5    LEAU    MIN.LEN,U        ;  .    BUMP TO NEXT ENTRY
-         DEC     &lt;TEMP2           ;  .    .    END OF TABLE ?
-         BNE     CBUL4            ;  .    .    .
-         BRA     CBUL2            ;  .    NO ACTIVE MINE FOUND - NEXT BULLET
+         clr     BLT_FLG,y        ;  .    COLLISION DETECTED - RESET CONDITIONS
+         clr     <LAYRSPD         ;  .    .    RESET MINE LAYER
+         clr     <TMR3            ;  .    .    .    INSERTION TIMER
 ;
-CBUL6    PSHS    Y                ;  .    FINE COLLISION TEST
-         LDA     BLT.WY,Y         ;  .    .    FETCH BULLET POSITION
-         LDB     BLT.WX,Y         ;  .    .    .
-         TFR     D,X              ;  .    .    .
-         LDA     MIN.YW,U         ;  .    .    FETCH MINE POSITION
-         LDB     MIN.XW,U         ;  .    .    .
-         TFR     D,Y              ;  .    .    .
-         LDD     MIN.BOX,U        ;  .    .    FETCH MINE BOX SIZE
-         JSR     BXTEST           ;  .    .    DO BOX TEST
-         PULS    Y                ;  .    .    .    FAILED COLLISION ?
-         BCC     CBUL5            ;  .    .    .    .
+         ldx     #SCRPTR          ;  .    .    ADD POINTS TO ACTIVE PLAYER SCORE
+         lda     <ACTPLY          ;  .    .    .    PLAYER #1 OR #2 ?
+         ldx     a,x              ;  .    .    .    .
+         ldd     #$1000           ;  .    .    .
+         jsr     SCRADD           ;  .    .    .
 ;
-         LDA     MIN.PAK,U        ;  .    COLLISION DETECTED
-         ANDA    #$02             ;  .    .     FIREBALL RELEASED ?
-         BEQ     CBUL7            ;  .    .     .
+         lda     #$30             ;  .    .    ENTER COLLISION IN EXPLOSION TABLE
+         ldb     #$70             ;  .    .    .    SET EXPLOSION SIZE
+         ldx     <LAYRYX          ;  .    .    .    SET EXPLOSION CENTRE
+         jsr     SETEXP           ;  .    .    .    SET EXPLOSION IN TABLE
 ;
-;
-         LDX     #SCRPTR          ;  'FIRE-BALL' RELEASED
-         LDA     &lt;ACTPLY          ;  .    ADD MINE TO ACTIVE PLAYER SCORE
-         LDX     A,X              ;  .    .    PLAYER #1 OR #2 ?
-         LDD     MIN.SCR,U        ;  .    .   
-         JSR     SCRADD           ;  .    .
-;
-         INC     FIRSND           ;  .    SET 'FIRE-BALL' SOUND
-;
-         LDA     MIN.YW,U         ;  .    SET SMALL EXPLOSION
-         LDB     MIN.XW,U         ;  .    .    SET POSITION
-         TFR     D,X              ;  .    .    .
-         LDA     MIN.SIZ,U        ;  .    .    SET STARTING SIZE
-         LDB     #$20             ;  .    .    SET MAXIMUM SIZE
-         JSR     SETEXP           ;  .    .    .
-;
-         LDD     #$0110           ;  .    CHANGE SCORE VALUE FOR FIRE-BALL
-         STD     MIN.SCR,U        ;  .    .
-;
-         LDA     &lt;WSHIPY          ;  .    CALCULATE DELTA YX VALUES
-         SUBA    MIN.YW,U         ;  .    .
-         LDB     &lt;WSHIPX          ;  .    .
-         SUBB    MIN.XW,U         ;  .    .
-;
-         JSR     CMPASS           ;  .    CALCULATE ANGLE TO SHIP
-         SUBA    #$10             ;  .    .
-         TFR     A,B              ;  .    .
-;
-         PSHS    Y                ;  .    CALCULATE NEW DISPLACEMENTS
-         LDA     #$3F             ;  .    .    SET FIRE-BALL SPEED
-         JSR     MLTY8            ;  .    .    FETCH NEW DISPLACEMENTS
-;
-         STY     MIN.YD,U         ;  .    .    SAVE NEW 'Y' DISPLACEMENT
-         STX     MIN.XD,U         ;  .    .    SAVE NEW 'X' DISPLACEMENT
-         PULS    Y                ;  .    .
-;
-         CLR     BLT.FLG,Y        ;  .    RESET BULLET FLAG
-;
-         LDD     #$0404           ;  .    SET NEW COLLISION BOX
-         STD     MIN.BOX,U        ;  .    .
-;
-         LDA     MIN.PAK,U        ;  .    GROW 2 NEW MINES
-         LDB     MIN.BSZ,U        ;  .    .
-         DECB                     ;  .    .
-         BEQ     CBUL60           ;  .    .
-         JSR     RANSEED          ;  .    .
-         JSR     RANSEED          ;  .    .
-;
-CBUL60   LDA     #$04             ;  .    SET FIRE-BALL FLAG
-         STA     MIN.PAK,U        ;  .    .
-;
-         DEC     &lt;CBULLET         ;  .    DECREMENT ACTIVE BULLET COUNT
-         JMP     CBUL2            ;  .    TRY NEXT BULLET FOR COLLISION
+         dec     <CBULLET         ;  .    .    DECREMENT ACTIVE BULLET COUNTER
+         bra     CBUL20           ;  .    .    .
 ;
 ;
-CBUL7    LDA     #$01             ;  'DUMB' OR 'MAGNETIC' MINE COLLISION
-         STA     MIN.FLG,U        ;  .    FLAG MINE FOR EXPLOSION
-         CLR     BLT.FLG,Y        ;  .    RESET BULLET
+CBUL30   ldu     #MIN_TBL         ;  FIND MINE TO COMPARE AGAINST BULLET
+         lda     #MINES           ;  .
+         sta     <TEMP2           ;  .
 ;
-         LDX     #SCRPTR          ;  .    ADD MINE TO ACTIVE PLAYER SCORE
-         LDA     &lt;ACTPLY          ;  .    .    PLAYER #1 OR #2 ?
-         LDX     A,X              ;  .    .    .
-         LDD     MIN.SCR,U        ;  ADD MINE TO SCORE
-         JSR     SCRADD           ;  .
+CBUL4    lda     MIN_FLG,u        ;  .    MINE ACTIVE ?
+         anda    #$3F             ;  .    .
+         bne     CBUL6            ;  .    .
 ;
-         LDA     MIN.YW,U         ;  ENTER COLLISION IN EXPLOSION TABLE
-         LDB     MIN.XW,U         ;  .    SET EXPLOSION CENTRE
-         TFR     D,X              ;  .    .
-         LDA     MIN.SIZ,U        ;  .    SET EXPLOSION STARTING SIZE
-         LDB     #$40             ;  .    SET EXPLOSION MAXIMUM SIZE
-         JSR     SETEXP           ;  .    SET EXPLOSION IN TABLE
+CBUL5    leau    MIN_LEN,u        ;  .    BUMP TO NEXT ENTRY
+         dec     <TEMP2           ;  .    .    END OF TABLE ?
+         bne     CBUL4            ;  .    .    .
+         bra     CBUL2            ;  .    NO ACTIVE MINE FOUND - NEXT BULLET
 ;
-         DEC     &lt;CMINES          ;  .    DECREMENT ACTIVE MINE COUNT
-         DEC     &lt;CBULLET         ;  .    DECREMENT ACTIVE BULLET COUNT
-CBUL9    JMP     CBUL2            ;  .    TRY NEXT BULLET FOR COLLISION
+CBUL6    pshs    y                ;  .    FINE COLLISION TEST
+         lda     BLT_WY,y         ;  .    .    FETCH BULLET POSITION
+         ldb     BLT_WX,y         ;  .    .    .
+         tfr     d,x              ;  .    .    .
+         lda     MIN_YW,u         ;  .    .    FETCH MINE POSITION
+         ldb     MIN_XW,u         ;  .    .    .
+         tfr     d,y              ;  .    .    .
+         ldd     MIN_BOX,u        ;  .    .    FETCH MINE BOX SIZE
+         jsr     BXTEST           ;  .    .    DO BOX TEST
+         puls    y                ;  .    .    .    FAILED COLLISION ?
+         bcc     CBUL5            ;  .    .    .    .
+;
+         lda     MIN_PAK,u        ;  .    COLLISION DETECTED
+         anda    #$02             ;  .    .     FIREBALL RELEASED ?
+         beq     CBUL7            ;  .    .     .
+;
+;
+         ldx     #SCRPTR          ;  'FIRE-BALL' RELEASED
+         lda     <ACTPLY          ;  .    ADD MINE TO ACTIVE PLAYER SCORE
+         ldx     a,x              ;  .    .    PLAYER #1 OR #2 ?
+         ldd     MIN_SCR,u        ;  .    .   
+         jsr     SCRADD           ;  .    .
+;
+         inc     FIRSND           ;  .    SET 'FIRE-BALL' SOUND
+;
+         lda     MIN_YW,u         ;  .    SET SMALL EXPLOSION
+         ldb     MIN_XW,u         ;  .    .    SET POSITION
+         tfr     d,x              ;  .    .    .
+         lda     MIN_SIZ,u        ;  .    .    SET STARTING SIZE
+         ldb     #$20             ;  .    .    SET MAXIMUM SIZE
+         jsr     SETEXP           ;  .    .    .
+;
+         ldd     #$0110           ;  .    CHANGE SCORE VALUE FOR FIRE-BALL
+         std     MIN_SCR,u        ;  .    .
+;
+         lda     <WSHIPY          ;  .    CALCULATE DELTA YX VALUES
+         suba    MIN_YW,u         ;  .    .
+         ldb     <WSHIPX          ;  .    .
+         subb    MIN_XW,u         ;  .    .
+;
+         jsr     CMPASS           ;  .    CALCULATE ANGLE TO SHIP
+         suba    #$10             ;  .    .
+         tfr     a,b              ;  .    .
+;
+         pshs    y                ;  .    CALCULATE NEW DISPLACEMENTS
+         lda     #$3F             ;  .    .    SET FIRE-BALL SPEED
+         jsr     MLTY8            ;  .    .    FETCH NEW DISPLACEMENTS
+;
+         sty     MIN_YD,u         ;  .    .    SAVE NEW 'Y' DISPLACEMENT
+         stx     MIN_XD,u         ;  .    .    SAVE NEW 'X' DISPLACEMENT
+         puls    y                ;  .    .
+;
+         clr     BLT_FLG,y        ;  .    RESET BULLET FLAG
+;
+         ldd     #$0404           ;  .    SET NEW COLLISION BOX
+         std     MIN_BOX,u        ;  .    .
+;
+         lda     MIN_PAK,u        ;  .    GROW 2 NEW MINES
+         ldb     MIN_BSZ,u        ;  .    .
+         decb                     ;  .    .
+         beq     CBUL60           ;  .    .
+         jsr     RANSEED          ;  .    .
+         jsr     RANSEED          ;  .    .
+;
+CBUL60   lda     #$04             ;  .    SET FIRE-BALL FLAG
+         sta     MIN_PAK,u        ;  .    .
+;
+         dec     <CBULLET         ;  .    DECREMENT ACTIVE BULLET COUNT
+         jmp     CBUL2            ;  .    TRY NEXT BULLET FOR COLLISION
+;
+;
+CBUL7    lda     #$01             ;  'DUMB' OR 'MAGNETIC' MINE COLLISION
+         sta     MIN_FLG,u        ;  .    FLAG MINE FOR EXPLOSION
+         clr     BLT_FLG,y        ;  .    RESET BULLET
+;
+         ldx     #SCRPTR          ;  .    ADD MINE TO ACTIVE PLAYER SCORE
+         lda     <ACTPLY          ;  .    .    PLAYER #1 OR #2 ?
+         ldx     a,x              ;  .    .    .
+         ldd     MIN_SCR,u        ;  ADD MINE TO SCORE
+         jsr     SCRADD           ;  .
+;
+         lda     MIN_YW,u         ;  ENTER COLLISION IN EXPLOSION TABLE
+         ldb     MIN_XW,u         ;  .    SET EXPLOSION CENTRE
+         tfr     d,x              ;  .    .
+         lda     MIN_SIZ,u        ;  .    SET EXPLOSION STARTING SIZE
+         ldb     #$40             ;  .    SET EXPLOSION MAXIMUM SIZE
+         jsr     SETEXP           ;  .    SET EXPLOSION IN TABLE
+;
+         dec     <CMINES          ;  .    DECREMENT ACTIVE MINE COUNT
+         dec     <CBULLET         ;  .    DECREMENT ACTIVE BULLET COUNT
+CBUL9    jmp     CBUL2            ;  .    TRY NEXT BULLET FOR COLLISION
 ;
 ;
 ;  HANDLE MINE VS. SHIP COLLISIONS
 ;  ===============================
 ;
-         SETDP   $C8
+         setdp   $C8
 ;        =====   ===
 ;
-CMINSHIP LDA     &lt;ABORT           ;  GAME ABORTED ?
-         BNE     CMIN3            ;  .    SKIP COLLISION DETECTION
+CMINSHIP lda     <ABORT           ;  GAME ABORTED ?
+         bne     CMIN3            ;  .    SKIP COLLISION DETECTION
 ;
-         LDA     &lt;HYPFLAG         ;  .    HYPER-SPACE SEQUENCE ?
-         BNE     CMIN3            ;  .    .
-:
-         LDY     #MIN.TBL         ;  FIND MINE TO COMPARE WITH
-         LDA     #MINES           ;  .
-         STA     &lt;TEMP1           ;  .
+         lda     <HYPFLAG         ;  .    HYPER-SPACE SEQUENCE ?
+         bne     CMIN3            ;  .    .
 ;
-CMIN1    LDA     MIN.FLG,Y        ;  .    MINE ACTIVE ?
-         ANDA    #$3F             ;  .    .
-         BNE     CMIN4            ;  .    .
+         ldy     #MIN_TBL         ;  FIND MINE TO COMPARE WITH
+         lda     #MINES           ;  .
+         sta     <TEMP1           ;  .
 ;
-CMIN2    LEAY    MIN.LEN,Y        ;  .    BUMP TO NEXT ENTRY
-         DEC     &lt;TEMP1           ;  .    .    END OF TABLE ?
-         BNE     CMIN1            ;  .    .    .
-CMIN3    RTS                      ;  .    RETURN - NO ACTIVE MINE
+CMIN1    lda     MIN_FLG,y        ;  .    MINE ACTIVE ?
+         anda    #$3F             ;  .    .
+         bne     CMIN4            ;  .    .
 ;
-CMIN4    PSHS    Y                ;  FINE COLLISION TEST
-         LDA     &lt;WSHIPY          ;  .    FETCH SHIP POSITION
-         LDB     &lt;WSHIPX          ;  .    .
-         TFR     D,X              ;  .    .
-         LDA     MIN.YW,Y         ;  .    FETCH MINE POSITION
-         LDB     MIN.XW,Y         ;  .    .
-         LDY     MIN.BOX,Y        ;  .    FETCH MINE BOX SIZE
-         EXG     Y,D              ;  .    .
-         JSR     BXTEST           ;  .    DO BOX TEST
-         PULS    Y                ;  .    .    FAILED COLLISION ?
-         BCC     CMIN2            ;  .    .    .
+CMIN2    leay    MIN_LEN,y        ;  .    BUMP TO NEXT ENTRY
+         dec     <TEMP1           ;  .    .    END OF TABLE ?
+         bne     CMIN1            ;  .    .    .
+CMIN3    rts                      ;  .    RETURN - NO ACTIVE MINE
 ;
-         CLR     MIN.FLG,Y        ;  COLLISION DETECTED - RESET CONDITIONS
-         CLR     &lt;MINMAX          ;  .    RESET TOTAL MINE COUNT
+CMIN4    pshs    y                ;  FINE COLLISION TEST
+         lda     <WSHIPY          ;  .    FETCH SHIP POSITION
+         ldb     <WSHIPX          ;  .    .
+         tfr     d,x              ;  .    .
+         lda     MIN_YW,y         ;  .    FETCH MINE POSITION
+         ldb     MIN_XW,y         ;  .    .
+         ldy     MIN_BOX,y        ;  .    FETCH MINE BOX SIZE
+         exg     y,d              ;  .    .
+         jsr     BXTEST           ;  .    DO BOX TEST
+         puls    y                ;  .    .    FAILED COLLISION ?
+         bcc     CMIN2            ;  .    .    .
 ;
-         LDA     &lt;WSHIPY          ;  ENTER COLLISION IN EXPLOSION TABLE
-         LDB     &lt;WSHIPX          ;  .    SET EXPLOSION CENTRE
-         TFR     D,X              ;  .    .
-         LDA     MIN.SIZ,Y        ;  .    SET STARTING EXPLOSION SIZE
-         ORA     #$80             ;  .    .    FATAL HIT TO SWEEPER
-         LDB     #$30             ;  .    SET EXPLOSION SIZE
-         JSR     SETEXP           ;  .    SET EXPLOSION IN TABLE
+         clr     MIN_FLG,y        ;  COLLISION DETECTED - RESET CONDITIONS
+         clr     <MINMAX          ;  .    RESET TOTAL MINE COUNT
 ;
-         INC     EXPLSND          ;  SET EXPLOSION SOUND FLAG
+         lda     <WSHIPY          ;  ENTER COLLISION IN EXPLOSION TABLE
+         ldb     <WSHIPX          ;  .    SET EXPLOSION CENTRE
+         tfr     d,x              ;  .    .
+         lda     MIN_SIZ,y        ;  .    SET STARTING EXPLOSION SIZE
+         ora     #$80             ;  .    .    FATAL HIT TO SWEEPER
+         ldb     #$30             ;  .    SET EXPLOSION SIZE
+         jsr     SETEXP           ;  .    SET EXPLOSION IN TABLE
 ;
-         DEC     &lt;CMINES          ;  DECREMENT ACTIVE MINE COUNT
-         BRA     CMIN3            ;  TRY NEXT MINE ENTRY
+         inc     EXPLSND          ;  SET EXPLOSION SOUND FLAG
+;
+         dec     <CMINES          ;  DECREMENT ACTIVE MINE COUNT
+         bra     CMIN3            ;  TRY NEXT MINE ENTRY
 ;
 ;
 ;  HANDLE SHIP VS. MINE-LAYER COLLISION
 ;  ====================================
 ;
-         SETDP   $C8
+         setdp   $C8
 ;        =====   ===
 ;
-CSHPLYR  LDA     &lt;ABORT           ;  GAME ABORTED ?
-         BNE     CSHP0            ;  .    SKIP COLLISION DETECTION
+CSHPLYR  lda     <ABORT           ;  GAME ABORTED ?
+         bne     CSHP0            ;  .    SKIP COLLISION DETECTION
 ;
-         LDA     &lt;HYPFLAG         ;  .    HYPER-SPACE SEQUENCE ?
-         BNE     CSHP0            ;  .    .
+         lda     <HYPFLAG         ;  .    HYPER-SPACE SEQUENCE ?
+         bne     CSHP0            ;  .    .
 ;
-         LDA     &lt;LAYRSPD         ;  MINE-LAYER OFF-SCREEN ?
-         BEQ     CSHP0            ;  .    IF SO, SKIP COLLISION DETECTION
+         lda     <LAYRSPD         ;  MINE-LAYER OFF-SCREEN ?
+         beq     CSHP0            ;  .    IF SO, SKIP COLLISION DETECTION
 ;
-         LDA     &lt;WSHIPY          ;  PERFORM FINE BOX TEST
-         LDB     &lt;WSHIPX          ;  .    FETCH SHIP POSITION
-         TFR     D,X              ;  .    .
-         LDD     #P.LYRBX         ;  .    FETCH MINE-LAYER COLLISION BOX
-         LDY     &lt;LAYRYX          ;  .    FETCH MINE-LAYER POSITION
-         JSR     BXTEST           ;  .    DO BOX TEST
-         BCS     CSHP1            ;  .    .    PASS COLLISION TEST ?
-CSHP0    RTS                      ;  .    .    .    NO COLLISION - RETURN
+         lda     <WSHIPY          ;  PERFORM FINE BOX TEST
+         ldb     <WSHIPX          ;  .    FETCH SHIP POSITION
+         tfr     d,x              ;  .    .
+         ldd     #P_LYRBX         ;  .    FETCH MINE-LAYER COLLISION BOX
+         ldy     <LAYRYX          ;  .    FETCH MINE-LAYER POSITION
+         jsr     BXTEST           ;  .    DO BOX TEST
+         bcs     CSHP1            ;  .    .    PASS COLLISION TEST ?
+CSHP0    rts                      ;  .    .    .    NO COLLISION - RETURN
 ;
-CSHP1    CLR     &lt;LAYRSPD         ;  COLLISION DETECTED - RESET MINE-LAYER
-         CLR     &lt;TMR3            ;  .
+CSHP1    clr     <LAYRSPD         ;  COLLISION DETECTED - RESET MINE-LAYER
+         clr     <TMR3            ;  .
 ;
-         LDA     &lt;WSHIPY          ;  ENTER COLLISION IN EXPLOSION TABLE
-         LDB     &lt;WSHIPX          ;  .    SET EXPLOSION CENTRE
-         TFR     D,X              ;  .    .
-         LDA     #P.LYRSZ         ;  .    SET STARTING EXPLOSION SIZE
-         ORA     #$80             ;  .    .    FATAL TO SWEEPER
-         LDB     #$30             ;  .    SET EXPLOSION SIZE
-         JSR     SETEXP           ;  .    SET EXPLOSION IN TABLE
+         lda     <WSHIPY          ;  ENTER COLLISION IN EXPLOSION TABLE
+         ldb     <WSHIPX          ;  .    SET EXPLOSION CENTRE
+         tfr     d,x              ;  .    .
+         lda     #P_LYRSZ         ;  .    SET STARTING EXPLOSION SIZE
+         ora     #$80             ;  .    .    FATAL TO SWEEPER
+         ldb     #$30             ;  .    SET EXPLOSION SIZE
+         jsr     SETEXP           ;  .    SET EXPLOSION IN TABLE
 ;
-         INC     EXPLSND          ;  SET EXPLOSION SOUND FLAG
+         inc     EXPLSND          ;  SET EXPLOSION SOUND FLAG
 ;
-         RTS                      ;  RETURN TO CALLER
+         rts                      ;  RETURN TO CALLER
 ;
 ;   
 ;
 ;  SOUND HANDLER
 ;  =============
 ;
-         SETDP   $D0
+         setdp   $D0
 ;        =====   ===
 ;
-SOUND    LDA     THRSND           ;  THRUSTER SOUND ?
-         BEQ     SND1             ;  .
+SOUND    lda     THRSND           ;  THRUSTER SOUND ?
+         beq     SND1             ;  .
 ;
-         CLR     THRSND           ;  .    RESET THRUSTER SOUND FLAG
-         LDU     #SS.THR          ;  .    SET THRUSTER SOUND
-         BRA     SND10            ;  .    .
+         clr     THRSND           ;  .    RESET THRUSTER SOUND FLAG
+         ldu     #SS_THR          ;  .    SET THRUSTER SOUND
+         bra     SND10            ;  .    .
 ;
-SND1     LDA     EXPLSND          ;  EXPLOSION SOUND ?
-         BEQ     SND2             ;  .
+SND1     lda     EXPLSND          ;  EXPLOSION SOUND ?
+         beq     SND2             ;  .
 ;
-         CLR     EXPLSND          ;  .    RESET EXPLOSION SOUND FLAG
-         LDU     #SS.EXP          ;  .    SET EXPLOSION SOUND
-         BRA     SND10            ;  .    .
+         clr     EXPLSND          ;  .    RESET EXPLOSION SOUND FLAG
+         ldu     #SS_EXP          ;  .    SET EXPLOSION SOUND
+         bra     SND10            ;  .    .
 ;
-SND2     LDA     BLTSND           ;  BULLET SOUND ?
-         BEQ     SND3             ;  .
+SND2     lda     BLTSND           ;  BULLET SOUND ?
+         beq     SND3             ;  .
 ;
-         CLR     BLTSND           ;  .    RESET BULLET SOUND FLAG
-         LDU     #SS.BLT          ;  .    SET BULLET SOUND
-         BRA     SND10            ;  .    .
+         clr     BLTSND           ;  .    RESET BULLET SOUND FLAG
+         ldu     #SS_BLT          ;  .    SET BULLET SOUND
+         bra     SND10            ;  .    .
 ;
-SND3     LDA     POPSND           ;  MINE-SEED 'POP' SOUND ?
-         BEQ     SND31            ;  .
+SND3     lda     POPSND           ;  MINE-SEED 'POP' SOUND ?
+         beq     SND31            ;  .
 ;
-SND32    CLR     POPSND           ;  .    RESET 'POP' SOUND FLAG
-         CLR     HYPSND           ;  .    RESET 'HYPER-SPACE' SOUND FLAG
-         LDU     #SS.POP          ;  .    SET 'POP' SOUND
-         BRA     SND10            ;  .    .
+SND32    clr     POPSND           ;  .    RESET 'POP' SOUND FLAG
+         clr     HYPSND           ;  .    RESET 'HYPER-SPACE' SOUND FLAG
+         ldu     #SS_POP          ;  .    SET 'POP' SOUND
+         bra     SND10            ;  .    .
 ;
-SND31    LDA     HYPSND           ;  HYPER-SPACE SOUND ?
-         BNE     SND32            ;  .
+SND31    lda     HYPSND           ;  HYPER-SPACE SOUND ?
+         bne     SND32            ;  .
 ;
-         BRA     SND18            ;  UPDATE SOUND
+         bra     SND18            ;  UPDATE SOUND
 ;
 ;
-SND10    JSR     PSGLST           ;  UPDATE PSG
+SND10    jsr     PSGLST           ;  UPDATE PSG
 ;
-SND18    LDB     REG0             ;  SLIDE TONE 'A' FREQUENCY
-         ADDB    #$10             ;  .
-         CMPB    #$A0             ;  .
-         BHS     STTNA            ;  .
-         LDA     #00              ;  .
-         JSR     WRREG            ;  .
-         BRA     CKTNB            ;  .
+SND18    ldb     REG0             ;  SLIDE TONE 'A' FREQUENCY
+         addb    #$10             ;  .
+         cmpb    #$A0             ;  .
+         bhs     STTNA            ;  .
+         lda     #00              ;  .
+         jsr     WRREG            ;  .
+         bra     CKTNB            ;  .
 ;
-STTNA    LDD     #$0800           ;  .    SET 'A' AMPLITUDE = $00
-         JSR     WRREG            ;  .    .
+STTNA    ldd     #$0800           ;  .    SET 'A' AMPLITUDE = $00
+         jsr     WRREG            ;  .    .
 ;
-CKTNB    LDB     REG2             ;  SLIDE TONE 'B' FREQUENCY
-         ADDB    #$20             ;  .
-         CMPB    #$F0             ;  .
-         BHS     STTNB            ;  .
-         LDA     #$02             ;  .
-         JSR     WRREG            ;  .
-         BRA     RUSND            ;  .
+CKTNB    ldb     REG2             ;  SLIDE TONE 'B' FREQUENCY
+         addb    #$20             ;  .
+         cmpb    #$F0             ;  .
+         bhs     STTNB            ;  .
+         lda     #$02             ;  .
+         jsr     WRREG            ;  .
+         bra     RUSND            ;  .
 ;
-STTNB    LDD     #$0900           ;  .    SET 'B' AMPLITUDE = $00
-         JSR     WRREG            ;  .    .
+STTNB    ldd     #$0900           ;  .    SET 'B' AMPLITUDE = $00
+         jsr     WRREG            ;  .    .
 ;
-RUSND    RTS                      ;  RETURN TO CALLER
+RUSND    rts                      ;  RETURN TO CALLER
 ;     
 ;
 ;        SOUND LIBRARY
 ;        -------------
 ;
 ;
-SS.THR   DW      $0010            ;  THRUSTER SOUND
-         DW      $0100            ;  .
-         DW      $061F            ;  .
-         DW      $0706            ;  .
-         DW      $080F            ;  .
-         DB      $FF              ;  .    TERMINATOR
+SS_THR   dw      $0010            ;  THRUSTER SOUND
+         dw      $0100            ;  .
+         dw      $061F            ;  .
+         dw      $0706            ;  .
+         dw      $080F            ;  .
+         db      $FF              ;  .    TERMINATOR
 ;
 ;
-SS.BLT   DW      $0239            ;  BULLET SOUND
-         DW      $0300            ;  .
-         DW      $061F            ;  .
-         DW      $0705            ;  .
-         DW      $090F            ;  .
-         DB      $FF              ;  .    TERMINATOR
+SS_BLT   dw      $0239            ;  BULLET SOUND
+         dw      $0300            ;  .
+         dw      $061F            ;  .
+         dw      $0705            ;  .
+         dw      $090F            ;  .
+         db      $FF              ;  .    TERMINATOR
 ;
 ;
-SS.EXP   DW      $061F            ;  OJECT EXPLOSION SOUND
-         DW      $0707            ;  .
-         DW      $0A10            ;  .
-         DW      $0B00            ;  .
-         DW      $0C38            ;  .
-         DW      $0D00            ;  .
-         DB      $FF              ;  .    TERMINATOR
+SS_EXP   dw      $061F            ;  OJECT EXPLOSION SOUND
+         dw      $0707            ;  .
+         dw      $0A10            ;  .
+         dw      $0B00            ;  .
+         dw      $0C38            ;  .
+         dw      $0D00            ;  .
+         db      $FF              ;  .    TERMINATOR
 ;
 ;
-SS.POP   DW      $0000            ;  MINE 'POP' SOUND
-         DW      $0100            ;  .
-         DW      $0230            ;  .
-         DW      $0300            ;  .
-         DW      $0400            ;  .
-         DW      $0500            ;  .
-         DW      $061F            ;  .
-         DW      $073D            ;  .
-         DW      $0800            ;  .
-         DW      $090F            ;  .
-         DW      $0A00            ;  .
-         DW      $0B00            ;  .
-         DW      $0C00            ;  .
-         DW      $0D00            ;  .
-         DB      $FF              ;  .    TERMINATOR
+SS_POP   dw      $0000            ;  MINE 'POP' SOUND
+         dw      $0100            ;  .
+         dw      $0230            ;  .
+         dw      $0300            ;  .
+         dw      $0400            ;  .
+         dw      $0500            ;  .
+         dw      $061F            ;  .
+         dw      $073D            ;  .
+         dw      $0800            ;  .
+         dw      $090F            ;  .
+         dw      $0A00            ;  .
+         dw      $0B00            ;  .
+         dw      $0C00            ;  .
+         dw      $0D00            ;  .
+         db      $FF              ;  .    TERMINATOR
 ;
 ;
 ;       LAYER TUNE
 ;       ----------
 ;
 ;
-QSC      EQU     50
-SC8      EQU     25
+QSC      equ     50
+SC8      equ     25
 ;
-G2       EQU     $00
-GS2      EQU     $01
-CS3      EQU     $06
-C3       EQU     $05
+G2       equ     $00
+GS2      equ     $01
+CS3      equ     $06
+C3       equ     $05
 ;
-LAYTUNE  DW      FADE66
-         DW      VIBENL
-         DB      G2,SC8
-         DB      GS2,SC8
-         DB      G2,SC8
-         DB      GS2,QSC
-         DB      G2,SC8
-         DB      GS2,SC8 
-         DB      G2,SC8
-         DB      CS3,SC8
-         DB      C3,SC8
-         DB      G2,$80
-;
-;
-FADE66   DW      $FFEE,$DDCC,$BBAA,$9988,$7777
-         DW      $7777,$7777,$7777
+LAYTUNE  dw      FADE66
+         dw      VIBENL
+         db      G2,SC8
+         db      GS2,SC8
+         db      G2,SC8
+         db      GS2,QSC
+         db      G2,SC8
+         db      GS2,SC8
+         db      G2,SC8
+         db      CS3,SC8
+         db      C3,SC8
+         db      G2,$80
 ;
 ;
+FADE66   dw      $FFEE,$DDCC,$BBAA,$9988,$7777
+         dw      $7777,$7777,$7777
 ;
-SCRPTR   DW      SCOR1            ;  POINTERS TO PLAYER SCORES
-         DW      SCOR2            ;  .
 ;
-PSCRPTR  DW      PSCOR1           ;  SCREEN POSITIONS OF PLAYER SCORES
-         DW      PSCOR2           ;  .
 ;
-PMNLVL   DW      MNLVL1           ;  POINTERS TO PLAYERS MINE-LEVEL MESSAGES
-         DW      MNLVL2           ;  .
+SCRPTR   dw      SCOR1            ;  POINTERS TO PLAYER SCORES
+         dw      SCOR2            ;  .
+;
+PSCRPTR  dw      PSCOR1           ;  SCREEN POSITIONS OF PLAYER SCORES
+         dw      PSCOR2           ;  .
+;
+PMNLVL   dw      MNLVL1           ;  POINTERS TO PLAYERS MINE-LEVEL MESSAGES
+         dw      MNLVL2           ;  .
 ;
 ;==========================================================================JJH
 ;                                   =======================================JJH
@@ -3001,146 +3001,146 @@ PMNLVL   DW      MNLVL1           ;  POINTERS TO PLAYERS MINE-LEVEL MESSAGES
 ;        LEVEL #1 PARAMETER TABLES                                   ======JJH
 ;        -------------------------                                   ======JJH
 ;                                                                    ======JJH
-;MINTBL1 DB      M.DUMB           ;  MINE TYPE TABLE                 ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
+;MINTBL1 db      M_DUMB           ;  MINE TYPE TABLE                 ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
 ;                                                                    ======JJH
 ;        LEVEL #2 PARAMETER TABLE                                    ======JJH
 ;        ------------------------                                    ======JJH
 ;                                                                    ======JJH
-;MINTBL2 DB      M.FIRE           ;  MINE TYPE TABLE                 ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
+;MINTBL2 db      M_FIRE           ;  MINE TYPE TABLE                 ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
 ;                                                                    ======JJH
 ;        LEVEL #3 PARAMETER TABLE                                    ======JJH
 ;        ------------------------                                    ======JJH
 ;                                                                    ======JJH
-;MINTBL3 DB      M.MAG            ;  MINE TYPE TABLE                 ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
+;MINTBL3 db      M_MAG            ;  MINE TYPE TABLE                 ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
 ;                                                                    ======JJH
 ;        LEVEL #4 PARAMETER TABLE                                    ======JJH
 ;        ------------------------                                    ======JJH
 ;                                                                    ======JJH
-;MINTBL4 DB      M.MFIRE          ;  MINE TYPE TABLE                 ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
+;MINTBL4 db      M_MFIRE          ;  MINE TYPE TABLE                 ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
 ;                                                                    ======JJH
 ;        LEVEL #5 PARAMETER TABLE                                    ======JJH
 ;        ------------------------                                    ======JJH
 ;                                                                    ======JJH
-;MINTBL5 DB      M.FIRE           ;  MINE TYPE TABLE                 ======JJH
-;        DB      M.MAG            ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
+;MINTBL5 db      M_FIRE           ;  MINE TYPE TABLE                 ======JJH
+;        db      M_MAG            ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
 ;                                                                    ======JJH
 ;        LEVEL #6 PARAMETER TABLE                                    ======JJH
 ;        ------------------------                                    ======JJH
 ;                                                                    ======JJH
-;MINTBL6 DB      M.FIRE           ;  MINE TYPE TABLE                 ======JJH
-;        DB      M.MFIRE          ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
+;MINTBL6 db      M_FIRE           ;  MINE TYPE TABLE                 ======JJH
+;        db      M_MFIRE          ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
 ;                                                                    ======JJH
 ;        LEVEL #7 PARAMETER TABLE                                    ======JJH
 ;        ------------------------                                    ======JJH
 ;                                                                    ======JJH
-;MINTBL7 DB      M.MAG            ;  MINE TYPE TABLE                 ======JJH
-;        DB      M.MFIRE          ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
+;MINTBL7 db      M_MAG            ;  MINE TYPE TABLE                 ======JJH
+;        db      M_MFIRE          ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
 ;                                                                    ======JJH
 ;        LEVEL #8 PARAMETER TABLE                                    ======JJH
 ;        ------------------------                                    ======JJH
 ;                                                                    ======JJH
-;MINTBL8 DB      M.FIRE           ;  MINE TYPE TABLE                 ======JJH
-;        DB      M.FIRE           ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
+;MINTBL8 db      M_FIRE           ;  MINE TYPE TABLE                 ======JJH
+;        db      M_FIRE           ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
 ;                                                                    ======JJH
 ;        LEVEL #9 PARAMETER TABLE                                    ======JJH
 ;        ------------------------                                    ======JJH
 ;                                                                    ======JJH
-;MINTBL9 DB      M.MAG            ;  MINE TYPE TABLE                 ======JJH
-;        DB      M.MAG            ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
+;MINTBL9 db      M_MAG            ;  MINE TYPE TABLE                 ======JJH
+;        db      M_MAG            ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
 ;                                                                    ======JJH
 ;        LEVEL #10 PARAMETER TABLE                                   ======JJH
 ;        -------------------------                                   ======JJH
 ;                                                                    ======JJH
-;MINTBL10DB      M.MFIRE          ;  MINE TYPE TABLE                 ======JJH
-;        DB      M.MFIRE          ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
+;MINTBL10DB      M_MFIRE          ;  MINE TYPE TABLE                 ======JJH
+;        db      M_MFIRE          ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
 ;                                                                    ======JJH
 ;        LEVEL #11 PARAMETER TABLE                                   ======JJH
 ;        -------------------------                                   ======JJH
 ;                                                                    ======JJH
-;MINTBL11DB      M.FIRE           ;  MINE TYPE TABLE                 ======JJH
-;        DB      M.FIRE           ;  .                               ======JJH
-;        DB      M.FIRE           ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
+;MINTBL11DB      M_FIRE           ;  MINE TYPE TABLE                 ======JJH
+;        db      M_FIRE           ;  .                               ======JJH
+;        db      M_FIRE           ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
 ;                                                                    ======JJH
 ;        LEVEL #12 PARAMETER TABLE                                   ======JJH
 ;        -------------------------                                   ======JJH
 ;                                                                    ======JJH
-;MINTBL12DB      M.MAG            ;  MINE TYPE TABLE                 ======JJH
-;        DB      M.MAG            ;  .                               ======JJH
-;        DB      M.MAG            ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
+;MINTBL12DB      M_MAG            ;  MINE TYPE TABLE                 ======JJH
+;        db      M_MAG            ;  .                               ======JJH
+;        db      M_MAG            ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
 ;                                                                    ======JJH
 ;        LEVEL #13 PARAMETER TABLE                                   ======JJH
 ;        -------------------------                                   ======JJH
 ;                                                                    ======JJH
-;MINTBL13DB      M.MFIRE          ;  MINE TYPE TABLE                 ======JJH
-;        DB      M.MFIRE          ;  .                               ======JJH
-;        DB      M.MFIRE          ;  .                               ======JJH
-;        DB      M.DUMB           ;  .                               ======JJH
+;MINTBL13DB      M_MFIRE          ;  MINE TYPE TABLE                 ======JJH
+;        db      M_MFIRE          ;  .                               ======JJH
+;        db      M_MFIRE          ;  .                               ======JJH
+;        db      M_DUMB           ;  .                               ======JJH
 ;                                                                    ======JJH
-;        DB      $80              ;  LEVEL PARAMETER TABLE TERMINATOR======JJH
+;        db      $80              ;  LEVEL PARAMETER TABLE TERMINATOR======JJH
 ;==========================================================================JJH
 ;
 ;==========================================================================JJH
-         SETDP   $C8              ;  CODE ADDED - REV. C CHANGES     ======JJH
+         setdp   $C8              ;  CODE ADDED - REV. C CHANGES     ======JJH
 ;        =====   ===                                                 ======JJH
 ;                                                                    ======JJH
-REVC.0   LDA     #$0C             ;  .    LAST GAME SEQUENCE ?       ======JJH
-         SUBA    0,X              ;  .    .                          ======JJH
-         SUBA    1,X              ;  .    .                          ======JJH
-         SUBA    2,X              ;  .    .                          ======JJH
-         SUBA    3,X              ;  .    .                          ======JJH
-         BEQ     REVC.09          ;  .    .                          ======JJH
+REVC_0   lda     #$0C             ;  .    LAST GAME SEQUENCE ?       ======JJH
+         suba    0,x              ;  .    .                          ======JJH
+         suba    1,x              ;  .    .                          ======JJH
+         suba    2,x              ;  .    .                          ======JJH
+         suba    3,x              ;  .    .                          ======JJH
+         beq     REVC_09          ;  .    .                          ======JJH
 ;                                                                    ======JJH
-         LDB     0,X              ;  .    INCREMENT MINE #1 TYPE     ======JJH
-         ADDB    #$FD             ;  .    .                          ======JJH
-         ANDB    #$03             ;  .    .                          ======JJH
-         STB     0,X              ;  .    .                          ======JJH
+         ldb     0,x              ;  .    INCREMENT MINE #1 TYPE     ======JJH
+         addb    #$FD             ;  .    .                          ======JJH
+         andb    #$03             ;  .    .                          ======JJH
+         stb     0,x              ;  .    .                          ======JJH
 ;                                                                    ======JJH
-         LDB     #$FC             ;  .    INCREMENT MINE #2 TYPE     ======JJH
-         ADCB    1,X              ;  .    .                          ======JJH
-         ANDB    #$03             ;  .    .                          ======JJH
-         STB     1,X              ;  .    .                          ======JJH
+         ldb     #$FC             ;  .    INCREMENT MINE #2 TYPE     ======JJH
+         adcb    1,x              ;  .    .                          ======JJH
+         andb    #$03             ;  .    .                          ======JJH
+         stb     1,x              ;  .    .                          ======JJH
 ;                                                                    ======JJH
-         LDB     #$FC             ;  .    INCREMENT MINE #3 TYPE     ======JJH
-         ADCB    2,X              ;  .    .                          ======JJH
-         ANDB    #$03             ;  .    .                          ======JJH
-         STB     2,X              ;  .    .                          ======JJH
+         ldb     #$FC             ;  .    INCREMENT MINE #3 TYPE     ======JJH
+         adcb    2,x              ;  .    .                          ======JJH
+         andb    #$03             ;  .    .                          ======JJH
+         stb     2,x              ;  .    .                          ======JJH
 ;                                                                    ======JJH
-         LDB     #$FC             ;  .    INCREMENT MINE #4 TYPE     ======JJH
-         ADCB    3,X              ;  .    .                          ======JJH
-         ANDB    #$03             ;  .    .                          ======JJH
-         STB     3,X              ;  .    .                          ======JJH
+         ldb     #$FC             ;  .    INCREMENT MINE #4 TYPE     ======JJH
+         adcb    3,x              ;  .    .                          ======JJH
+         andb    #$03             ;  .    .                          ======JJH
+         stb     3,x              ;  .    .                          ======JJH
 ;                                                                    ======JJH
-REVC.09  RTS                      ;  .    RETURN TO CALLER           ======JJH
+REVC_09  rts                      ;  .    RETURN TO CALLER           ======JJH
 ;==========================================================================JJH
 ;
 ;==========================================================================JJH
-         DS      8                ;  CODE ADDED - REV. C CHANGES     ======JJH
+         ds      8                ;  CODE ADDED - REV. C CHANGES     ======JJH
 ;==========================================================================JJH
 ;
 ;
@@ -3149,58 +3149,58 @@ REVC.09  RTS                      ;  .    RETURN TO CALLER           ======JJH
 ;  =================
 ;
 ;
-STAR.1   DB      $C8,$40          ;  STAR FIELD #1
-         DB      $3F,$00          ;  .
-         DB      $20,$80          ;  .
-         DB      $10,$1F          ;  .
+STAR_1   db      $C8,$40          ;  STAR FIELD #1
+         db      $3F,$00          ;  .
+         db      $20,$80          ;  .
+         db      $10,$1F          ;  .
 ;
-STAR.2   DB      $3F,$3F          ;  STAR FIELD #2
-         DB      $00,$BF          ;  .
-         DB      $BF,$BF          ;  .
-         DB      $C0,$20          ;  .
+STAR_2   db      $3F,$3F          ;  STAR FIELD #2
+         db      $00,$BF          ;  .
+         db      $BF,$BF          ;  .
+         db      $C0,$20          ;  .
 ;
-STAR.3   DB      $48,$08          ;  STAR FIELD #3
-         DB      $F8,$30          ;  .
-         DB      $A8,$10          ;  .
-         DB      $D0,$A0          ;  .
+STAR_3   db      $48,$08          ;  STAR FIELD #3
+         db      $F8,$30          ;  .
+         db      $A8,$10          ;  .
+         db      $D0,$A0          ;  .
 ;
-STAR.4   DB      $BF,$BF          ;  STAR FIELD #4
-         DB      $00,$3F          ;  .
-         DB      $3F,$48          ;  .
-         DB      $20,$80          ;  .
+STAR_4   db      $BF,$BF          ;  STAR FIELD #4
+         db      $00,$3F          ;  .
+         db      $3F,$48          ;  .
+         db      $20,$80          ;  .
 ;
-STAR.5   DB      $00,$B0          ;  STAR FIELD #5
-         DB      $48,$38          ;  .
-         DB      $FB,$38          ;  .
-         DB      $80,$28          ;  .
+STAR_5   db      $00,$B0          ;  STAR FIELD #5
+         db      $48,$38          ;  .
+         db      $FB,$38          ;  .
+         db      $80,$28          ;  .
 ;
-STAR.6   DB      $30,$48          ;  STAR FIELD #6
-         DB      $80,$80          ;  .
-         DB      $45,$F0          ;  .
-         DB      $28,$7F          ;  .
+STAR_6   db      $30,$48          ;  STAR FIELD #6
+         db      $80,$80          ;  .
+         db      $45,$F0          ;  .
+         db      $28,$7F          ;  .
 ;
-STAR.7   DB      $3F,$BF          ;  STAR FIELD #7
-         DB      $A5,$00          ;  .
-         DB      $D0,$60          ;  .
-         DB      $20,$28          ;  .
+STAR_7   db      $3F,$BF          ;  STAR FIELD #7
+         db      $A5,$00          ;  .
+         db      $D0,$60          ;  .
+         db      $20,$28          ;  .
 ;
-STAR.8   DB      $B8,$40          ;  STAR FIELD #8
-         DB      $15,$80          ;  .
-         DB      $40,$F8          ;  .
-         DB      $40,$18          ;  .
+STAR_8   db      $B8,$40          ;  STAR FIELD #8
+         db      $15,$80          ;  .
+         db      $40,$F8          ;  .
+         db      $40,$18          ;  .
 ;
 ;
 ;  RASTER MESSAGES
 ;  ===============
 ;
 ;
-M.MNFLD  DW      $FA38
-         DW      $E0C0
-         DB      "MINE FIELD",$80
+M_MNFLD  dw      $FA38
+         dw      $E0C0
+         db      "MINE FIELD",$80
 ;
-M.END    DW      $FA38
-         DW      $E0D8
-         DB      "GAME OVER",$80
+M_END    dw      $FA38
+         dw      $E0D8
+         db      "GAME OVER",$80
 ;
 ;
 ;
@@ -3209,209 +3209,209 @@ M.END    DW      $FA38
 ;  =====
 ;
 ;
-MINE1    DB      $00,$10,$00      ;  'DUMB' MINE
-         DB      $FF,$20,$A0      ;  .
-         DB      $FF,$C0,$40      ;  .
-         DB      $FF,$90,$20      ;  .
-         DB      $FF,$70,$20      ;  .
-         DB      $FF,$50,$50      ;  .
-         DB      $FF,$D0,$90      ;  .
-         DB      $01              ;  .    PACKET TERMINATOR
+MINE1    db      $00,$10,$00      ;  'DUMB' MINE
+         db      $FF,$20,$A0      ;  .
+         db      $FF,$C0,$40      ;  .
+         db      $FF,$90,$20      ;  .
+         db      $FF,$70,$20      ;  .
+         db      $FF,$50,$50      ;  .
+         db      $FF,$D0,$90      ;  .
+         db      $01              ;  .    PACKET TERMINATOR
 ;
-MINE2    DB      $00,$20,$00      ;  'MAGNETIC' MINE
-         DB      $FF,$30,$B0      ;  .
-         DB      $FF,$B0,$30      ;  .
-         DB      $FF,$B0,$D0      ;  .
-         DB      $FF,$30,$50      ;  .
-         DB      $FF,$D0,$50      ;  .
-         DB      $FF,$50,$D0      ;  .
-         DB      $FF,$50,$30      ;  .
-         DB      $FF,$D0,$B0      ;  .
-         DB      $01              ;  .    PACKET TERMINATOR
+MINE2    db      $00,$20,$00      ;  'MAGNETIC' MINE
+         db      $FF,$30,$B0      ;  .
+         db      $FF,$B0,$30      ;  .
+         db      $FF,$B0,$D0      ;  .
+         db      $FF,$30,$50      ;  .
+         db      $FF,$D0,$50      ;  .
+         db      $FF,$50,$D0      ;  .
+         db      $FF,$50,$30      ;  .
+         db      $FF,$D0,$B0      ;  .
+         db      $01              ;  .    PACKET TERMINATOR
 ;
-MINE3    DB      $FF,$00,$00      ;  'DUMB FIRE-BALL' MINE
-         DB      $00,$30,$00      ;  .
-         DB      $FF,$10,$C0      ;  .
-         DB      $FF,$C0,$10      ;  .
-         DB      $FF,$C0,$F0      ;  .
-         DB      $FF,$10,$40      ;  .
-         DB      $FF,$F0,$40      ;  .
-         DB      $FF,$40,$F0      ;  .
-         DB      $FF,$40,$10      ;  .
-         DB      $FF,$F0,$C0      ;  .
-         DB      $01              ;  .    PACKET TERMINATOR
+MINE3    db      $FF,$00,$00      ;  'DUMB FIRE-BALL' MINE
+         db      $00,$30,$00      ;  .
+         db      $FF,$10,$C0      ;  .
+         db      $FF,$C0,$10      ;  .
+         db      $FF,$C0,$F0      ;  .
+         db      $FF,$10,$40      ;  .
+         db      $FF,$F0,$40      ;  .
+         db      $FF,$40,$F0      ;  .
+         db      $FF,$40,$10      ;  .
+         db      $FF,$F0,$C0      ;  .
+         db      $01              ;  .    PACKET TERMINATOR
 ;
-MINE4    DB      $FF,$00,$00      ;  'MAGNETIC FIRE-BALL' MINE
-         DB      $00,$F0,$D0      ;  .
-         DB      $FF,$C0,$40      ;  .
-         DB      $FF,$20,$00      ;  .
-         DB      $FF,$40,$40      ;  .
-         DB      $FF,$00,$E0      ;  .
-         DB      $FF,$40,$C0      ;  .
-         DB      $FF,$E0,$00      ;  .
-         DB      $FF,$C0,$C0      ;  .
-         DB      $FF,$00,$20      ;  .
-         DB      $01              ;  .    PACKET TERMINATOR
+MINE4    db      $FF,$00,$00      ;  'MAGNETIC FIRE-BALL' MINE
+         db      $00,$F0,$D0      ;  .
+         db      $FF,$C0,$40      ;  .
+         db      $FF,$20,$00      ;  .
+         db      $FF,$40,$40      ;  .
+         db      $FF,$00,$E0      ;  .
+         db      $FF,$40,$C0      ;  .
+         db      $FF,$E0,$00      ;  .
+         db      $FF,$C0,$C0      ;  .
+         db      $FF,$00,$20      ;  .
+         db      $01              ;  .    PACKET TERMINATOR
 ;
-MINE5    DB      $00,$3F,$00      ;  'RELEASED FIRE-BALL' MINE
-         DB      $FF,$80,$00      ;  .
-         DB      $00,$3F,$3F      ;  .
-         DB      $FF,$00,$80      ;  .
-         DB      $01              ;  .    PACKET TERMINATOR
+MINE5    db      $00,$3F,$00      ;  'RELEASED FIRE-BALL' MINE
+         db      $FF,$80,$00      ;  .
+         db      $00,$3F,$3F      ;  .
+         db      $FF,$00,$80      ;  .
+         db      $01              ;  .    PACKET TERMINATOR
 ;
 ;
 ;  EXPLOSION CLOUD
 ;  ===============
 ;
 ;
-EXPLODE  DB      $FF,$7F,$20
-         DB      $00,$C0,$10
-         DB      $FF,$C0,$D0
-         DB      $FF,$20,$7F
-         DB      $00,$E0,$C0
-         DB      $FF,$00,$C0
-         DB      $FF,$E0,$30
-         DB      $00,$C0,$00
-         DB      $FF,$60,$CD
-         DB      $FF,$A0,$00
-         DB      $00,$20,$D0
-         DB      $FF,$3C,$30
-         DB      $FF,$00,$82
-         DB      $00,$30,$30
-         DB      $FF,$D0,$50
-         DB      $FF,$20,$F0
-         DB      $01
+EXPLODE  db      $FF,$7F,$20
+         db      $00,$C0,$10
+         db      $FF,$C0,$D0
+         db      $FF,$20,$7F
+         db      $00,$E0,$C0
+         db      $FF,$00,$C0
+         db      $FF,$E0,$30
+         db      $00,$C0,$00
+         db      $FF,$60,$CD
+         db      $FF,$A0,$00
+         db      $00,$20,$D0
+         db      $FF,$3C,$30
+         db      $FF,$00,$82
+         db      $00,$30,$30
+         db      $FF,$D0,$50
+         db      $FF,$20,$F0
+         db      $01
 ;
 ;
 ;  STAR-SWEEPER SHIP
 ;  =================
 ;
 ;
-NSHIP    DB      $00,$3F,$00      ;  ANOTHER NEW SHIP
-         DB      $FF,$C4,$08      ;  .
-         DB      $FF,$D8,$D8      ;  .
-         DB      $FF,$20,$00      ;  .
-         DB      $00,$00,$40      ;  .
-         DB      $FF,$E0,$00      ;  .
-         DB      $FF,$28,$D8      ;  .
-         DB      $FF,$3C,$08      ;  .
-         DB      $01              ;  .
+NSHIP    db      $00,$3F,$00      ;  ANOTHER NEW SHIP
+         db      $FF,$C4,$08      ;  .
+         db      $FF,$D8,$D8      ;  .
+         db      $FF,$20,$00      ;  .
+         db      $00,$00,$40      ;  .
+         db      $FF,$E0,$00      ;  .
+         db      $FF,$28,$D8      ;  .
+         db      $FF,$3C,$08      ;  .
+         db      $01              ;  .
 ;
 ;
 ;        SHIP PACKETS FOR EXPLOSION
 ;        --------------------------
 ;
-SHPEX1   DB      $00,$3F,$00
-         DB      $FF,$C4,$08
-         DB      $01
+SHPEX1   db      $00,$3F,$00
+         db      $FF,$C4,$08
+         db      $01
 ;
-SHPEX2   DB      $00,$04,$08
-         DB      $FF,$D8,$D8
-         DB      $FF,$20,$00
-         DB      $01
+SHPEX2   db      $00,$04,$08
+         db      $FF,$D8,$D8
+         db      $FF,$20,$00
+         db      $01
 ;
-SHPEX3   DB      $00,$3F,$00
-         DB      $FF,$C4,$F8
-         DB      $01
+SHPEX3   db      $00,$3F,$00
+         db      $FF,$C4,$F8
+         db      $01
 ;
-SHPEX4   DB      $00,$04,$F8
-         DB      $FF,$D8,$28
-         DB      $FF,$20,$00
-         DB      $01
+SHPEX4   db      $00,$04,$F8
+         db      $FF,$D8,$28
+         db      $FF,$20,$00
+         db      $01
 ;
 ;
 ;  MINE-LAYER
 ;  ==========
 ;
 ;
-LLAYR    DB      $00,$20,$00      ;  LEFT PORTION OF MINE-LAYER
-         DB      $FF,$00,$D8      ;  .
-         DB      $FF,$D0,$A8      ;  .
-         DB      $FF,$F0,$40      ;  .
-         DB      $FF,$08,$18      ;  .
-         DB      $FF,$18,$F0      ;  .
-         DB      $FF,$F0,$B8      ;  .
-         DB      $00,$10,$48      ;  .
-         DB      $FF,$08,$00      ;  .
-         DB      $FF,$E8,$10      ;  .
-         DB      $FF,$F8,$00      ;  .
-         DB      $00,$08,$00      ;  .
-         DB      $FF,$00,$06      ;  .
-         DB      $00,$10,$FA      ;  .
-         DB      $FF,$08,$00      ;  .
-         DB      $FF,$00,$F0      ;  .
-         DB      $00,$10,$18      ;  .
-         DB      $FF,$F0,$08      ;  .
-         DB      $01              ;  .    PACKET TERMINATOR
+LLAYR    db      $00,$20,$00      ;  LEFT PORTION OF MINE-LAYER
+         db      $FF,$00,$D8      ;  .
+         db      $FF,$D0,$A8      ;  .
+         db      $FF,$F0,$40      ;  .
+         db      $FF,$08,$18      ;  .
+         db      $FF,$18,$F0      ;  .
+         db      $FF,$F0,$B8      ;  .
+         db      $00,$10,$48      ;  .
+         db      $FF,$08,$00      ;  .
+         db      $FF,$E8,$10      ;  .
+         db      $FF,$F8,$00      ;  .
+         db      $00,$08,$00      ;  .
+         db      $FF,$00,$06      ;  .
+         db      $00,$10,$FA      ;  .
+         db      $FF,$08,$00      ;  .
+         db      $FF,$00,$F0      ;  .
+         db      $00,$10,$18      ;  .
+         db      $FF,$F0,$08      ;  .
+         db      $01              ;  .    PACKET TERMINATOR
 ;
-RLAYR    DB      $00,$20,$00      ;  RIGHT PORTION OF MINE-LAYER
-         DB      $FF,$00,$28      ;  .
-         DB      $FF,$D0,$58      ;  .
-         DB      $FF,$F0,$C0      ;  .
-         DB      $FF,$08,$E8      ;  .
-         DB      $FF,$18,$10      ;  .
-         DB      $FF,$F0,$48      ;  .
-         DB      $00,$10,$B8      ;  .
-         DB      $FF,$08,$00      ;  .
-         DB      $FF,$E8,$F0      ;  .
-         DB      $FF,$F8,$00      ;  .
-         DB      $FF,$08,$00      ;  .
-         DB      $FF,$00,$FA      ;  .
-         DB      $00,$10,$06      ;  .
-         DB      $FF,$08,$00      ;  .
-         DB      $FF,$00,$10      ;  .
-         DB      $00,$10,$E8      ;  .
-         DB      $FF,$F0,$F8      ;  .
-         DB      $01              ;  .    PACKET TERMINATOR
+RLAYR    db      $00,$20,$00      ;  RIGHT PORTION OF MINE-LAYER
+         db      $FF,$00,$28      ;  .
+         db      $FF,$D0,$58      ;  .
+         db      $FF,$F0,$C0      ;  .
+         db      $FF,$08,$E8      ;  .
+         db      $FF,$18,$10      ;  .
+         db      $FF,$F0,$48      ;  .
+         db      $00,$10,$B8      ;  .
+         db      $FF,$08,$00      ;  .
+         db      $FF,$E8,$F0      ;  .
+         db      $FF,$F8,$00      ;  .
+         db      $FF,$08,$00      ;  .
+         db      $FF,$00,$FA      ;  .
+         db      $00,$10,$06      ;  .
+         db      $FF,$08,$00      ;  .
+         db      $FF,$00,$10      ;  .
+         db      $00,$10,$E8      ;  .
+         db      $FF,$F0,$F8      ;  .
+         db      $01              ;  .    PACKET TERMINATOR
 ;
-MLAYR    DB      $FF,$00,$D8      ;  MID-SECTION OF MINE-LAYER
-         DB      $FF,$E8,$08      ;  .
-         DB      $FF,$00,$40      ;  .
-         DB      $FF,$18,$08      ;  .
-         DB      $FF,$00,$D8      ;  .
-         DB      $00,$08,$E0      ;  .
-         DB      $FF,$10,$00      ;  .
-         DB      $FF,$00,$40      ;  .
-         DB      $FF,$F0,$00      ;  .
-         DB      $FF,$00,$C0      ;  .
-         DB      $01              ;  .    PACKET TERMINATOR
+MLAYR    db      $FF,$00,$D8      ;  MID-SECTION OF MINE-LAYER
+         db      $FF,$E8,$08      ;  .
+         db      $FF,$00,$40      ;  .
+         db      $FF,$18,$08      ;  .
+         db      $FF,$00,$D8      ;  .
+         db      $00,$08,$E0      ;  .
+         db      $FF,$10,$00      ;  .
+         db      $FF,$00,$40      ;  .
+         db      $FF,$F0,$00      ;  .
+         db      $FF,$00,$C0      ;  .
+         db      $01              ;  .    PACKET TERMINATOR
 ;
-LAYER    DB      $00,$18,$00      ;  LOW RESOLUTION MINE-LAYER PACKET
-         DB      $FF,$00,$20      ;  .
-         DB      $FF,$C8,$70      ;  .
-         DB      $FF,$10,$A0      ;  .
-         DB      $FF,$00,$A0      ;  .
-         DB      $FF,$EC,$A4      ;  .
-         DB      $FF,$39,$6D      ;  .
-         DB      $FF,$00,$20      ;  .
-         DB      $01              ;  .    PACKET TERMINATOR
+LAYER    db      $00,$18,$00      ;  LOW RESOLUTION MINE-LAYER PACKET
+         db      $FF,$00,$20      ;  .
+         db      $FF,$C8,$70      ;  .
+         db      $FF,$10,$A0      ;  .
+         db      $FF,$00,$A0      ;  .
+         db      $FF,$EC,$A4      ;  .
+         db      $FF,$39,$6D      ;  .
+         db      $FF,$00,$20      ;  .
+         db      $01              ;  .    PACKET TERMINATOR
 ;
 ;
 ;==========================================================================JJH
 ;                                                                    ======JJH
-         SETDP   $00              ;  CODE ADDED - REV. B CHANGES     ======JJH
+         setdp   $00              ;  CODE ADDED - REV. B CHANGES     ======JJH
 ;        =====   ===                                                 ======JJH
 ;                                                                    ======JJH
-REVB.0   CLR     FRAME - 1        ;  .    CLEAR HOUSE FOR RESTART    ======JJH
-         CLR     FRAME            ;  .    .                          ======JJH
-         CLR     LEG              ;  .    .                          ======JJH
-         JMP     COLD0            ;  .    .    RESTART VECTREX       ======JJH
+REVB_0   clr     FRAME - 1        ;  .    CLEAR HOUSE FOR RESTART    ======JJH
+         clr     FRAME            ;  .    .                          ======JJH
+         clr     LEG              ;  .    .                          ======JJH
+         jmp     COLD0            ;  .    .    RESTART VECTREX       ======JJH
 ;==========================================================================JJH
 ;
 ;==========================================================================JJH
-         SETDP   $D0              ;  CODE ADDED - REV. C CHANGES     ======JJH
+         setdp   $D0              ;  CODE ADDED - REV. C CHANGES     ======JJH
 ;        =====   ===                                                 ======JJH
 ;                                                                    ======JJH
-REVC.1   LDA     SHIPCNT          ;  .    LIMIT NUMBER OF MARKERS    ======JJH
-         BEQ     REVC.19          ;  .    .    SKIP DISPLAY ?        ======JJH
+REVC_1   lda     SHIPCNT          ;  .    LIMIT NUMBER OF MARKERS    ======JJH
+         beq     REVC_19          ;  .    .    SKIP DISPLAY ?        ======JJH
 ;                                                                    ======JJH
-         CMPA    #$08             ;  .    .                          ======JJH
-         BLE     REVC.11          ;  .    .                          ======JJH
-         LDA     #$08             ;  .    .                          ======JJH
-REVC.11  STA     TEMP1            ;  .    .                          ======JJH
+         cmpa    #$08             ;  .    .                          ======JJH
+         ble     REVC_11          ;  .    .                          ======JJH
+         lda     #$08             ;  .    .                          ======JJH
+REVC_11  sta     TEMP1            ;  .    .                          ======JJH
 ;                                                                    ======JJH
-REVC.19  RTS                      ;  .    RETURN TO CALLER           ======JJH
+REVC_19  rts                      ;  .    RETURN TO CALLER           ======JJH
 ;==========================================================================JJH
 ;
 ;
-         END
+         end
