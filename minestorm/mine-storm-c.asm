@@ -438,7 +438,7 @@ ENDRAM   db      0                ;  END-OF-RAM FLAG
 ;        =====   ===
 ;
 ENTRY    ldx     #ETMP1           ;  CLEAR MEMORY
-CLRALL   clr     x+               ;  .
+CLRALL   clr     ,x+               ;  .
          cmpx    #ENDRAM          ;  .
          bne     CLRALL           ;  .
 ;
@@ -471,7 +471,7 @@ CLRALL   clr     x+               ;  .
 ;
 ;
 NEWGAME  ldx     #ETMP1           ;  CLEAR MEMORY
-CLRMEM   clr     x+               ;  .
+CLRMEM   clr     ,x+               ;  .
          cmpx    #FSTAR - 1       ;  .
          bne     CLRMEM           ;  .
          bra     GAME1            ;  .
@@ -1079,7 +1079,7 @@ BEGLAYR  setdp   $C8              ;  TIMER "DP" SET TO RAM
          anda    #$06             ;  .
          ldx     a,x              ;  .
 ;
-         ldd     x++              ;  SET INITIAL MINE-LAYER LOCATION
+         ldd     ,x++              ;  SET INITIAL MINE-LAYER LOCATION
          std     <LAYRYX          ;  .
          sta     <WLAYRY          ;  .    WORKING 'Y' LOCATION
          clr     <WLAYRY + 1      ;  .    .
@@ -1156,13 +1156,13 @@ INSLYR4  inc     <MINMAX          ;  .    INSERT NEW MINE
          inc     <RESEED          ;  .    .    SET RE-SEEDING FLAG
 ;
 INSLYR5  ldx     <LAYRPTR         ;  .    FETCH PRE-PROGRAMMED VALUES
-INSLYR6  lda     x+               ;  .    .    SET NEXT PARAMETER CHANGE TIME
+INSLYR6  lda     ,x+               ;  .    .    SET NEXT PARAMETER CHANGE TIME
          sta     <TMR3            ;  .    .    .
 ;
-         lda     x+               ;  .    .    SET MINE-LAYER DIRECTION
+         lda     ,x+               ;  .    .    SET MINE-LAYER DIRECTION
          sta     <LAYRDIR         ;  .    .    .
 ;
-         lda     x+               ;  .    .    SET MINE-LAYER SPEED
+         lda     ,x+               ;  .    .    SET MINE-LAYER SPEED
          sta     <LAYRSPD         ;  .    .    .
          stx     <LAYRPTR         ;  .    .    .    SAVE UPDATED SEQUENCE POINTER
 ;
@@ -1866,7 +1866,7 @@ SWPINT   lda     #$D0             ;  SET "DP" REGISTER TO I/O
          clr     <TMR4            ;  .
 ;
          ldx     #BLT_TBL         ;  CLEAR TABLES
-CLROBJ   clr     x+               ;  .
+CLROBJ   clr     ,x+               ;  .
          cmpx    #FSTAR           ;  .
          bne     CLROBJ           ;  .
 ;
@@ -1988,7 +1988,7 @@ FALL4    jsr     SHPONLY          ;  ROTATE AND DISPLAY STAR-SWEEPER
          ldb     #$08             ;  .
 FALL5    lda     0,x              ;  .
          adda    #$03             ;  .
-         sta     x+               ;  .
+         sta     ,x+               ;  .
          decb                     ;  .
          bne     FALL5            ;  .
 ;
@@ -2030,9 +2030,9 @@ I_STARS  ldx     #STAR_1
          ldb     #$08
          lda     #$16
 ;
-ST_101   stx     y++
+ST_101   stx     ,y++
          leax    8,x
-         sta     u+
+         sta     ,u+
          adda    #$0F
          decb
          bne     ST_101
@@ -2056,7 +2056,7 @@ F_STARS  pshs    a,b,x,dp         ;  SAVE ENTRY VALUES
 ;
          ldx     #ZSTAR           ;  BUMP ZOOM VALUES
          lda     #$08             ;  .
-ST_201   inc     x+               ;  .
+ST_201   inc     ,x+               ;  .
          deca                     ;  .
          bne     ST_201           ;  .
 ;
