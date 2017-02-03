@@ -32,6 +32,9 @@ INITIAL_Y_DIR       equ     +4
 watch1          equ     $C880
 watch2          equ     $C881
 
+direction_adjust_y  equ     $C882
+direction_adjust_x  equ     $C883
+
 burst1_addr       equ     $C888
 burst2_addr       equ     $C890
 burst3_addr       equ     $C898
@@ -81,6 +84,7 @@ init:
 
 main:
                 jsr     recalibrate
+                jsr     handle_joystick
 
                 ldx     #burst1_addr
                 jsr     move_burst_position
@@ -103,6 +107,38 @@ main:
 
                 bra     main                    ; and repeat forever
 ;***************************************************************************
+
+handle_joystick:
+                jsr     Joy_Digital             ; read joystick positions
+                lda     Vec_Joy_1_X             ; load joystick 1 position X to A
+                beq     no_x_movement           ; if zero, than no x position
+                bmi     left_move               ; if negative, than left, otherwise right
+right_move:
+                lda     #1
+                sta     direction_adjust_x
+                bra     x_done
+left_move:
+                lda     #-1
+                sta     direction_adjust_x
+                bra     x_done
+no_x_movement:
+                clr     direction_adjust_x
+x_done:
+                lda     Vec_Joy_1_Y             ; load joystick 1 position Y to A
+                beq     no_y_movement           ; if zero, than no y position
+                bmi     down_move               ; if negative, than down otherwise up
+up_move:
+                lda     #1
+                sta     direction_adjust_y
+                bra     y_done                  ; goto y done
+down_move:
+                lda     #-1
+                sta     direction_adjust_y
+                bra     y_done                  ; goto y done
+no_y_movement:
+                clr     direction_adjust_y
+y_done:
+                rts
 
 recalibrate:
                 jsr     Wait_Recal              ; Vectrex BIOS recalibration
@@ -129,9 +165,10 @@ move_burst_position:
 
 ; X contains the base addr of the object
 calculate_next_y_burst_pos:
-                lda     #1
-                sta     watch1
-                lda     burst_y_dir_offset,x
+                lda     #1       ; Do a write for debugging
+                sta     watch1   ; ------------------------
+                lda     direction_adjust_y     ; alter direction based on joystick
+                sta     burst_y_dir_offset,x
                 bmi     check_y_min      ; direction negative
                 lda     burst_position_y_offset,x
                 bpl     y_positive
@@ -162,9 +199,8 @@ y_ok:
                 rts
 
 calculate_next_x_burst_pos:
-                ;lda     #1
-                ;sta     watch1
-                lda     burst_x_dir_offset,x
+                lda     direction_adjust_x     ; alter direction based on joystick
+                sta     burst_x_dir_offset,x
                 bmi     check_x_min      ; direction negative
                 lda     burst_position_x_offset,x
                 bpl     x_positive
