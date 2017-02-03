@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="dcterms.rights" content="Copyright 2017 &copy; Manta BlueSky, All Rights Reserved">
+<link rel="stylesheet" type="text/css" href="http://roadsidethoughts.com/urst.css">
+<link rel="author" href="https://plus.google.com/118279428097774141269/"/>
+<script type="text/javascript">
+function tdf_bof()
+{ if (top.location != location) { top.location.href = document.location.href; }
+}
+</script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-16983354-1']);
+_gaq.push(['_trackPageview']);
+
+_gaq.push(['_trackPageLoadTime']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src =  'http://www.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+if (document.referrer.match(/google./gi) && document.referrer.match(/cd/gi)) {
+  var myString = document.referrer;
+  var r = myString.match(/cd=(.*?)&/);
+  var rank = parseInt(r[1]);
+  var kw = myString.match(/q=(.*?)&/);
+  if (kw[1].length > 0) {
+    var keyWord = decodeURI(kw[1]);
+  } else {
+    keyWord = "(not provided)";
+  }
+  var p = document.location.pathname;
+  _gaq.push(['_trackEvent', 'RST-GSearch', keyWord, p, rank, true]);
+}
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="application/ld+json">
+{ "@context" : "http://schema.org",
+"@type" : "WebSite",
+"name" : "RoadsideThoughts",
+"url" : "http://roadsidethoughts.com",
+"description": "A Gazetteer for the United States and Canada"
+}
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+
+<table class="trst">
+
+<tr><td class="vrst" colspan="2">&#160;<a id="top"></a>
+    <a class="vrst1" href="http://roadsidethoughts.com/">From RoadsideThoughts ...</a><br />
+    <a class="vrst2" href="http://roadsidethoughts.com/vectrex/">A Bit of Vectrex History</a>
+    </td></tr>
+
+<tr class="trstb"><td class="tbar" colspan="2">
+    <table class="tsct">
+    <tr><td class="tsct wd120"> &#160;<br /><a class="tsct" href="http://roadsidethoughts.com/vectrex/">Introduction</a></td>
+        <td class="tsct wd120"><a class="tsct" href="http://roadsidethoughts.com/vectrex/vectrex-programmers-guide.htm">Programmer's<br />Guide</a></td>
+        <td class="tsct wd120"> &#160;<br /><a class="tsct" href="http://roadsidethoughts.com/vectrex/the-rum.htm">The RUM</a></td>
+        <td class="tsct wd120"> &#160;<br /><a class="tsct" href="http://roadsidethoughts.com/vectrex/mine-storm.htm">Mine Storm</a></td>
+        <td class="tsct wd120"><a class="tsct" href="http://roadsidethoughts.com/vectrex/fortress-of-narzod.htm">Fortress of<br />Narzod</a></td>
+        <td class="tsct wd120"> &#160; <br /><a class="tsct" href="http://roadsidethoughts.com/vectrex/dark-tower.htm">Dark Tower</a></td>
+        <td class="vsct wd60"> &#160; </td>
+        <td class="vsct wd120"> &#160; <br /><a class="tsct" href="http://roadsidethoughts.com/sitemap.htm">Sitemap</a></td>
+    </tr></table></td></tr>
+
+
+<tr><td class="thlk"><div class="i2"><span itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><a href='http://roadsidethoughts.com/' itemprop='url' title='Home page for RoadsideThoughts: A Gazetteer for the United States and Canada'><span itemprop='title'>Home</span></a> &gt;&gt; </span><span itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><a href='http://roadsidethoughts.com/vectrex/' itemprop='url' title='Home page for A Bit of Vectrex History'><span itemprop='title'>Vectrex</span></a> &gt;&gt; </span><span itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><a href='http://roadsidethoughts.com/vectrex/dark-tower.htm' itemprop='url' title='Dark Tower'><span itemprop='title'>Dark Tower</span></a> &gt;&gt; </span><span itemscope itemtype='http://data-vocabulary.org/Breadcrumb'><a href='http://roadsidethoughts.com/vectrex/dark-tower.htm' itemprop='url'><span itemprop='title'> Introduction</span></a></span></div> &#160; </td><td class="tsrch rt"><form action="http://roadsidethoughts.com/search.htm" id="cse-search-box"><div><input type="hidden" name="cx" value="partner-pub-6853254609661254:i7pisc-77z3" /><input type="hidden" name="cof" value="FORID:10" /><input type="hidden" name="ie" value="ISO-8859-1" /><input type="text" name="q" size="20" /><input type="submit" name="sa" value="Search" /></div></form><script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en"></script> &#160; &#160; </td></tr>
+
+</table>
+
+<table class="wd100p">
+<tr><td class="wd40">&#160;</td><td>
+<h1 class="pt">The Vectrex Game<br /><br />Dark Tower</h1><hr class="pt">
+
+<br /><h1 class="ctr">Introduction</h1>
+
+<p class="i1">Like the Fortress of Narzod, the source code for Dark Tower was broken into several files to compartmentalize the code and make it easier 
+to edit.  The top-most file (the one that was submitted to the assembler) was DRKTWR.ASM and in-turn it would would link to the associated files.</p>
+
+<p class="i1">The top most file for Dark Tower:</p>
+
+<p class="i2"><a href="http://roadsidethoughts.com/vectrex/dark-tower-asm.htm">DRKTWR.ASM</a></p>
+
+
+<p class="i1">The associated files:</p>
+
+<table class="i2">
+
+<tr><td class="wd150"> <a href="http://roadsidethoughts.com/vectrex/dark-tower-brgand-drk.htm">BRGAND.DRK</a> </td>
+    <td class="wd150"> <a href="http://roadsidethoughts.com/vectrex/dark-tower-frgmnt-drk.htm">FRGMNTE.DRK</a> </td>
+    <td class="wd150"> <a href="http://roadsidethoughts.com/vectrex/dark-tower-map-drk.htm">MAP.DRK</a> </td>
+    <td class="wd150"> <a href="http://roadsidethoughts.com/vectrex/dark-tower-tower-drk.htm">TOWER.DRK</a> </td></tr>
+
+<tr><td> <a href="http://roadsidethoughts.com/vectrex/dark-tower-colide-drk.htm">COLIDE.DRK</a> </td>
+    <td> <a href="http://roadsidethoughts.com/vectrex/dark-tower-goblin-drk.htm">GOBLIN.DRK</a> </td>
+    <td> <a href="http://roadsidethoughts.com/vectrex/dark-tower-packs-drk.htm">PACKS.DRK</a> </td>
+    <td> <a href="http://roadsidethoughts.com/vectrex/dark-tower-warior-drk.htm">WARIOR.DRK</a> </td></tr>
+
+<tr><td> <a href="http://roadsidethoughts.com/vectrex/dark-tower-fight-drk.htm">FIGHT.DRK</a> </td>
+    <td> <a href="http://roadsidethoughts.com/vectrex/dark-tower-grdscn-drk.htm">GRDSCN.DRK</a> </td>
+    <td> <a href="http://roadsidethoughts.com/vectrex/dark-tower-scenry-drk.htm">SCENRY.DRK</a> </td>
+    <td> <a href="http://roadsidethoughts.com/vectrex/dark-tower-wizard-drk.htm">WIZARD.DRK</a> </td></tr>
+
+<tr><td> <a href="http://roadsidethoughts.com/vectrex/dark-tower-flamer-drk.htm">FLAMER.DRK</a> </td>
+    <td> <a href="http://roadsidethoughts.com/vectrex/dark-tower-invent-drk.htm">INVENT.DRK</a> </td>
+    <td> <a href="http://roadsidethoughts.com/vectrex/dark-tower-sound-drk.htm">SOUND.DRK</a> </td>
+    <td> &#160; </td></tr>
+
+<tr><td> <a href="http://roadsidethoughts.com/vectrex/dark-tower-forest-drk.htm">FOREST.DRK</a> </td>
+    <td> <a href="http://roadsidethoughts.com/vectrex/dark-tower-magic-drk.htm">MAGIC.DRK</a> </td>
+    <td> <a href="http://roadsidethoughts.com/vectrex/dark-tower-subr-drk.htm">SUBR.DRK</a> </td>
+    <td> &#160; </td></tr>
+
+</table>
+
+
+<br><p class="i1">Just a comment:</p><ul class="i1">
+
+<li>I wrote the following Dark Tower description for Lee Chaden.
+
+</ul>
+
+
+
+<br /><h1 class="ctr">Game Description</h1>
+
+<p class="i1"><u>Object of Game</u></p>
+
+<p class="i2">Ultimately the player is required to unlock the door of the Dark Tower by solving the Riddle of the Keys.  To solve the Riddle, the player 
+must find four different keys that are scattered about the forest (or by bribing the Magician) and once in the player's possesion, the Dark Tower must be 
+found (located at the centre of the map).</p>
+
+<p class="i2">The keys are Gold, Silver, Bronze and Brass (one other treasure is to be found - the Crystal Crown).</p>
+
+
+<p class="i1"><u>Start of Game</u></p>
+
+<p class="i2">After selecting the desired game option, the player's warrior appears at a random position within the forest.  The warrior will not appear 
+in the Zone of Death or near the map boundaries.</p>
+
+<p class="i2">The player starts each game (independent of game option) with 2 bags of gold and 5 replacement warriors (6 total).</p>
+
+<p class="i2">Options</p>
+
+<p class="i3">1 = Player starts with no keys</p>
+
+<p class="i3">2 = Player starts with the silver key only</p>
+
+<p class="i3">3 = Player starts with the silver and bronze keys</p>
+
+<p class="i3">4 = Player starts with the silver, bronze and brass keys</p>
+
+<p class="i3">When selecting options 2 - 4, the player does not receive points for those keys initially given.</p>
+
+
+<p class="i1"><u>Forest Sequence</u></p>
+
+<p class="i2">Forest Map and Boundaries</p>
+
+<p class="i3">The forest is derived from a fixed map (the map does not change from one game to another).  The map is laid out as 4 sectors, each 
+containing 32 x 32 grid points (nodes).  A node may appear as an object (ie - trees or boxes) or as a game play trigger (ie - scenery fog or plague).  
+Any given sector can be identified by its characteristic tree type (the tree types are: elm, pine, lolli-pop and dead trees).</p>
+
+<p class="i3">Note: other types of trees can be inserted within a sector without changing the characteristic tree.</p>
+
+<p class="i3">There are a total of 4,096 objects on the map (64 x 64 nodes) consisting of the following break-down -</p>
+
+<table class="i4">
+<tr><td colspan="2"> &#160; </td><td class="ctr"> <br /> <b><u>Total</u></b> </td><td class="ctr"> <b>Dead <br /> <u>Forest</u></b> </td>
+    <td class="ctr"> <br /> <b><u>Pine</u></b> </td><td class="ctr"> <br /> <b><u>Elm</u></b> </td><td class="ctr"> <br /> <b><u>Pop</u></b> </td>
+    <td class="ctr"> <br /> <b><u>Mixed</u></b> </td></tr>
+
+<tr><td colspan="8"> &#160; </td></tr>
+
+<tr><td class="wd150">Brigand boxes </td><td> &#160; = &#160; </td><td class="ctr wd50"> 26 </td><td class="ctr wd50"> 4 </td>
+    <td class="ctr wd50"> 7 </td><td class="ctr wd50"> 6 </td><td class="ctr wd50"> 9 </td><td class="ctr wd50"> 0 </td></tr>
+
+<tr><td>Magician boxes </td><td> &#160; = &#160; </td><td class="ctr"> 17 </td><td class="ctr"> 4 </td><td class="ctr"> 5 </td>
+    <td class="ctr"> 2 </td><td class="ctr"> 4 </td><td class="ctr"> 2 </td></tr>
+
+<tr><td>Plague boxes </td><td> &#160; = &#160; </td><td class="ctr"> 5 </td><td class="ctr"> 2 </td><td class="ctr"> 0 </td>
+    <td class="ctr"> 2 </td><td class="ctr"> 1 </td><td class="ctr"> 0 </td></tr>
+
+<tr><td>Fog boxes </td><td> &#160; = &#160; </td><td class="ctr"> 5 </td><td class="ctr"> 2 </td><td class="ctr"> 0 </td>
+    <td class="ctr"> 1 </td><td class="ctr"> 2 </td><td class="ctr"> 0 </td></tr>
+
+<tr><td>Plague triggers </td><td> &#160; = &#160; </td><td class="ctr"> 12 </td><td class="ctr"> 7 </td><td class="ctr"> 0 </td>
+    <td class="ctr"> 2 </td><td class="ctr"> 1 </td><td class="ctr"> 2 </td></tr>
+
+<tr><td>Fog triggers </td><td> &#160; = &#160; </td><td class="ctr"> 5 </td><td class="ctr"> 0 </td><td class="ctr"> 2 </td>
+    <td class="ctr"> 2 </td><td class="ctr"> 1 </td><td class="ctr"> 0 </td></tr>
+
+<tr><td>Do-Nothing boxes </td><td> &#160; = &#160; </td><td class="ctr"> 21 </td><td class="ctr"> 4 </td><td class="ctr"> 5 </td>
+    <td class="ctr"> 6 </td><td class="ctr"> 4 </td><td class="ctr"> 2 </td></tr>
+
+<tr><td>Treasure boxes </td><td> &#160; = &#160; </td><td class="ctr"> 10 </td><td class="ctr"> 1 </td><td class="ctr"> 4 </td>
+    <td class="ctr"> 2 </td><td class="ctr"> 2 </td><td class="ctr"> 1 </td></tr>
+
+<tr><td>Scenery Keys </td><td> &#160; = &#160; </td><td class="ctr"> 4 </td><td class="ctr"> 1 </td><td class="ctr"> 1 </td>
+    <td class="ctr"> 1 </td><td class="ctr"> 1 </td><td class="ctr"> 0 </td></tr>
+
+<tr><td>Scenery Gold </td><td> &#160; = &#160; </td><td class="ctr"> 38 </td><td class="ctr"> 9 </td><td class="ctr"> 4 </td>
+    <td class="ctr"> 12 </td><td class="ctr"> 11 </td><td class="ctr"> 2 </td></tr>
+
+<tr><td>Dark Forest </td><td> &#160; = &#160; </td><td class="ctr"> 4 </td><td class="ctr"> 2 </td><td class="ctr"> 0 </td>
+    <td class="ctr"> 0 </td><td class="ctr"> 1 </td><td class="ctr"> 1 </td></tr>
+
+</table>
+
+<p class="i3">Since the forest map is finite, something had to be done to define the boundaries of the map.  Using a fog to define the boundary, the 
+player may not leave the map without first being thrown back into the map (randomly).  The boundary fog differs from the scenery fog in the following 
+ways:</p>
+
+<p class="i4">1.  The boundary fog occurs even if the player holds a scout (and the boundary fog does not affect the use-counter of the scout).</p>
+
+<p class="i3">Approaching a border is best indicated by the lack of any trees or objects (this appears the same as entering the Dark Forest).</p>
+
+
+<p class="i2">Zone of Death</p>
+
+<p class="i3">One entire sector of the map has been set aside for a Zone of Death.  This area is apparent because of the dead trees.  In the Zone of 
+Death lies several of the treasure and magician boxes.</p>
+
+<p class="i3">Within the Zone of Death, the plague (scenery or box) occurs with great frequency - therefore, it is only safe to enter the zone with a 
+healer in possesion.</p>
+
+<p class="i3">One game play function of the Zone of Death is that it increases the hazard associated with the fog (scenery or box).  During a fog cycle, 
+the player has a 25% chance of appearing within the Zone and if not prepared, can lose the game by plague alone.</p>
+
+
+<p class="i2">Dark Forest</p>
+
+<p class="i3">The Dark Forest is a zone where no trees or objects exist.  There are several of these zones within in the map.  In the largest such zone 
+(located at the centre of the map), hides the Dark Tower.  If not careful, the player can be lost in these zones.  Because the zone looks like the 
+border, entering one of these zones can be quite exciting for the player who has not learned the ins and outs of the map (because they may be entering a 
+border fog).</p>
+
+
+<p class="i2">Warrior</p>
+
+<p class="i3">While in the forest sequence, a pedometer is displayed at the top of the screen.  This pedometer indicates the number of steps since the 
+warrior made his last turn.  Direction of motion is also indicated&#160;(N,&#160;NW, W, SW, S, SE,&#160;E,&#160;NE).</p>
+
+<p class="i3">Under some set of conditions, the warrior may not move.  They are -</p>
+
+<p class="i4">1.  If the warrior is being drawn into or returning from a box or while the box is cycling.</p>
+
+<p class="i4">2.  If the warrior has been killed and awaiting replacement.</p>
+
+<p class="i4">3.  During the Magician sequence.</p>
+
+<p class="i4">4.  During the Brigand sequence, the warrior must stop motion to throw a flamoid.</p>
+
+
+<p class="i2">Healer</p>
+
+<p class="i3">The healer prevents the fatal effects of the plague (scenery or box).</p>
+
+<p class="i3">A healer is available only from the magician (given enough gold).</p>
+
+<p class="i3">A healer can be used only 4 - 6 times and is then lost.  It may be regained from a magician again if the player has not used all the 
+magician boxes and has sufficient gold.</p>
+
+
+<p class="i2">Scout</p>
+
+<p class="i3">The scout prevents the player from becoming lost during a fog (scenery or box).  A boundary fog is not prevented by the scout, the player 
+is lost if trying to cross the border.</p>
+
+<p class="i3">A scout is available only from the magician (given enough gold).</p>
+
+<p class="i3">A scout can be used only 4 - 6 times and is then lost.  It may be regained from a magician again if the player has not used all the 
+magician boxes and has sufficient gold.</p>
+
+
+<p class="i2">Scenery Fog</p>
+
+<p class="i3">Scenery fog is implemented as a mapped game trigger, with no warning (it does appear as a missing tree, but no one is likely to 
+notice).</p>
+ 
+<p class="i3">When the scenery fog is triggered, the fog ramps up from the bottom of the screen; the warrior and background are ramped down in intensity.  
+At that time, a new position on the map is calculated and the process is reversed so that the player can see his new position within the forest.</p>
+
+
+<p class="i2">Scenery Plague</p>
+
+<p class="i3">Scenery plague is implemented as a mapped game trigger, with no warning (same as the scenery fog).</p>
+
+<p class="i3">When the scenery plague is triggered, the plague ramps up from the bottom of screen; the warrior breaks up and ramps down in intensity 
+until it becomes invisible (a dead player and a replacement is requested).</p>
+
+<p class="i3">Following a scenery plague, subsequent encounters with the scenery plague trigger are inhibited for 25 seconds.  This prevents a lost 
+player from stumbling directly into a scenery plague almost immediately following the previous plague (but this does not prevent the player from finding 
+a box plague and suffering its full effects).  The scenery plague is also inhibited for the first 25 seconds of the game (so that the player does not get 
+hit at the very beginning of the game).</p>
+
+
+<p class="i2">General Box Behavior</p>
+
+<p class="i3">The player must place the box immediately before the warrior on the screen before it can be opened.  Pressing button #4 causes the box to 
+start opening (pressing this button a second time closes the box, so long as the box has not opened completely). The box cannot be opened if the plague 
+or fog is cycling or if a tune is pending.</p>
+
+<p class="i3">While a box is cycling, the warrior cannot move.</p>
+
+<p class="i3">All boxes appear alike, there is no clue toward the box contents.  Since the boxes are determined by the map, it becomes very important 
+that the player learns to map the forest and keeps track of his progress.  This is the only way in which a player may avoid dangerous boxes.</p>
+
+
+<p class="i2">Box Fog</p>
+
+<p class="i3">When the box has fully opened, a fog cycle is initiated (similiar  to the scenery fog).</p>
+
+
+<p class="i2">Box Plague</p>
+
+<p class="i3">When the box has fully opened, a plague cycle is initiated (similiar to the scenery plague).</p>
+
+<p class="i3">The box plague is effected by the plague lock-out timer.</p>
+
+
+<p class="i2">Do-Nothing Box</p>
+
+<p class="i3">As the name implies, this type of box does nothing.  It merely opens, pauses for a moment and then closes.  I feel that it adds 
+anticipation for the player.</p>
+
+
+<p class="i2">Treasure Box</p>
+
+<p class="i3">This box contains a no-risk treasure for the player and is very rare.  The following treasures are possible for this box -</p>
+
+<p class="i4">Bags of gold (1 - 9 bags, determined randomly)
+<br /> &#160; &#160; &#160; &#160; points = bags of gold  x  100 pts.</p>
+
+<p class="i4">Replacement Warriors (1 - 4 warriors, determined randomly)
+<br /> &#160; &#160; &#160; &#160; points = new warriors  x  100 pts.</p>
+
+<p class="i3">A treasure box can be opened only once per game, subsequent openings will take the player to the brigand sequence (once again, it is 
+important for the player to learn how to map the forest).</p>
+
+
+<p class="i2">Scenery Keys </p>
+
+<p class="i3">In each sector of the map, lies one of the keys necessary to open the Dark Tower.  As with all map objects, these keys are in the same 
+position for each game.  The key picked up is determined randomly at the time of the pick up and will vary from game to game.</p>
+
+<p class="i3">After finding one of these keys, the player can pick up the key by walking toward the key.  The player must walk directly to the key to 
+pick it up (the player cannot back or turn into the key, but the key may be picked up during a fog or plague).</p>
+
+<p class="i3">Any given key may be picked up once only once per game.  If the key has already been picked up, it leaves a blank spot on the map that 
+looks like a plague or fog trigger.</p>
+
+<p class="i3">The actual number of scenery keys depend on the starting option, if the player has selected option #2 - then only three scenery keys are to 
+be found in the forest.</p>
+
+
+<p class="i2">Scenery Gold</p>
+
+<p class="i3">After finding a bag of gold, the player can pick up the bag by walking toward it.  The player must walk directly to the bag to pick it up 
+(the player cannot back or turn into the gold, but the gold may be picked up during a fog or plague).</p>
+
+<p class="i3">Any given bag of gold may be picked up once only per game.  If the bag of gold has already been picked up, it leaves a blank spot on the 
+map that looks like a plague or fog trigger.</p>
+
+
+<p class="i2">Inventory Page</p>
+
+<p class="i3">The inventory page reflects the status of player progress -</p>
+
+<p class="i4">Player score</p>
+
+<p class="i4">Number of replacement warriors</p>
+
+<p class="i4">Amount of gold held</p>
+
+<p class="i4">Treasures held</p>
+
+<p class="i3">The inventory page can be requested at any time by depressing button #1.  If a tune is pending, the inventory page is delayed until the 
+tune is over.</p>
+
+
+<p class="i2">Control Definitions</p>
+
+<p class="i3">Joystick   =  Move warrior forward / backward or right / left</p>
+
+<p class="i3">Button #1  =  Inventory page</p>
+
+<p class="i3">Button #2  =  No defined function</p>
+
+<p class="i3">Button #3  =  No defined function</p>
+
+<p class="i3">Button #4  =  Opens the box (the box must be in front of the player)</p>
+
+
+<p class="i2">Scoring</p>
+
+<p class="i3">See treasure box description</p>
+
+<p class="i4">Scenery Gold Key    = 1000 pts.</p>
+
+<p class="i4">Scenery Silver Key  = 900 pts.</p>
+
+<p class="i4">Scenery Bronze Key  = 800 pts.</p>
+
+<p class="i4">Scenery Brass Key   = 700 pts.</p>
+
+<p class="i4">Scenery Bag of Gold = 100 pts.</p>
+
+
+<p class="i1"><u>Brigand Sequence</u></p>
+
+<p class="i2">The brigand sequence begins when the player opens a brigand box.  The player is drawn into the box and must fight for the warrior survival.  
+The player must destroy a randomly determined number of brigands (up to about 20 brigands).  If the warrior is successful (kills all the brigands), then 
+the player may receive a randomly selected treasure (see below).</p>
+
+<p class="i2">If the warrior is killed, the player is returned to the forest outside of the brigand box.  If the player is feeling brave, the brigand box 
+may be attempted again.  The player may enter the box as often as warriors are available.</p>
+
+<p class="i2">Under certain conditions, the last brigand may flee the box instead of fighting.  If this happens, the brigand sequence is still over.  
+This should be a rare condition and represents a programming problem that could take a long time to fix.</p>
+
+<p class="i2">The brigands throw most of the flamoids directly at the player, but some are thrown randomly (hoping that the warrior will move into them, 
+while trying to evade the directed flamoids).</p>
+
+<p class="i2">The warrior has an unlimited number of flamoids.</p>
+
+<p class="i2">The warrior cannot be destroyed by his own flamoids.  And the brigands cannot be killed by flamoids thrown by themselves or other 
+brigands.</p>
+
+<p class="i2">Control Definitions</p>
+
+<p class="i3">Joystick   =  Moves warrior right or left only</p>
+
+<p class="i3">Button #1  =  Inventory page</p>
+
+<p class="i3">Button #2  =  Throw flamoid left</p>
+
+<p class="i3">Button #3  =  Throw flamoid straight</p>
+
+<p class="i3">Button #4  =  Throw flamoid right</p>
+
+
+<p class="i2">Scoring</p>
+
+<p class="i3">125 pts. for each brigand destroyed</p>
+
+<p class="i3">Score depends upon treasure found</p>
+
+<p class="i4">New warriors = number of warriors  x  100 pts</p>
+
+<p class="i4">Bags of Gold = number of bags  x  100 pts</p>
+
+<p class="i4">Be Gone      = no points / no treasure</p>
+
+
+<p class="i1"><u>Magician Sequence</u></p>
+
+<p class="i2">The magician sequence begins when the player opens a magician box.  The player is drawn into the box and is open to the will of the 
+magician.  If the player has sufficent gold, a key or other treasure may be granted by the magician (the magician might just tell the warrior to bugger-
+off).</p>
+
+<p class="i2">The amount of gold necessary is detailed below -</p>
+
+<table class="i3">
+<tr><td class="wd100">Gold Key </td><td> &#160; = &#160; </td><td>60 - 69 bags </td></tr>
+<tr><td>Silver Key </td><td> &#160; = &#160; </td><td>50 - 59</td></tr>
+<tr><td>Bronze Key </td><td> &#160; = &#160; </td><td>40 - 49</td></tr>
+<tr><td>Brass Key </td><td> &#160; = &#160; </td><td>30 - 39</td></tr>
+<tr><td>Crystal Crown </td><td> &#160; = &#160; </td><td>60 - 69</td></tr>
+<tr><td>Healer </td><td> &#160; = &#160; </td><td>15 - 30</td></tr>
+<tr><td>Scout </td><td> &#160; = &#160; </td><td>20 - 30</td></tr>
+<tr><td>Warriors </td><td> &#160; = &#160; </td><td>10 - 20</td></tr>
+</table>
+
+<p class="i2">A magician box can be opened only once per game, subsequent openings will take the player to the brigand sequence (the player must learn 
+how to map the forest and keep track of which boxes have already been opened).</p>
+
+<p class="i2">Control Definitions</p>
+
+<p class="i3">Button #1  =  Inventory page</p>
+
+<p class="i3">Button #2  =  No defined function</p>
+
+<p class="i3">Button #3  =  No defined function</p>
+
+<p class="i3">Button #4  =  No defined function</p>
+
+
+<p class="i2">Scoring</p>
+
+<p class="i3">Score depends upon the treasure granted</p>
+
+<table class="i3">
+<tr><td class="wd100">New warriors </td><td> &#160; = &#160; </td><td>number of warriors  x  100 pts </td></tr>
+<tr><td>Gold key </td><td> &#160; = &#160; </td><td>1000 pts </td></tr>
+<tr><td>Silver key </td><td> &#160; = &#160; </td><td>900 pts </td></tr>
+<tr><td>Bronze key </td><td> &#160; = &#160; </td><td>800 pts </td></tr>
+<tr><td>Brass key </td><td> &#160; = &#160; </td><td>700 pts </td></tr>
+<tr><td>Crystal Crown </td><td> &#160; = &#160; </td><td>1500 pts </td></tr>
+<tr><td>Healer </td><td> &#160; = &#160; </td><td>300 pts (plus bonus warrior) </td></tr>
+<tr><td>Scout </td><td> &#160; = &#160; </td><td>300 pts (plus bonus warrior) </td></tr>
+</table>
+
+
+<p class="i1"><u>Dark Tower / Riddle of the Keys</u></p>
+
+<p class="i2">The Dark Tower is visible only when all four keys are in the possession of the player.  The Dark Tower is located at the center of the map 
+in the largest of the Dark Forests.  This Dark Forest is surrounded by a forest of heavily mixed trees (all four tree types and trees alternate).</p>
+
+<p class="i2">The Riddle of the Keys is entered by walking into the entrance of the Dark Tower (the Dark Tower may not be entered if a fog is pending, if 
+the player is backing or turning into the tower).  If the player does not answer the riddle correctly, the player is informed which of the guesses where 
+correct and then is thrown back into the forest (the fog mechanism).  If the player has a scout, then the warrior appears outside the Dark Tower for 
+another chance (all the conditions for the scout still apply - it can only be used a limited number of times).</p>
+
+<p class="i2">The combination for the Riddle of the Keys is determined randomly at the beginning of the game and does change for the duration of the 
+game.  Because of the way that the random number generator functions, certain combinations will occur more often than others and this bias will be 
+machine dependent.</p>
+
+<p class="i2">Control Definitions</p>
+
+<p class="i3">Joystick   =  No defined function</p>
+
+<p class="i3">Button #1  =  Inventory page</p>
+
+<p class="i3">Button #2  =  Step to next key position (left to right)</p>
+
+<p class="i3">Button #3  =  Step to next key type (Gold, Silver, Bronze, Brass)</p>
+
+<p class="i3">Button #4  =  Test player defined key sequence against hidden key riddle</p>
+
+
+<p class="i2">Scoring</p>
+
+<p class="i3">3000 pts for correctly guessing the riddle.</p>
+
+<br /><br />&#160;</td><td class="wd30">&#160;</td></tr>
+<tr><td>&#160;</td><td>
+
+<table class="ctr">
+
+
+<tr><td class="fsrch lt"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- link-vectrex -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:468px;height:15px"
+     data-ad-client="ca-pub-6853254609661254"
+     data-ad-slot="7097834702"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</td><td class="fsrch rt">
+<form action="http://roadsidethoughts.com/search.htm" id="cse-search-box2">
+<div>
+<input type="hidden" name="cx" value="partner-pub-6853254609661254:i7pisc-77z3" />
+<input type="hidden" name="cof" value="FORID:10" />
+<input type="hidden" name="ie" value="ISO-8859-1" />
+<input type="text" name="q" size="20" />
+<input type="submit" name="sa" value="Search" />
+</div>
+</form>
+<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box2&amp;lang=en"></script>
+</td></tr>
+
+
+   <tr><td class="ctr">
+   <table><tr><td colspan="5"> &#160; </td></tr><tr><td colspan="5"> &#160; </td></tr><tr><td colspan="5"> &#160; </td></tr>
+       <tr><td class="ctr" colspan="5"><hr class="ctr wd750 ht2"></td></tr>
+
+   <tr><td class="fbar"><a href="http://roadsidethoughts.com/vectrex/"
+               title="Return to our Vectrex home page">Home<br />Page</a></td>
+
+       <td class="fbar"><a href="http://roadsidethoughts.com/sitemap.htm"
+               title="Having trouble navigating our website?  Our sitemap might help">Sitemap</a></td>
+
+       <td class="fbar"><a href="http://roadsidethoughts.com/privacy.htm"
+               title="Our statement about the privacy of your visit">Privacy<br />Statement</a></td>
+
+       <td class="fbar"><a href="http://roadsidethoughts.com/terms.htm"
+               title="The terms, conditions and notices that govern your use of the information from RoadsideThoughts">Terms<br />of Use</a></td>
+
+       <td class="fbar"><a href="http://roadsidethoughts.com/vectrex/feedback.htm"
+               title="How to contact us">Feedback</a></td>
+
+   </tr><tr><td class="ctr" colspan="5"><hr class="ctr wd750 ht2"></td></tr>
+   </table></td></tr>
+
+
+   <tr><td>&#160;</td></tr>
+   <tr><td>&#160;</td></tr>
+   <tr><td class="lt">
+   <table class="wd100p"><tr><td class="ftn">
+       <p class="ftn">Please keep in mind that we can not guarantee the accuracy or timeliness of the information
+       on this website, so use with care.  We encourage you to double-check the information that is critical to you.</p>
+       <p class="ftn">If you've found an error or have additional information that you would like to share,
+       please don't hesitate to write. <a href="http://roadsidethoughts.com/vectrex/feedback.htm">Click here to contact us.</a></p></td>
+       <td class="fcpy"><div class="fcpy"></div>Copyright 2016 <br />All Rights Reserved</td></tr>
+       </table>
+       </td></tr>
+
+
+   <tr><td class="flm">This page was last modified: 12 Jan 2017</td></tr>
+   <tr><td class="flm">By John Hall</td></tr>
+
+
+   <tr><td>&#160;</td></tr></table>
+
+&#160;</td><td>&#160;</td></tr>
+</table>
+</body></html>
